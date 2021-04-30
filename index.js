@@ -11,6 +11,10 @@ const entity = readlineSync.question("Which entity would you like to search? ");
 const field = readlineSync.question("Which field would you like to search? ");
 const value = readlineSync.question("Which value would you like to search? ");
 
-results = data[entity].filter((item) => item[field] === value);
+if (!data[entity]) {
+  console.log("entity does not exist");
+  process.exit(1);
+}
+var results = data[entity].filter((item) => item[field] === value);
 
 console.log(results.length);
