@@ -23,14 +23,18 @@ const search = (entityName, field, value) =>
 
 const results = search(entityName, field, value);
 
-console.log("==================");
+const border = () => console.log("=".repeat(100));
+
+border();
 console.log(
-  `Searched ${entityName} for ${field} field and ${value} value. Results: ${results.length}`
+  `Searched ${entityName.toUpperCase()} for "${field.toUpperCase()}" field and "${value.toUpperCase()}" value. Results: ${
+    results.length
+  }`
 );
-console.log("==================");
+border();
 
 const printRecord = (type, record) => {
-  console.log(`----- ${type} -----`);
+  console.log(`----------- ${type} -----------`);
   record &&
     Object.entries(record).forEach(([key, value]) => {
       console.log(`${key}:`, value);
@@ -41,9 +45,8 @@ const printRecords = (entityName, records) =>
   records.forEach((record) => printRecord(entityName, record));
 
 results.forEach((entity) => {
-  console.log("------------------");
   printRecord(entityName, entity);
-  console.log("------------------");
+  border();
 
   if (entityName === "tickets") {
     const [user] = search("users", "_id", entity.assignee_id);
