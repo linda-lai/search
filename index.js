@@ -2,9 +2,9 @@ const fs = require("fs");
 const readlineSync = require("readline-sync");
 
 const data = {
-  tickets: JSON.parse(fs.readFileSync("tickets.json")),
-  organizations: JSON.parse(fs.readFileSync("organizations.json")),
-  users: JSON.parse(fs.readFileSync("users.json")),
+  tickets: JSON.parse(fs.readFileSync("./data/tickets.json")),
+  organizations: JSON.parse(fs.readFileSync("./data/organizations.json")),
+  users: JSON.parse(fs.readFileSync("./data/users.json")),
 };
 
 const entityName = readlineSync.question(
@@ -21,7 +21,7 @@ if (!data[entityName]) {
 const search = (entityName, field, value) =>
   data[entityName].filter((item) => item[field] === value);
 
-var results = search(entityName, field, value);
+const results = search(entityName, field, value);
 
 console.log("==================");
 console.log(
