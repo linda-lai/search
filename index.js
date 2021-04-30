@@ -29,16 +29,27 @@ console.log(
 );
 console.log("==================");
 
+const printRecord = (type, record) => {
+  console.log(`----- ${type} -----`);
+  record &&
+    Object.entries(record).forEach(([key, value]) => {
+      console.log(`${key}:`, value);
+    });
+};
+
 results.forEach((entity) => {
   console.log("------------------");
-  Object.entries(entity).forEach(([key, value]) => {
-    console.log(`${key}:`, value);
-  });
+  printRecord(entityName, entity);
   console.log("------------------");
 
   if (entityName === "tickets") {
-    console.log(entity.assignee_id);
-    const user = search("users", "_id", entity.assignee_id);
-    console.log(user);
+    const [user] = search("users", "_id", entity.assignee_id);
+    const [organization] = search(
+      "organizations",
+      "_id",
+      entity.organization_id
+    );
+    printRecord("user", user);
+    printRecord("organization", organization);
   }
 });
