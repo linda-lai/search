@@ -52,4 +52,16 @@ results.forEach((entity) => {
     printRecord("user", user);
     printRecord("organization", organization);
   }
+
+  if (entityName === "users") {
+    const [organization] = search(
+      "organizations",
+      "_id",
+      entity.organization_id
+    );
+
+    const tickets = search("tickets", "assignee_id", entity._id);
+    printRecord("organization", organization);
+    tickets.forEach((ticket) => printRecord("tickets", ticket));
+  }
 });
