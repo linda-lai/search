@@ -37,6 +37,9 @@ const printRecord = (type, record) => {
     });
 };
 
+const printRecords = (entityName, records) =>
+  records.forEach((record) => printRecord(entityName, record));
+
 results.forEach((entity) => {
   console.log("------------------");
   printRecord(entityName, entity);
@@ -59,9 +62,17 @@ results.forEach((entity) => {
       "_id",
       entity.organization_id
     );
+    printRecord("organization", organization);
 
     const tickets = search("tickets", "assignee_id", entity._id);
-    printRecord("organization", organization);
-    tickets.forEach((ticket) => printRecord("tickets", ticket));
+    printRecords("ticket", tickets);
+  }
+
+  if (entityName === "organizations") {
+    const tickets = search("tickets", "organization_id", entity._id);
+    printRecords("ticket", tickets);
+
+    const users = search("users", "organization_id", entity._id);
+    printRecords("user", users);
   }
 });
