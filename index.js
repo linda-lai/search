@@ -7,14 +7,21 @@ const data = {
   users: JSON.parse(fs.readFileSync("users.json")),
 };
 
-const entity = readlineSync.question("Which entity would you like to search? ");
+const entityName = readlineSync.question(
+  "Which entity would you like to search? "
+);
 const field = readlineSync.question("Which field would you like to search? ");
 const value = readlineSync.question("Which value would you like to search? ");
 
-if (!data[entity]) {
+if (!data[entityName]) {
   console.log("entity does not exist");
   process.exit(1);
 }
-var results = data[entity].filter((item) => item[field] === value);
+var results = data[entityName].filter((item) => item[field] === value);
 
-console.log(results.length);
+results.forEach((entity) =>
+  Object.entries(entity).forEach((entry) => {
+    var [key, value] = entry;
+    console.log(key, value);
+  })
+);
