@@ -14,5 +14,21 @@ const value = readlineSync.question("Which value would you like to search? ");
 
 // console.log(entity, field, value);
 // console.log(users[0]._id);
+// const result = users.filter((user) => user[field] === value);
 
-const result = users.filter((user) => user._id === parseInt(value));
+let result;
+switch (entity) {
+  case "tickets":
+    result = tickets.filter((ticket) => ticket[field] === value);
+    break;
+  case "users":
+    result = users.filter((user) => user[field] === value);
+    break;
+  case "organizations":
+    result = organizations.filter(
+      (organization) => organization[field] === value
+    );
+  default:
+    "No bueno";
+}
+console.log(result.length);
