@@ -19,9 +19,17 @@ if (!data[entityName]) {
 }
 var results = data[entityName].filter((item) => item[field] === value);
 
-results.forEach((entity) =>
+console.log("==================");
+console.log(
+  `Searched ${entityName} for ${field} field and ${value} value. Results: ${results.length}`
+);
+console.log("==================");
+
+results.forEach((entity) => {
+  console.log("------------------");
   Object.entries(entity).forEach((entry) => {
     var [key, value] = entry;
-    console.log(key, value);
-  })
-);
+    console.log(`${key}:`, value);
+  });
+  console.log("------------------");
+});
