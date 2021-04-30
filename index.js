@@ -17,7 +17,11 @@ if (!data[entityName]) {
   console.log("entity does not exist");
   process.exit(1);
 }
-var results = data[entityName].filter((item) => item[field] === value);
+
+const search = (entityName, field, value) =>
+  data[entityName].filter((item) => item[field] === value);
+
+var results = search(entityName, field, value);
 
 console.log("==================");
 console.log(
@@ -27,9 +31,14 @@ console.log("==================");
 
 results.forEach((entity) => {
   console.log("------------------");
-  Object.entries(entity).forEach((entry) => {
-    var [key, value] = entry;
+  Object.entries(entity).forEach(([key, value]) => {
     console.log(`${key}:`, value);
   });
   console.log("------------------");
+
+  if (entityName === "tickets") {
+    console.log(entity.assignee_id);
+    const user = search("users", "_id", entity.assignee_id);
+    console.log(user);
+  }
 });
