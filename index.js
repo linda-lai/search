@@ -1,13 +1,6 @@
 const fs = require("fs");
 const readlineSync = require("readline-sync");
 
-// const data = {
-//   tickets: JSON.parse(fs.readFileSync("./data/tickets.json")),
-//   organizations: JSON.parse(fs.readFileSync("./data/organizations.json")),
-//   users: JSON.parse(fs.readFileSync("./data/users.json")),
-// };
-
-// loadData()
 const loadData = () => {
   return {
     tickets: JSON.parse(fs.readFileSync("./data/tickets.json")),
@@ -16,7 +9,6 @@ const loadData = () => {
   };
 };
 
-// promptUser()
 const promptUser = (data) => {
   const entityName = readlineSync.question(
     "Which entity would you like to search? "
@@ -36,32 +28,10 @@ const promptUser = (data) => {
   };
 };
 
-// const entityName = readlineSync.question(
-//   "Which entity would you like to search? "
-// );
-// const field = readlineSync.question("Which field would you like to search? ");
-// const value = readlineSync.question("Which value would you like to search? ");
-
-// if (!data[entityName]) {
-//   console.log("entity does not exist");
-//   process.exit(1);
-// }
-
-// // searchEntities()
-// const search = (entityName, field, value) =>
-//   data[entityName].filter((item) => item[field] === value);
-
-// const results = search(entityName, field, value);
-
 const search = (entityName, field, value, data) => {
-  // const { entityName, field, value } = inputs;
-
   return data[entityName].filter((item) => item[field] === value);
 };
 
-// printResults()
-
-// TODO:
 const printResults = (inputs, results, data) => {
   const { entityName, field, value } = inputs;
   const border = () => console.log("=".repeat(100));
@@ -113,16 +83,6 @@ const printResults = (inputs, results, data) => {
   });
 };
 
-// const border = () => console.log("=".repeat(100));
-
-// border();
-// console.log(
-//   `Searched ${entityName.toUpperCase()} for "${field.toUpperCase()}" field and "${value.toUpperCase()}" value. Results: ${
-//     results.length
-//   }`
-// );
-// border();
-
 const printRecord = (type, record) => {
   console.log(`----------- ${type} -----------`);
   record &&
@@ -136,18 +96,10 @@ const printRecords = (entityName, records) =>
 
 function run() {
   const data = loadData();
-  const inputs = promptUser(data);
-  const { entityName, field, value } = inputs;
+  const query = promptUser(data);
+  const { entityName, field, value } = query;
   const results = search(entityName, field, value, data);
-  console.log(results);
-  printResults(inputs, results, data);
+  printResults(query, results, data);
 }
-
-// function run() {
-//   const data = loadData();
-//   const searchInputs = promptUser();
-//   const results = searchEntities(inputs, data);
-//   printResults(results);
-// }
 
 run();
