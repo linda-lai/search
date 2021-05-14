@@ -21,7 +21,7 @@ const promptUser = (data) => {
   };
 };
 
-const printResults = (inputs, results, data) => {
+const printHeader = (inputs, results) => {
   const { entityName, field, value } = inputs;
   const border = () => console.log("=".repeat(100));
 
@@ -32,44 +32,41 @@ const printResults = (inputs, results, data) => {
     }`
   );
   border();
+};
 
-  results.forEach((entity) => {
-    printRecord(entityName, entity);
-    border();
+const printRelatedResults = (entityName, entity, data) => {
+  if (entityName === "tickets") {
+    const [user] = search("users", "_id", entity.assignee_id, data);
+    const [organization] = search(
+      "organizations",
+      "_id",
+      entity.organization_id,
+      data
+    );
+    printRecord("user", user);
+    printRecord("organization", organization);
+  }
 
-    if (entityName === "tickets") {
-      const [user] = search("users", "_id", entity.assignee_id, data);
-      const [organization] = search(
-        "organizations",
-        "_id",
-        entity.organization_id,
-        data
-      );
-      printRecord("user", user);
-      printRecord("organization", organization);
-    }
+  if (entityName === "users") {
+    const [organization] = search(
+      "organizations",
+      "_id",
+      entity.organization_id,
+      data
+    );
+    printRecord("organization", organization);
 
-    if (entityName === "users") {
-      const [organization] = search(
-        "organizations",
-        "_id",
-        entity.organization_id,
-        data
-      );
-      printRecord("organization", organization);
+    const tickets = search("tickets", "assignee_id", entity._id, data);
+    printRecords("ticket", tickets);
+  }
 
-      const tickets = search("tickets", "assignee_id", entity._id, data);
-      printRecords("ticket", tickets);
-    }
+  if (entityName === "organizations") {
+    const tickets = search("tickets", "organization_id", entity._id, data);
+    printRecords("ticket", tickets);
 
-    if (entityName === "organizations") {
-      const tickets = search("tickets", "organization_id", entity._id, data);
-      printRecords("ticket", tickets);
-
-      const users = search("users", "organization_id", entity._id, data);
-      printRecords("user", users);
-    }
-  });
+    const users = search("users", "organization_id", entity._id, data);
+    printRecords("user", users);
+  }
 };
 
 const printRecord = (type, record) => {
@@ -78,6 +75,15 @@ const printRecord = (type, record) => {
     Object.entries(record).forEach(([key, value]) => {
       console.log(`${key}:`, value);
     });
+};
+
+const printResults = (inputs, results, data) => {
+  printHeader(inputs, results);
+
+  results.forEach((entity) => {
+    printRecord(inputs.entityName, entity);
+    printRelatedResults(inputs.entityName, entity, data);
+  });
 };
 
 const printRecords = (entityName, records) =>
