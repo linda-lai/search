@@ -36,15 +36,9 @@ const printHeader = (inputs, results) => {
 
 const printRelatedResults = (entityName, entity, data) => {
   if (entityName === "tickets") {
-    // Law of Demeter violation
-    const [user] = search("users", "_id", entity.attributes.assignee_id, data);
-    console.log(user);
-    const [organization] = search(
-      "organizations",
-      "_id",
-      entity.attributes.organization_id,
-      data
-    );
+    var relatedRecords = entity.getRelatedRecords(data);
+    const [user, organization] = relatedRecords;
+
     printRecord("user", user);
     printRecord("organization", organization);
   }
@@ -74,7 +68,7 @@ const printRelatedResults = (entityName, entity, data) => {
 const printRecord = (type, record) => {
   console.log(`----------- ${type} -----------`);
   record &&
-    Object.entries(record).forEach(([key, value]) => {
+    Object.entries(record.attributes).forEach(([key, value]) => {
       console.log(`${key}:`, value);
     });
 };
