@@ -37,10 +37,9 @@ const printHeader = (inputs, results) => {
 const printRelatedResults = (entityName, entity, data) => {
   if (entityName === "tickets") {
     var relatedRecords = entity.getRelatedRecords(data);
-    const [user, organization] = relatedRecords;
 
-    printRecord("user", user);
-    printRecord("organization", organization);
+    printRecords("user", relatedRecords.users);
+    printRecords("organization", relatedRecords.organizations);
   }
 
   if (entityName === "users") {
@@ -57,11 +56,10 @@ const printRelatedResults = (entityName, entity, data) => {
   }
 
   if (entityName === "organizations") {
-    const tickets = search("tickets", "organization_id", entity._id, data);
-    printRecords("ticket", tickets);
+    const relatedRecords = entity.getRelatedRecords(data);
 
-    const users = search("users", "organization_id", entity._id, data);
-    printRecords("user", users);
+    printRecords("user", relatedRecords.users);
+    printRecords("ticket", relatedRecords.tickets);
   }
 };
 
