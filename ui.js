@@ -36,11 +36,13 @@ const printHeader = (inputs, results) => {
 
 const printRelatedResults = (entityName, entity, data) => {
   if (entityName === "tickets") {
-    const [user] = search("users", "_id", entity.assignee_id, data);
+    // Law of Demeter violation
+    const [user] = search("users", "_id", entity.attributes.assignee_id, data);
+    console.log(user);
     const [organization] = search(
       "organizations",
       "_id",
-      entity.organization_id,
+      entity.attributes.organization_id,
       data
     );
     printRecord("user", user);
