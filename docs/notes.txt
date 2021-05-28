@@ -377,3 +377,58 @@ end
 results.forEach((result) => {
   result.print()
 })
+
+
+===========================
+
+
+module.exports = Organization;
+
+
+class Vehicle {}
+class Car extends Vehicle and PersonalProperty {}
+
+class PersonalProperty {}
+
+//  ------------------------
+interface Vehicle {
+  start();
+  stop();
+}
+interface PersonalProperty {
+  getOwner();
+  getMonetaryValue();
+}
+
+class Car implements Vehicle implements PersonalProperty;
+
+
+class Point {
+  var x, y;
+
+  Constructor(x,y) {
+    this.x = x;
+    thix.y = y;
+  }
+
+  getX() { return x; }
+  getY() { return y; }
+}
+
+
+class CartesianPoint {
+  var x, y;
+
+  Constructor(x,y) {
+    this.x = x;
+    thix.y = y;
+  }
+
+  distanceFrom(otherPoint): Int
+}
+
+class PolarPoint {
+  var angle, distance;
+
+  distanceFrom()
+}
