@@ -1,5 +1,3 @@
-const { search } = require("./search");
-
 const readlineSync = require("readline-sync");
 
 const promptUser = (data) => {
@@ -52,7 +50,7 @@ const printRecords = (records) => {
 };
 
 const printRecord = (record) => {
-  console.log(`----------- ${record.constructor.name} -----------`);
+  console.log("-".repeat(25), record.constructor.name, "-".repeat(25));
   record &&
     Object.entries(record.attributes).forEach(([key, value]) => {
       console.log(`${key}:`, value);

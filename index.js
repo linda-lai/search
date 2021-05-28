@@ -1,10 +1,15 @@
 const { promptUser, printResults } = require("./ui");
 const { search } = require("./search");
 const { loadDatasets } = require("./data");
-const assert = require("assert");
+// const assert = require("assert");
 
 const data = loadDatasets();
 const query = promptUser(data);
+// const query = {
+//   entityName: "organizations",
+//   field: "name",
+//   value: '"Qualitern"',
+// };
 
 const { entityName, field, value } = query;
 
@@ -25,6 +30,8 @@ printResults(query, results, data);
 //   value: '"Qualitern"',
 // };
 
+// TODO: With readline-sync, int must be searched without quote marks right now
+// i.e. 24 not "24", otherwise it searches as ""24""
 // const query = {
 //   entityName: "organizations",
 //   field: "_id",
