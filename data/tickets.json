@@ -35,12 +35,7 @@
     "submitter_id": 71,
     "assignee_id": 38,
     "organization_id": 112,
-    "tags": [
-      "Puerto Rico",
-      "Idaho",
-      "Oklahoma",
-      "Louisiana"
-    ],
+    "tags": ["Puerto Rico", "Idaho", "Oklahoma", "Louisiana"],
     "has_incidents": false,
     "due_at": "2016-08-15T05:37:32 -10:00",
     "via": "chat"
@@ -58,12 +53,7 @@
     "submitter_id": 9,
     "assignee_id": 65,
     "organization_id": 105,
-    "tags": [
-      "Massachusetts",
-      "New York",
-      "Minnesota",
-      "New Jersey"
-    ],
+    "tags": ["Massachusetts", "New York", "Minnesota", "New Jersey"],
     "has_incidents": true,
     "due_at": "2016-08-06T04:16:06 -10:00",
     "via": "web"
@@ -81,12 +71,7 @@
     "submitter_id": 14,
     "assignee_id": 7,
     "organization_id": 118,
-    "tags": [
-      "Texas",
-      "Nevada",
-      "Oregon",
-      "Arizona"
-    ],
+    "tags": ["Texas", "Nevada", "Oregon", "Arizona"],
     "has_incidents": true,
     "due_at": "2016-08-19T07:40:17 -10:00",
     "via": "voice"
@@ -103,12 +88,7 @@
     "submitter_id": 9,
     "assignee_id": 48,
     "organization_id": 104,
-    "tags": [
-      "Delaware",
-      "New Hampshire",
-      "Utah",
-      "Hawaii"
-    ],
+    "tags": ["Delaware", "New Hampshire", "Utah", "Hawaii"],
     "has_incidents": false,
     "due_at": "2016-08-05T10:31:03 -10:00",
     "via": "web"
@@ -126,12 +106,7 @@
     "submitter_id": 4,
     "assignee_id": 3,
     "organization_id": 111,
-    "tags": [
-      "Alaska",
-      "Maryland",
-      "Iowa",
-      "North Dakota"
-    ],
+    "tags": ["Alaska", "Maryland", "Iowa", "North Dakota"],
     "has_incidents": true,
     "due_at": "2016-08-21T06:49:58 -10:00",
     "via": "chat"
@@ -149,12 +124,7 @@
     "submitter_id": 74,
     "assignee_id": 40,
     "organization_id": 105,
-    "tags": [
-      "California",
-      "Palau",
-      "Kentucky",
-      "North Carolina"
-    ],
+    "tags": ["California", "Palau", "Kentucky", "North Carolina"],
     "has_incidents": true,
     "via": "voice"
   },
@@ -171,12 +141,7 @@
     "submitter_id": 73,
     "assignee_id": 44,
     "organization_id": 107,
-    "tags": [
-      "South Carolina",
-      "Indiana",
-      "New Mexico",
-      "Nebraska"
-    ],
+    "tags": ["South Carolina", "Indiana", "New Mexico", "Nebraska"],
     "has_incidents": true,
     "due_at": "2016-08-23T01:54:35 -10:00",
     "via": "voice"
@@ -194,12 +159,7 @@
     "submitter_id": 49,
     "assignee_id": 14,
     "organization_id": 109,
-    "tags": [
-      "Connecticut",
-      "Arkansas",
-      "Missouri",
-      "Alabama"
-    ],
+    "tags": ["Connecticut", "Arkansas", "Missouri", "Alabama"],
     "has_incidents": false,
     "due_at": "2016-08-15T06:13:11 -10:00",
     "via": "voice"
@@ -217,12 +177,7 @@
     "submitter_id": 36,
     "assignee_id": 34,
     "organization_id": 122,
-    "tags": [
-      "Virginia",
-      "Virgin Islands",
-      "Maine",
-      "West Virginia"
-    ],
+    "tags": ["Virginia", "Virgin Islands", "Maine", "West Virginia"],
     "has_incidents": false,
     "due_at": "2016-08-16T11:12:43 -10:00",
     "via": "web"
@@ -240,12 +195,7 @@
     "submitter_id": 73,
     "assignee_id": 31,
     "organization_id": 113,
-    "tags": [
-      "Michigan",
-      "Florida",
-      "Georgia",
-      "Tennessee"
-    ],
+    "tags": ["Michigan", "Florida", "Georgia", "Tennessee"],
     "has_incidents": false,
     "due_at": "2016-08-06T07:41:47 -10:00",
     "via": "voice"
@@ -263,12 +213,7 @@
     "submitter_id": 65,
     "assignee_id": 64,
     "organization_id": 113,
-    "tags": [
-      "Mississippi",
-      "Marshall Islands",
-      "South Dakota",
-      "Montana"
-    ],
+    "tags": ["Mississippi", "Marshall Islands", "South Dakota", "Montana"],
     "has_incidents": true,
     "due_at": "2016-08-06T07:35:44 -10:00",
     "via": "chat"
@@ -309,12 +254,7 @@
     "submitter_id": 29,
     "assignee_id": 65,
     "organization_id": 107,
-    "tags": [
-      "Rhode Island",
-      "Kansas",
-      "Guam",
-      "Colorado"
-    ],
+    "tags": ["Rhode Island", "Kansas", "Guam", "Colorado"],
     "has_incidents": false,
     "due_at": "2016-08-20T12:45:48 -10:00",
     "via": "chat"
@@ -332,12 +272,7 @@
     "submitter_id": 50,
     "assignee_id": 29,
     "organization_id": 113,
-    "tags": [
-      "Washington",
-      "Wyoming",
-      "Ohio",
-      "Pennsylvania"
-    ],
+    "tags": ["Washington", "Wyoming", "Ohio", "Pennsylvania"],
     "has_incidents": false,
     "due_at": "2016-08-16T05:52:08 -10:00",
     "via": "chat"
@@ -378,12 +313,7 @@
     "submitter_id": 4,
     "assignee_id": 68,
     "organization_id": 120,
-    "tags": [
-      "Oklahoma",
-      "Louisiana",
-      "Massachusetts",
-      "New York"
-    ],
+    "tags": ["Oklahoma", "Louisiana", "Massachusetts", "New York"],
     "has_incidents": false,
     "due_at": "2016-08-18T10:51:32 -10:00",
     "via": "voice"
@@ -401,12 +331,7 @@
     "submitter_id": 1,
     "assignee_id": 19,
     "organization_id": 120,
-    "tags": [
-      "Minnesota",
-      "New Jersey",
-      "Texas",
-      "Nevada"
-    ],
+    "tags": ["Minnesota", "New Jersey", "Texas", "Nevada"],
     "has_incidents": true,
     "via": "voice"
   },
@@ -423,12 +348,7 @@
     "submitter_id": 34,
     "assignee_id": 37,
     "organization_id": 120,
-    "tags": [
-      "Oregon",
-      "Arizona",
-      "Delaware",
-      "New Hampshire"
-    ],
+    "tags": ["Oregon", "Arizona", "Delaware", "New Hampshire"],
     "has_incidents": true,
     "due_at": "2016-07-30T02:22:24 -10:00",
     "via": "chat"
@@ -446,12 +366,7 @@
     "submitter_id": 60,
     "assignee_id": 72,
     "organization_id": 103,
-    "tags": [
-      "Utah",
-      "Hawaii",
-      "Alaska",
-      "Maryland"
-    ],
+    "tags": ["Utah", "Hawaii", "Alaska", "Maryland"],
     "has_incidents": false,
     "due_at": "2016-08-21T10:41:42 -10:00",
     "via": "chat"
@@ -469,12 +384,7 @@
     "submitter_id": 67,
     "assignee_id": 7,
     "organization_id": 117,
-    "tags": [
-      "Iowa",
-      "North Dakota",
-      "California",
-      "Palau"
-    ],
+    "tags": ["Iowa", "North Dakota", "California", "Palau"],
     "has_incidents": true,
     "due_at": "2016-08-13T03:54:31 -10:00",
     "via": "web"
@@ -492,12 +402,7 @@
     "submitter_id": 43,
     "assignee_id": 64,
     "organization_id": 119,
-    "tags": [
-      "Kentucky",
-      "North Carolina",
-      "South Carolina",
-      "Indiana"
-    ],
+    "tags": ["Kentucky", "North Carolina", "South Carolina", "Indiana"],
     "has_incidents": false,
     "due_at": "2016-08-14T09:28:10 -10:00",
     "via": "voice"
@@ -515,12 +420,7 @@
     "submitter_id": 10,
     "assignee_id": 47,
     "organization_id": 103,
-    "tags": [
-      "New Mexico",
-      "Nebraska",
-      "Connecticut",
-      "Arkansas"
-    ],
+    "tags": ["New Mexico", "Nebraska", "Connecticut", "Arkansas"],
     "has_incidents": false,
     "due_at": "2016-07-31T03:12:39 -10:00",
     "via": "chat"
@@ -538,12 +438,7 @@
     "submitter_id": 10,
     "assignee_id": 53,
     "organization_id": 112,
-    "tags": [
-      "Missouri",
-      "Alabama",
-      "Virginia",
-      "Virgin Islands"
-    ],
+    "tags": ["Missouri", "Alabama", "Virginia", "Virgin Islands"],
     "has_incidents": true,
     "via": "chat"
   },
@@ -560,12 +455,7 @@
     "submitter_id": 19,
     "assignee_id": 33,
     "organization_id": 121,
-    "tags": [
-      "Maine",
-      "West Virginia",
-      "Michigan",
-      "Florida"
-    ],
+    "tags": ["Maine", "West Virginia", "Michigan", "Florida"],
     "has_incidents": true,
     "due_at": "2016-08-22T10:12:33 -10:00",
     "via": "chat"
@@ -581,12 +471,7 @@
     "priority": "normal",
     "status": "pending",
     "submitter_id": 17,
-    "tags": [
-      "Georgia",
-      "Tennessee",
-      "Mississippi",
-      "Marshall Islands"
-    ],
+    "tags": ["Georgia", "Tennessee", "Mississippi", "Marshall Islands"],
     "has_incidents": false,
     "due_at": "2016-08-13T02:51:04 -10:00",
     "via": "voice"
@@ -604,12 +489,7 @@
     "submitter_id": 12,
     "assignee_id": 65,
     "organization_id": 123,
-    "tags": [
-      "South Dakota",
-      "Montana",
-      "District Of Columbia",
-      "Wisconsin"
-    ],
+    "tags": ["South Dakota", "Montana", "District Of Columbia", "Wisconsin"],
     "has_incidents": true,
     "due_at": "2016-08-11T03:56:39 -10:00",
     "via": "web"
@@ -650,12 +530,7 @@
     "submitter_id": 41,
     "assignee_id": 64,
     "organization_id": 118,
-    "tags": [
-      "Guam",
-      "Colorado",
-      "Washington",
-      "Wyoming"
-    ],
+    "tags": ["Guam", "Colorado", "Washington", "Wyoming"],
     "has_incidents": false,
     "due_at": "2016-08-07T05:39:40 -10:00",
     "via": "chat"
@@ -696,12 +571,7 @@
     "submitter_id": 62,
     "assignee_id": 75,
     "organization_id": 125,
-    "tags": [
-      "Puerto Rico",
-      "Idaho",
-      "Oklahoma",
-      "Louisiana"
-    ],
+    "tags": ["Puerto Rico", "Idaho", "Oklahoma", "Louisiana"],
     "has_incidents": true,
     "due_at": "2016-08-17T07:54:27 -10:00",
     "via": "web"
@@ -718,12 +588,7 @@
     "status": "solved",
     "submitter_id": 61,
     "organization_id": 120,
-    "tags": [
-      "Massachusetts",
-      "New York",
-      "Minnesota",
-      "New Jersey"
-    ],
+    "tags": ["Massachusetts", "New York", "Minnesota", "New Jersey"],
     "has_incidents": false,
     "due_at": "2016-08-14T08:16:12 -10:00",
     "via": "chat"
@@ -741,12 +606,7 @@
     "submitter_id": 23,
     "assignee_id": 69,
     "organization_id": 117,
-    "tags": [
-      "Texas",
-      "Nevada",
-      "Oregon",
-      "Arizona"
-    ],
+    "tags": ["Texas", "Nevada", "Oregon", "Arizona"],
     "has_incidents": false,
     "due_at": "2016-08-06T04:22:29 -10:00",
     "via": "web"
@@ -764,12 +624,7 @@
     "submitter_id": 9,
     "assignee_id": 35,
     "organization_id": 104,
-    "tags": [
-      "Delaware",
-      "New Hampshire",
-      "Utah",
-      "Hawaii"
-    ],
+    "tags": ["Delaware", "New Hampshire", "Utah", "Hawaii"],
     "has_incidents": true,
     "due_at": "2016-08-20T03:35:32 -10:00",
     "via": "chat"
@@ -787,12 +642,7 @@
     "submitter_id": 58,
     "assignee_id": 44,
     "organization_id": 116,
-    "tags": [
-      "Alaska",
-      "Maryland",
-      "Iowa",
-      "North Dakota"
-    ],
+    "tags": ["Alaska", "Maryland", "Iowa", "North Dakota"],
     "has_incidents": false,
     "due_at": "2016-08-01T06:08:22 -10:00",
     "via": "chat"
@@ -810,12 +660,7 @@
     "submitter_id": 53,
     "assignee_id": 12,
     "organization_id": 116,
-    "tags": [
-      "California",
-      "Palau",
-      "Kentucky",
-      "North Carolina"
-    ],
+    "tags": ["California", "Palau", "Kentucky", "North Carolina"],
     "has_incidents": true,
     "due_at": "2016-08-07T04:44:19 -10:00",
     "via": "chat"
@@ -833,12 +678,7 @@
     "submitter_id": 52,
     "assignee_id": 36,
     "organization_id": 124,
-    "tags": [
-      "South Carolina",
-      "Indiana",
-      "New Mexico",
-      "Nebraska"
-    ],
+    "tags": ["South Carolina", "Indiana", "New Mexico", "Nebraska"],
     "has_incidents": false,
     "due_at": "2016-08-09T10:22:25 -10:00",
     "via": "web"
@@ -856,12 +696,7 @@
     "submitter_id": 56,
     "assignee_id": 22,
     "organization_id": 111,
-    "tags": [
-      "Connecticut",
-      "Arkansas",
-      "Missouri",
-      "Alabama"
-    ],
+    "tags": ["Connecticut", "Arkansas", "Missouri", "Alabama"],
     "has_incidents": false,
     "due_at": "2016-08-23T07:46:46 -10:00",
     "via": "chat"
@@ -879,12 +714,7 @@
     "submitter_id": 70,
     "assignee_id": 35,
     "organization_id": 111,
-    "tags": [
-      "Virginia",
-      "Virgin Islands",
-      "Maine",
-      "West Virginia"
-    ],
+    "tags": ["Virginia", "Virgin Islands", "Maine", "West Virginia"],
     "has_incidents": true,
     "due_at": "2016-08-15T11:58:06 -10:00",
     "via": "web"
@@ -902,12 +732,7 @@
     "submitter_id": 36,
     "assignee_id": 74,
     "organization_id": 105,
-    "tags": [
-      "Michigan",
-      "Florida",
-      "Georgia",
-      "Tennessee"
-    ],
+    "tags": ["Michigan", "Florida", "Georgia", "Tennessee"],
     "has_incidents": false,
     "due_at": "2016-07-31T07:03:07 -10:00",
     "via": "voice"
@@ -925,12 +750,7 @@
     "submitter_id": 33,
     "assignee_id": 53,
     "organization_id": 109,
-    "tags": [
-      "Mississippi",
-      "Marshall Islands",
-      "South Dakota",
-      "Montana"
-    ],
+    "tags": ["Mississippi", "Marshall Islands", "South Dakota", "Montana"],
     "has_incidents": true,
     "due_at": "2016-08-14T04:08:52 -10:00",
     "via": "web"
@@ -970,12 +790,7 @@
     "submitter_id": 71,
     "assignee_id": 57,
     "organization_id": 105,
-    "tags": [
-      "Rhode Island",
-      "Kansas",
-      "Guam",
-      "Colorado"
-    ],
+    "tags": ["Rhode Island", "Kansas", "Guam", "Colorado"],
     "has_incidents": true,
     "due_at": "2016-08-22T02:19:02 -10:00",
     "via": "chat"
@@ -993,12 +808,7 @@
     "submitter_id": 28,
     "assignee_id": 73,
     "organization_id": 111,
-    "tags": [
-      "Washington",
-      "Wyoming",
-      "Ohio",
-      "Pennsylvania"
-    ],
+    "tags": ["Washington", "Wyoming", "Ohio", "Pennsylvania"],
     "has_incidents": true,
     "due_at": "2016-08-01T12:32:09 -10:00",
     "via": "voice"
@@ -1038,12 +848,7 @@
     "status": "open",
     "submitter_id": 37,
     "assignee_id": 22,
-    "tags": [
-      "Oklahoma",
-      "Louisiana",
-      "Massachusetts",
-      "New York"
-    ],
+    "tags": ["Oklahoma", "Louisiana", "Massachusetts", "New York"],
     "has_incidents": true,
     "due_at": "2016-08-21T08:16:08 -10:00",
     "via": "chat"
@@ -1061,12 +866,7 @@
     "submitter_id": 22,
     "assignee_id": 15,
     "organization_id": 114,
-    "tags": [
-      "Minnesota",
-      "New Jersey",
-      "Texas",
-      "Nevada"
-    ],
+    "tags": ["Minnesota", "New Jersey", "Texas", "Nevada"],
     "has_incidents": false,
     "due_at": "2016-08-12T12:58:31 -10:00",
     "via": "chat"
@@ -1084,12 +884,7 @@
     "submitter_id": 22,
     "assignee_id": 15,
     "organization_id": 108,
-    "tags": [
-      "Oregon",
-      "Arizona",
-      "Delaware",
-      "New Hampshire"
-    ],
+    "tags": ["Oregon", "Arizona", "Delaware", "New Hampshire"],
     "has_incidents": false,
     "via": "voice"
   },
@@ -1106,12 +901,7 @@
     "submitter_id": 54,
     "assignee_id": 9,
     "organization_id": 111,
-    "tags": [
-      "Utah",
-      "Hawaii",
-      "Alaska",
-      "Maryland"
-    ],
+    "tags": ["Utah", "Hawaii", "Alaska", "Maryland"],
     "has_incidents": false,
     "due_at": "2016-08-18T06:46:57 -10:00",
     "via": "web"
@@ -1129,12 +919,7 @@
     "submitter_id": 64,
     "assignee_id": 32,
     "organization_id": 112,
-    "tags": [
-      "Iowa",
-      "North Dakota",
-      "California",
-      "Palau"
-    ],
+    "tags": ["Iowa", "North Dakota", "California", "Palau"],
     "has_incidents": true,
     "due_at": "2016-08-04T12:30:25 -10:00",
     "via": "chat"
@@ -1152,12 +937,7 @@
     "submitter_id": 65,
     "assignee_id": 70,
     "organization_id": 115,
-    "tags": [
-      "Kentucky",
-      "North Carolina",
-      "South Carolina",
-      "Indiana"
-    ],
+    "tags": ["Kentucky", "North Carolina", "South Carolina", "Indiana"],
     "has_incidents": true,
     "due_at": "2016-08-18T11:17:19 -10:00",
     "via": "web"
@@ -1175,12 +955,7 @@
     "submitter_id": 5,
     "assignee_id": 31,
     "organization_id": 124,
-    "tags": [
-      "New Mexico",
-      "Nebraska",
-      "Connecticut",
-      "Arkansas"
-    ],
+    "tags": ["New Mexico", "Nebraska", "Connecticut", "Arkansas"],
     "has_incidents": true,
     "due_at": "2016-08-18T11:55:52 -10:00",
     "via": "web"
@@ -1198,12 +973,7 @@
     "submitter_id": 54,
     "assignee_id": 40,
     "organization_id": 108,
-    "tags": [
-      "Missouri",
-      "Alabama",
-      "Virginia",
-      "Virgin Islands"
-    ],
+    "tags": ["Missouri", "Alabama", "Virginia", "Virgin Islands"],
     "has_incidents": false,
     "due_at": "2016-08-09T08:46:39 -10:00",
     "via": "web"
@@ -1221,12 +991,7 @@
     "submitter_id": 14,
     "assignee_id": 67,
     "organization_id": 106,
-    "tags": [
-      "Maine",
-      "West Virginia",
-      "Michigan",
-      "Florida"
-    ],
+    "tags": ["Maine", "West Virginia", "Michigan", "Florida"],
     "has_incidents": false,
     "due_at": "2016-08-12T10:25:13 -10:00",
     "via": "web"
@@ -1244,12 +1009,7 @@
     "submitter_id": 29,
     "assignee_id": 49,
     "organization_id": 122,
-    "tags": [
-      "Georgia",
-      "Tennessee",
-      "Mississippi",
-      "Marshall Islands"
-    ],
+    "tags": ["Georgia", "Tennessee", "Mississippi", "Marshall Islands"],
     "has_incidents": false,
     "due_at": "2016-08-05T07:03:16 -10:00",
     "via": "web"
@@ -1267,12 +1027,7 @@
     "submitter_id": 51,
     "assignee_id": 32,
     "organization_id": 123,
-    "tags": [
-      "South Dakota",
-      "Montana",
-      "District Of Columbia",
-      "Wisconsin"
-    ],
+    "tags": ["South Dakota", "Montana", "District Of Columbia", "Wisconsin"],
     "has_incidents": true,
     "due_at": "2016-08-19T11:22:02 -10:00",
     "via": "chat"
@@ -1313,12 +1068,7 @@
     "submitter_id": 21,
     "assignee_id": 56,
     "organization_id": 116,
-    "tags": [
-      "Guam",
-      "Colorado",
-      "Washington",
-      "Wyoming"
-    ],
+    "tags": ["Guam", "Colorado", "Washington", "Wyoming"],
     "has_incidents": true,
     "via": "voice"
   },
@@ -1357,12 +1107,7 @@
     "submitter_id": 11,
     "assignee_id": 73,
     "organization_id": 123,
-    "tags": [
-      "Puerto Rico",
-      "Idaho",
-      "Oklahoma",
-      "Louisiana"
-    ],
+    "tags": ["Puerto Rico", "Idaho", "Oklahoma", "Louisiana"],
     "has_incidents": false,
     "due_at": "2016-08-21T06:07:01 -10:00",
     "via": "web"
@@ -1380,12 +1125,7 @@
     "submitter_id": 22,
     "assignee_id": 36,
     "organization_id": 109,
-    "tags": [
-      "Massachusetts",
-      "New York",
-      "Minnesota",
-      "New Jersey"
-    ],
+    "tags": ["Massachusetts", "New York", "Minnesota", "New Jersey"],
     "has_incidents": true,
     "due_at": "2016-08-08T10:37:21 -10:00",
     "via": "voice"
@@ -1402,12 +1142,7 @@
     "status": "solved",
     "submitter_id": 58,
     "assignee_id": 20,
-    "tags": [
-      "Texas",
-      "Nevada",
-      "Oregon",
-      "Arizona"
-    ],
+    "tags": ["Texas", "Nevada", "Oregon", "Arizona"],
     "has_incidents": true,
     "due_at": "2016-08-06T11:11:16 -10:00",
     "via": "chat"
@@ -1425,12 +1160,7 @@
     "submitter_id": 58,
     "assignee_id": 14,
     "organization_id": 107,
-    "tags": [
-      "Delaware",
-      "New Hampshire",
-      "Utah",
-      "Hawaii"
-    ],
+    "tags": ["Delaware", "New Hampshire", "Utah", "Hawaii"],
     "has_incidents": true,
     "due_at": "2016-08-14T10:25:07 -10:00",
     "via": "chat"
@@ -1448,12 +1178,7 @@
     "submitter_id": 61,
     "assignee_id": 52,
     "organization_id": 122,
-    "tags": [
-      "Alaska",
-      "Maryland",
-      "Iowa",
-      "North Dakota"
-    ],
+    "tags": ["Alaska", "Maryland", "Iowa", "North Dakota"],
     "has_incidents": true,
     "due_at": "2016-07-31T09:21:42 -10:00",
     "via": "voice"
@@ -1470,12 +1195,7 @@
     "submitter_id": 17,
     "assignee_id": 41,
     "organization_id": 115,
-    "tags": [
-      "California",
-      "Palau",
-      "Kentucky",
-      "North Carolina"
-    ],
+    "tags": ["California", "Palau", "Kentucky", "North Carolina"],
     "has_incidents": true,
     "due_at": "2016-08-02T05:48:02 -10:00",
     "via": "chat"
@@ -1493,12 +1213,7 @@
     "submitter_id": 44,
     "assignee_id": 43,
     "organization_id": 108,
-    "tags": [
-      "South Carolina",
-      "Indiana",
-      "New Mexico",
-      "Nebraska"
-    ],
+    "tags": ["South Carolina", "Indiana", "New Mexico", "Nebraska"],
     "has_incidents": false,
     "due_at": "2016-08-22T08:00:54 -10:00",
     "via": "voice"
@@ -1516,12 +1231,7 @@
     "submitter_id": 39,
     "assignee_id": 25,
     "organization_id": 106,
-    "tags": [
-      "Connecticut",
-      "Arkansas",
-      "Missouri",
-      "Alabama"
-    ],
+    "tags": ["Connecticut", "Arkansas", "Missouri", "Alabama"],
     "has_incidents": false,
     "due_at": "2016-08-01T05:42:00 -10:00",
     "via": "web"
@@ -1539,12 +1249,7 @@
     "submitter_id": 18,
     "assignee_id": 56,
     "organization_id": 107,
-    "tags": [
-      "Virginia",
-      "Virgin Islands",
-      "Maine",
-      "West Virginia"
-    ],
+    "tags": ["Virginia", "Virgin Islands", "Maine", "West Virginia"],
     "has_incidents": true,
     "due_at": "2016-08-07T06:57:03 -10:00",
     "via": "web"
@@ -1562,12 +1267,7 @@
     "submitter_id": 31,
     "assignee_id": 48,
     "organization_id": 105,
-    "tags": [
-      "Michigan",
-      "Florida",
-      "Georgia",
-      "Tennessee"
-    ],
+    "tags": ["Michigan", "Florida", "Georgia", "Tennessee"],
     "has_incidents": true,
     "due_at": "2016-08-02T06:59:47 -10:00",
     "via": "chat"
@@ -1585,12 +1285,7 @@
     "submitter_id": 19,
     "assignee_id": 39,
     "organization_id": 110,
-    "tags": [
-      "Mississippi",
-      "Marshall Islands",
-      "South Dakota",
-      "Montana"
-    ],
+    "tags": ["Mississippi", "Marshall Islands", "South Dakota", "Montana"],
     "has_incidents": false,
     "due_at": "2016-08-15T01:19:11 -10:00",
     "via": "chat"
@@ -1631,12 +1326,7 @@
     "submitter_id": 50,
     "assignee_id": 40,
     "organization_id": 116,
-    "tags": [
-      "Rhode Island",
-      "Kansas",
-      "Guam",
-      "Colorado"
-    ],
+    "tags": ["Rhode Island", "Kansas", "Guam", "Colorado"],
     "has_incidents": true,
     "due_at": "2016-08-19T01:00:41 -10:00",
     "via": "web"
@@ -1654,12 +1344,7 @@
     "submitter_id": 22,
     "assignee_id": 43,
     "organization_id": 102,
-    "tags": [
-      "Washington",
-      "Wyoming",
-      "Ohio",
-      "Pennsylvania"
-    ],
+    "tags": ["Washington", "Wyoming", "Ohio", "Pennsylvania"],
     "has_incidents": false,
     "due_at": "2016-08-22T04:49:19 -10:00",
     "via": "web"
@@ -1699,12 +1384,7 @@
     "submitter_id": 42,
     "assignee_id": 59,
     "organization_id": 107,
-    "tags": [
-      "Oklahoma",
-      "Louisiana",
-      "Massachusetts",
-      "New York"
-    ],
+    "tags": ["Oklahoma", "Louisiana", "Massachusetts", "New York"],
     "has_incidents": false,
     "due_at": "2016-08-17T06:25:43 -10:00",
     "via": "chat"
@@ -1722,12 +1402,7 @@
     "submitter_id": 55,
     "assignee_id": 55,
     "organization_id": 101,
-    "tags": [
-      "Minnesota",
-      "New Jersey",
-      "Texas",
-      "Nevada"
-    ],
+    "tags": ["Minnesota", "New Jersey", "Texas", "Nevada"],
     "has_incidents": true,
     "due_at": "2016-08-06T09:22:54 -10:00",
     "via": "web"
@@ -1745,12 +1420,7 @@
     "submitter_id": 3,
     "assignee_id": 33,
     "organization_id": 110,
-    "tags": [
-      "Oregon",
-      "Arizona",
-      "Delaware",
-      "New Hampshire"
-    ],
+    "tags": ["Oregon", "Arizona", "Delaware", "New Hampshire"],
     "has_incidents": true,
     "due_at": "2016-08-12T06:24:57 -10:00",
     "via": "voice"
@@ -1768,12 +1438,7 @@
     "submitter_id": 555,
     "assignee_id": 17,
     "organization_id": 114,
-    "tags": [
-      "Utah",
-      "Hawaii",
-      "Alaska",
-      "Maryland"
-    ],
+    "tags": ["Utah", "Hawaii", "Alaska", "Maryland"],
     "has_incidents": true,
     "due_at": "2016-08-04T12:14:53 -10:00",
     "via": "web"
@@ -1791,12 +1456,7 @@
     "submitter_id": 14,
     "assignee_id": 17,
     "organization_id": 123,
-    "tags": [
-      "Iowa",
-      "North Dakota",
-      "California",
-      "Palau"
-    ],
+    "tags": ["Iowa", "North Dakota", "California", "Palau"],
     "has_incidents": true,
     "due_at": "2016-08-15T09:19:45 -10:00",
     "via": "web"
@@ -1814,12 +1474,7 @@
     "submitter_id": 41,
     "assignee_id": 6,
     "organization_id": 107,
-    "tags": [
-      "Kentucky",
-      "North Carolina",
-      "South Carolina",
-      "Indiana"
-    ],
+    "tags": ["Kentucky", "North Carolina", "South Carolina", "Indiana"],
     "has_incidents": true,
     "due_at": "2016-07-31T09:27:17 -10:00",
     "via": "voice"
@@ -1837,12 +1492,7 @@
     "submitter_id": 66,
     "assignee_id": 73,
     "organization_id": 113,
-    "tags": [
-      "New Mexico",
-      "Nebraska",
-      "Connecticut",
-      "Arkansas"
-    ],
+    "tags": ["New Mexico", "Nebraska", "Connecticut", "Arkansas"],
     "has_incidents": false,
     "due_at": "2016-07-31T06:51:48 -10:00",
     "via": "web"
@@ -1860,12 +1510,7 @@
     "submitter_id": 1,
     "assignee_id": 11,
     "organization_id": 106,
-    "tags": [
-      "Missouri",
-      "Alabama",
-      "Virginia",
-      "Virgin Islands"
-    ],
+    "tags": ["Missouri", "Alabama", "Virginia", "Virgin Islands"],
     "has_incidents": false,
     "due_at": "2016-08-03T04:44:08 -10:00",
     "via": "chat"
@@ -1882,12 +1527,7 @@
     "status": "hold",
     "submitter_id": 42,
     "assignee_id": 8,
-    "tags": [
-      "Maine",
-      "West Virginia",
-      "Michigan",
-      "Florida"
-    ],
+    "tags": ["Maine", "West Virginia", "Michigan", "Florida"],
     "has_incidents": false,
     "due_at": "2016-08-08T03:54:14 -10:00",
     "via": "chat"
@@ -1905,12 +1545,7 @@
     "submitter_id": 44,
     "assignee_id": 1,
     "organization_id": 115,
-    "tags": [
-      "Georgia",
-      "Tennessee",
-      "Mississippi",
-      "Marshall Islands"
-    ],
+    "tags": ["Georgia", "Tennessee", "Mississippi", "Marshall Islands"],
     "has_incidents": true,
     "due_at": "2016-08-07T04:10:34 -10:00",
     "via": "voice"
@@ -1928,12 +1563,7 @@
     "submitter_id": 20,
     "assignee_id": 33,
     "organization_id": 555,
-    "tags": [
-      "South Dakota",
-      "Montana",
-      "District Of Columbia",
-      "Wisconsin"
-    ],
+    "tags": ["South Dakota", "Montana", "District Of Columbia", "Wisconsin"],
     "has_incidents": false,
     "due_at": "2016-08-22T03:18:02 -10:00",
     "via": "voice"
@@ -1974,12 +1604,7 @@
     "submitter_id": 67,
     "assignee_id": 22,
     "organization_id": 119,
-    "tags": [
-      "Guam",
-      "Colorado",
-      "Washington",
-      "Wyoming"
-    ],
+    "tags": ["Guam", "Colorado", "Washington", "Wyoming"],
     "has_incidents": true,
     "due_at": "2016-08-05T08:46:22 -10:00",
     "via": "web"
@@ -2020,12 +1645,7 @@
     "submitter_id": 71,
     "assignee_id": 7,
     "organization_id": 111,
-    "tags": [
-      "Puerto Rico",
-      "Idaho",
-      "Oklahoma",
-      "Louisiana"
-    ],
+    "tags": ["Puerto Rico", "Idaho", "Oklahoma", "Louisiana"],
     "has_incidents": true,
     "due_at": "2016-08-04T10:15:42 -10:00",
     "via": "voice"
@@ -2043,12 +1663,7 @@
     "submitter_id": 40,
     "assignee_id": 23,
     "organization_id": 123,
-    "tags": [
-      "Massachusetts",
-      "New York",
-      "Minnesota",
-      "New Jersey"
-    ],
+    "tags": ["Massachusetts", "New York", "Minnesota", "New Jersey"],
     "has_incidents": true,
     "due_at": "2016-08-12T05:40:30 -10:00",
     "via": "web"
@@ -2066,12 +1681,7 @@
     "submitter_id": 49,
     "assignee_id": 26,
     "organization_id": 119,
-    "tags": [
-      "Texas",
-      "Nevada",
-      "Oregon",
-      "Arizona"
-    ],
+    "tags": ["Texas", "Nevada", "Oregon", "Arizona"],
     "has_incidents": true,
     "due_at": "2016-08-01T11:20:58 -10:00",
     "via": "voice"
@@ -2089,12 +1699,7 @@
     "submitter_id": 68,
     "assignee_id": 68,
     "organization_id": 107,
-    "tags": [
-      "Delaware",
-      "New Hampshire",
-      "Utah",
-      "Hawaii"
-    ],
+    "tags": ["Delaware", "New Hampshire", "Utah", "Hawaii"],
     "has_incidents": false,
     "due_at": "2016-08-16T03:52:40 -10:00",
     "via": "web"
@@ -2112,12 +1717,7 @@
     "submitter_id": 69,
     "assignee_id": 15,
     "organization_id": 112,
-    "tags": [
-      "Alaska",
-      "Maryland",
-      "Iowa",
-      "North Dakota"
-    ],
+    "tags": ["Alaska", "Maryland", "Iowa", "North Dakota"],
     "has_incidents": false,
     "due_at": "2016-08-02T02:21:53 -10:00",
     "via": "chat"
@@ -2135,12 +1735,7 @@
     "submitter_id": 69,
     "assignee_id": 27,
     "organization_id": 115,
-    "tags": [
-      "California",
-      "Palau",
-      "Kentucky",
-      "North Carolina"
-    ],
+    "tags": ["California", "Palau", "Kentucky", "North Carolina"],
     "has_incidents": false,
     "due_at": "2016-08-06T11:28:35 -10:00",
     "via": "chat"
@@ -2158,12 +1753,7 @@
     "submitter_id": 20,
     "assignee_id": 73,
     "organization_id": 106,
-    "tags": [
-      "Şouth Carolina",
-      "Indiana",
-      "New Mexico",
-      "Nebraska"
-    ],
+    "tags": ["Şouth Carolina", "Indiana", "New Mexico", "Nebraska"],
     "has_incidents": true,
     "due_at": "2016-08-07T12:00:03 -10:00",
     "via": "voice"
@@ -2181,12 +1771,7 @@
     "submitter_id": 5,
     "assignee_id": 21,
     "organization_id": 122,
-    "tags": [
-      "Connecticut",
-      "Arkansas",
-      "Missouri",
-      "Alabama"
-    ],
+    "tags": ["Connecticut", "Arkansas", "Missouri", "Alabama"],
     "has_incidents": true,
     "due_at": "2016-08-03T05:56:26 -10:00",
     "via": "web"
@@ -2204,12 +1789,7 @@
     "submitter_id": 51,
     "assignee_id": 64,
     "organization_id": 106,
-    "tags": [
-      "Virginia",
-      "Virgin Islands",
-      "Maine",
-      "West Virginia"
-    ],
+    "tags": ["Virginia", "Virgin Islands", "Maine", "West Virginia"],
     "has_incidents": false,
     "due_at": "2016-07-30T09:19:15 -10:00",
     "via": "voice"
@@ -2227,12 +1807,7 @@
     "submitter_id": 28,
     "assignee_id": 39,
     "organization_id": 103,
-    "tags": [
-      "Michigan",
-      "Florida",
-      "Georgia",
-      "Tennessee"
-    ],
+    "tags": ["Michigan", "Florida", "Georgia", "Tennessee"],
     "has_incidents": false,
     "due_at": "2016-08-17T11:16:15 -10:00",
     "via": "voice"
@@ -2250,12 +1825,7 @@
     "submitter_id": 17,
     "assignee_id": 12,
     "organization_id": 124,
-    "tags": [
-      "Mississippi",
-      "Marshall Islands",
-      "Şouth Dakota",
-      "Montana"
-    ],
+    "tags": ["Mississippi", "Marshall Islands", "Şouth Dakota", "Montana"],
     "has_incidents": false,
     "due_at": "2016-08-06T06:16:27 -10:00",
     "via": "web"
@@ -2296,12 +1866,7 @@
     "submitter_id": 66,
     "assignee_id": 5,
     "organization_id": 107,
-    "tags": [
-      "Rhode Island",
-      "Kansas",
-      "Guam",
-      "Colorado"
-    ],
+    "tags": ["Rhode Island", "Kansas", "Guam", "Colorado"],
     "has_incidents": true,
     "due_at": "2016-08-13T08:20:15 -10:00",
     "via": "web"
@@ -2319,12 +1884,7 @@
     "submitter_id": 59,
     "assignee_id": 71,
     "organization_id": 124,
-    "tags": [
-      "Washington",
-      "Wyoming",
-      "Ohio",
-      "Pennsylvania"
-    ],
+    "tags": ["Washington", "Wyoming", "Ohio", "Pennsylvania"],
     "has_incidents": true,
     "due_at": "2016-08-22T08:21:08 -10:00",
     "via": "chat"
@@ -2365,12 +1925,7 @@
     "submitter_id": 38,
     "assignee_id": 73,
     "organization_id": 108,
-    "tags": [
-      "Oklahoma",
-      "Louisiana",
-      "Massachusetts",
-      "New York"
-    ],
+    "tags": ["Oklahoma", "Louisiana", "Massachusetts", "New York"],
     "has_incidents": true,
     "due_at": "2016-08-23T02:11:24 -10:00",
     "via": "chat"
@@ -2388,12 +1943,7 @@
     "submitter_id": 3,
     "assignee_id": 14,
     "organization_id": 124,
-    "tags": [
-      "Minnesota",
-      "New Jersey",
-      "Texas",
-      "Nevada"
-    ],
+    "tags": ["Minnesota", "New Jersey", "Texas", "Nevada"],
     "has_incidents": false,
     "due_at": "2016-08-04T06:56:18 -10:00",
     "via": "voice"
@@ -2411,12 +1961,7 @@
     "submitter_id": 68,
     "assignee_id": 47,
     "organization_id": 108,
-    "tags": [
-      "Oregon",
-      "Arizona",
-      "Delaware",
-      "New Hampshire"
-    ],
+    "tags": ["Oregon", "Arizona", "Delaware", "New Hampshire"],
     "has_incidents": true,
     "due_at": "2016-08-06T03:44:27 -10:00",
     "via": "chat"
@@ -2434,12 +1979,7 @@
     "submitter_id": 40,
     "assignee_id": 23,
     "organization_id": 122,
-    "tags": [
-      "Utah",
-      "Hawaii",
-      "Alaska",
-      "Maryland"
-    ],
+    "tags": ["Utah", "Hawaii", "Alaska", "Maryland"],
     "has_incidents": true,
     "due_at": "2016-08-22T02:29:10 -10:00",
     "via": "voice"
@@ -2457,12 +1997,7 @@
     "submitter_id": 27,
     "assignee_id": 17,
     "organization_id": 120,
-    "tags": [
-      "Iowa",
-      "North Dakota",
-      "California",
-      "Palau"
-    ],
+    "tags": ["Iowa", "North Dakota", "California", "Palau"],
     "has_incidents": false,
     "due_at": "2016-08-15T10:48:59 -10:00",
     "via": "chat"
@@ -2480,12 +2015,7 @@
     "submitter_id": 8,
     "assignee_id": 72,
     "organization_id": 118,
-    "tags": [
-      "Kentucky",
-      "North Carolina",
-      "South Carolina",
-      "Indiana"
-    ],
+    "tags": ["Kentucky", "North Carolina", "South Carolina", "Indiana"],
     "has_incidents": true,
     "due_at": "2016-08-05T09:42:07 -10:00",
     "via": "voice"
@@ -2503,12 +2033,7 @@
     "submitter_id": 69,
     "assignee_id": 36,
     "organization_id": 109,
-    "tags": [
-      "New Mexico",
-      "Nebraska",
-      "Connecticut",
-      "Arkansas"
-    ],
+    "tags": ["New Mexico", "Nebraska", "Connecticut", "Arkansas"],
     "has_incidents": true,
     "due_at": "2016-08-09T01:54:41 -10:00",
     "via": "voice"
@@ -2526,12 +2051,7 @@
     "submitter_id": 72,
     "assignee_id": 54,
     "organization_id": 116,
-    "tags": [
-      "Missouri",
-      "Alabama",
-      "Virginia",
-      "Virgin Islands"
-    ],
+    "tags": ["Missouri", "Alabama", "Virginia", "Virgin Islands"],
     "has_incidents": false,
     "due_at": "2016-07-31T04:32:55 -10:00",
     "via": "web"
@@ -2549,12 +2069,7 @@
     "submitter_id": 65,
     "assignee_id": 10,
     "organization_id": 105,
-    "tags": [
-      "Maine",
-      "West Virginia",
-      "Michigan",
-      "Florida"
-    ],
+    "tags": ["Maine", "West Virginia", "Michigan", "Florida"],
     "has_incidents": true,
     "due_at": "2016-08-08T04:32:50 -10:00",
     "via": "web"
@@ -2572,12 +2087,7 @@
     "submitter_id": 12,
     "assignee_id": 55,
     "organization_id": 117,
-    "tags": [
-      "Georgia",
-      "Tennessee",
-      "Mississippi",
-      "Marshall Islands"
-    ],
+    "tags": ["Georgia", "Tennessee", "Mississippi", "Marshall Islands"],
     "has_incidents": false,
     "due_at": "2016-08-18T11:38:49 -10:00",
     "via": "chat"
@@ -2595,12 +2105,7 @@
     "submitter_id": 34,
     "assignee_id": 19,
     "organization_id": 105,
-    "tags": [
-      "South Dakota",
-      "Montana",
-      "District Of Columbia",
-      "Wisconsin"
-    ],
+    "tags": ["South Dakota", "Montana", "District Of Columbia", "Wisconsin"],
     "has_incidents": true,
     "due_at": "2016-08-01T08:10:54 -10:00",
     "via": "web"
@@ -2641,12 +2146,7 @@
     "submitter_id": 41,
     "assignee_id": 45,
     "organization_id": 123,
-    "tags": [
-      "Guam",
-      "Colorado",
-      "Washington",
-      "Wyoming"
-    ],
+    "tags": ["Guam", "Colorado", "Washington", "Wyoming"],
     "has_incidents": true,
     "due_at": "2016-07-30T11:02:33 -10:00",
     "via": "chat"
@@ -2687,12 +2187,7 @@
     "submitter_id": 27,
     "assignee_id": 2,
     "organization_id": 102,
-    "tags": [
-      "Puerto Rico",
-      "Idaho",
-      "Oklahoma",
-      "Louisiana"
-    ],
+    "tags": ["Puerto Rico", "Idaho", "Oklahoma", "Louisiana"],
     "has_incidents": false,
     "due_at": "2016-08-11T06:46:49 -10:00",
     "via": "voice"
@@ -2710,12 +2205,7 @@
     "submitter_id": 56,
     "assignee_id": 40,
     "organization_id": 113,
-    "tags": [
-      "Massachusetts",
-      "New York",
-      "Minnesota",
-      "New Jersey"
-    ],
+    "tags": ["Massachusetts", "New York", "Minnesota", "New Jersey"],
     "has_incidents": false,
     "due_at": "2016-08-23T02:39:42 -10:00",
     "via": "voice"
@@ -2733,12 +2223,7 @@
     "submitter_id": 64,
     "assignee_id": 26,
     "organization_id": 122,
-    "tags": [
-      "Texas",
-      "Nevada",
-      "Oregon",
-      "Arizona"
-    ],
+    "tags": ["Texas", "Nevada", "Oregon", "Arizona"],
     "has_incidents": true,
     "due_at": "2016-08-11T01:24:40 -10:00",
     "via": "web"
@@ -2756,12 +2241,7 @@
     "submitter_id": 75,
     "assignee_id": 37,
     "organization_id": 108,
-    "tags": [
-      "Delaware",
-      "New Hampshire",
-      "Utah",
-      "Hawaii"
-    ],
+    "tags": ["Delaware", "New Hampshire", "Utah", "Hawaii"],
     "has_incidents": false,
     "due_at": "2016-08-22T07:41:00 -10:00",
     "via": "chat"
@@ -2779,12 +2259,7 @@
     "submitter_id": 58,
     "assignee_id": 8,
     "organization_id": 122,
-    "tags": [
-      "Alaska",
-      "Maryland",
-      "Iowa",
-      "North Dakota"
-    ],
+    "tags": ["Alaska", "Maryland", "Iowa", "North Dakota"],
     "has_incidents": false,
     "due_at": "2016-08-09T11:07:11 -10:00",
     "via": "voice"
@@ -2802,12 +2277,7 @@
     "submitter_id": 8,
     "assignee_id": 32,
     "organization_id": 123,
-    "tags": [
-      "California",
-      "Palau",
-      "Kentucky",
-      "North Carolina"
-    ],
+    "tags": ["California", "Palau", "Kentucky", "North Carolina"],
     "has_incidents": false,
     "due_at": "2016-08-09T10:11:11 -10:00",
     "via": "voice"
@@ -2825,12 +2295,7 @@
     "submitter_id": 30,
     "assignee_id": 5,
     "organization_id": 116,
-    "tags": [
-      "South Carolina",
-      "Indiana",
-      "New Mexico",
-      "Nebraska"
-    ],
+    "tags": ["South Carolina", "Indiana", "New Mexico", "Nebraska"],
     "has_incidents": false,
     "due_at": "2016-08-07T09:56:12 -10:00",
     "via": "voice"
@@ -2848,12 +2313,7 @@
     "submitter_id": 45,
     "assignee_id": 63,
     "organization_id": 125,
-    "tags": [
-      "Connecticut",
-      "Arkansas",
-      "Missouri",
-      "Alabama"
-    ],
+    "tags": ["Connecticut", "Arkansas", "Missouri", "Alabama"],
     "has_incidents": false,
     "due_at": "2016-08-21T05:15:11 -10:00",
     "via": "voice"
@@ -2871,12 +2331,7 @@
     "submitter_id": 3,
     "assignee_id": 43,
     "organization_id": 122,
-    "tags": [
-      "Virginia",
-      "Virgin Islands",
-      "Maine",
-      "West Virginia"
-    ],
+    "tags": ["Virginia", "Virgin Islands", "Maine", "West Virginia"],
     "has_incidents": false,
     "due_at": "2016-08-04T07:53:50 -10:00",
     "via": "web"
@@ -2894,12 +2349,7 @@
     "submitter_id": 13,
     "assignee_id": 52,
     "organization_id": 123,
-    "tags": [
-      "Michigan",
-      "Florida",
-      "Georgia",
-      "Tennessee"
-    ],
+    "tags": ["Michigan", "Florida", "Georgia", "Tennessee"],
     "has_incidents": false,
     "due_at": "2016-08-04T03:49:58 -10:00",
     "via": "voice"
@@ -2917,12 +2367,7 @@
     "submitter_id": 27,
     "assignee_id": 74,
     "organization_id": 104,
-    "tags": [
-      "Mississippi",
-      "Marshall Islands",
-      "South Dakota",
-      "Montana"
-    ],
+    "tags": ["Mississippi", "Marshall Islands", "South Dakota", "Montana"],
     "has_incidents": true,
     "due_at": "2016-08-12T08:50:35 -10:00",
     "via": "web"
@@ -2963,12 +2408,7 @@
     "submitter_id": 27,
     "assignee_id": 39,
     "organization_id": 119,
-    "tags": [
-      "Rhodé Island",
-      "Kansas",
-      "Guam",
-      "Colorado"
-    ],
+    "tags": ["Rhodé Island", "Kansas", "Guam", "Colorado"],
     "has_incidents": false,
     "due_at": "2016-08-05T12:38:00 -10:00",
     "via": "chat"
@@ -2986,12 +2426,7 @@
     "submitter_id": 54,
     "assignee_id": 24,
     "organization_id": 124,
-    "tags": [
-      "Washington",
-      "Wyoming",
-      "Ohio",
-      "Pennsylvania"
-    ],
+    "tags": ["Washington", "Wyoming", "Ohio", "Pennsylvania"],
     "has_incidents": true,
     "due_at": "2016-08-14T08:34:02 -10:00",
     "via": "chat"
@@ -3032,12 +2467,7 @@
     "submitter_id": 41,
     "assignee_id": 34,
     "organization_id": 104,
-    "tags": [
-      "Oklahoma",
-      "Louisiana",
-      "Massachusetts",
-      "New York"
-    ],
+    "tags": ["Oklahoma", "Louisiana", "Massachusetts", "New York"],
     "has_incidents": true,
     "due_at": "2016-08-18T10:18:16 -10:00",
     "via": "chat"
@@ -3055,12 +2485,7 @@
     "submitter_id": 39,
     "assignee_id": 59,
     "organization_id": 115,
-    "tags": [
-      "Minnesota",
-      "New Jersey",
-      "Texas",
-      "Nevada"
-    ],
+    "tags": ["Minnesota", "New Jersey", "Texas", "Nevada"],
     "has_incidents": true,
     "due_at": "2016-08-02T01:04:04 -10:00",
     "via": "chat"
@@ -3078,12 +2503,7 @@
     "submitter_id": 33,
     "assignee_id": 57,
     "organization_id": 107,
-    "tags": [
-      "Oregon",
-      "Arizona",
-      "Delaware",
-      "New Hampshire"
-    ],
+    "tags": ["Oregon", "Arizona", "Delaware", "New Hampshire"],
     "has_incidents": true,
     "due_at": "2016-08-04T10:20:00 -10:00",
     "via": "chat"
@@ -3101,12 +2521,7 @@
     "submitter_id": 34,
     "assignee_id": 50,
     "organization_id": 105,
-    "tags": [
-      "Utah",
-      "Hawaii",
-      "Alaska",
-      "Maryland"
-    ],
+    "tags": ["Utah", "Hawaii", "Alaska", "Maryland"],
     "has_incidents": true,
     "due_at": "2016-08-11T09:24:15 -10:00",
     "via": "web"
@@ -3124,12 +2539,7 @@
     "submitter_id": 51,
     "assignee_id": 33,
     "organization_id": 119,
-    "tags": [
-      "Iowa",
-      "North Dakota",
-      "California",
-      "Palau"
-    ],
+    "tags": ["Iowa", "North Dakota", "California", "Palau"],
     "has_incidents": false,
     "due_at": "2016-08-15T01:48:37 -10:00",
     "via": "voice"
@@ -3147,12 +2557,7 @@
     "submitter_id": 57,
     "assignee_id": 34,
     "organization_id": 124,
-    "tags": [
-      "Kentucky",
-      "North Carolina",
-      "South Carolina",
-      "Indiana"
-    ],
+    "tags": ["Kentucky", "North Carolina", "South Carolina", "Indiana"],
     "has_incidents": false,
     "due_at": "2016-08-15T11:52:58 -10:00",
     "via": "voice"
@@ -3170,12 +2575,7 @@
     "submitter_id": 8,
     "assignee_id": 72,
     "organization_id": 122,
-    "tags": [
-      "New Mexico",
-      "Nebraska",
-      "Connecticut",
-      "Arkansas"
-    ],
+    "tags": ["New Mexico", "Nebraska", "Connecticut", "Arkansas"],
     "has_incidents": false,
     "due_at": "2016-08-18T04:37:42 -10:00",
     "via": "chat"
@@ -3193,12 +2593,7 @@
     "submitter_id": 74,
     "assignee_id": 46,
     "organization_id": 119,
-    "tags": [
-      "Missouri",
-      "Alabama",
-      "Virginia",
-      "Virgin Islands"
-    ],
+    "tags": ["Missouri", "Alabama", "Virginia", "Virgin Islands"],
     "has_incidents": false,
     "due_at": "2016-08-01T05:32:02 -10:00",
     "via": "web"
@@ -3216,12 +2611,7 @@
     "submitter_id": 18,
     "assignee_id": 50,
     "organization_id": 105,
-    "tags": [
-      "Maine",
-      "West Virginia",
-      "Michigan",
-      "Florida"
-    ],
+    "tags": ["Maine", "West Virginia", "Michigan", "Florida"],
     "has_incidents": true,
     "due_at": "2016-08-10T11:38:58 -10:00",
     "via": "web"
@@ -3239,12 +2629,7 @@
     "submitter_id": 12,
     "assignee_id": 58,
     "organization_id": 120,
-    "tags": [
-      "Georgia",
-      "Tennessee",
-      "Mississippi",
-      "Marshall Islands"
-    ],
+    "tags": ["Georgia", "Tennessee", "Mississippi", "Marshall Islands"],
     "has_incidents": true,
     "due_at": "2016-08-15T01:47:16 -10:00",
     "via": "web"
@@ -3262,12 +2647,7 @@
     "submitter_id": 67,
     "assignee_id": 50,
     "organization_id": 102,
-    "tags": [
-      "South Dakota",
-      "Montana",
-      "District Of Columbia",
-      "Wisconsin"
-    ],
+    "tags": ["South Dakota", "Montana", "District Of Columbia", "Wisconsin"],
     "has_incidents": false,
     "due_at": "2016-08-18T08:00:29 -10:00",
     "via": "chat"
@@ -3308,12 +2688,7 @@
     "submitter_id": 43,
     "assignee_id": 74,
     "organization_id": 114,
-    "tags": [
-      "Guam",
-      "Colorado",
-      "Washington",
-      "Wyoming"
-    ],
+    "tags": ["Guam", "Colorado", "Washington", "Wyoming"],
     "has_incidents": true,
     "due_at": "2016-08-06T05:55:07 -10:00",
     "via": "voice"
@@ -3354,12 +2729,7 @@
     "submitter_id": 20,
     "assignee_id": 57,
     "organization_id": 122,
-    "tags": [
-      "Puerto Rico",
-      "Idaho",
-      "Oklahoma",
-      "Louisiana"
-    ],
+    "tags": ["Puerto Rico", "Idaho", "Oklahoma", "Louisiana"],
     "has_incidents": true,
     "due_at": "2016-08-15T11:12:26 -10:00",
     "via": "voice"
@@ -3377,12 +2747,7 @@
     "submitter_id": 74,
     "assignee_id": 16,
     "organization_id": 118,
-    "tags": [
-      "Massachusetts",
-      "New York",
-      "Minnesota",
-      "New Jersey"
-    ],
+    "tags": ["Massachusetts", "New York", "Minnesota", "New Jersey"],
     "has_incidents": false,
     "due_at": "2016-08-06T09:42:11 -10:00",
     "via": "voice"
@@ -3400,12 +2765,7 @@
     "submitter_id": 75,
     "assignee_id": 2,
     "organization_id": 108,
-    "tags": [
-      "Texas",
-      "Nevada",
-      "Oregon",
-      "Arizona"
-    ],
+    "tags": ["Texas", "Nevada", "Oregon", "Arizona"],
     "has_incidents": false,
     "due_at": "2016-08-15T07:32:57 -10:00",
     "via": "voice"
@@ -3423,12 +2783,7 @@
     "submitter_id": 36,
     "assignee_id": 67,
     "organization_id": 109,
-    "tags": [
-      "Delaware",
-      "New Hampshire",
-      "Utah",
-      "Hawaii"
-    ],
+    "tags": ["Delaware", "New Hampshire", "Utah", "Hawaii"],
     "has_incidents": true,
     "due_at": "2016-08-08T07:47:20 -10:00",
     "via": "web"
@@ -3446,12 +2801,7 @@
     "submitter_id": 45,
     "assignee_id": 24,
     "organization_id": 110,
-    "tags": [
-      "Alaska",
-      "Maryland",
-      "Iowa",
-      "North Dakota"
-    ],
+    "tags": ["Alaska", "Maryland", "Iowa", "North Dakota"],
     "has_incidents": true,
     "due_at": "2016-08-10T07:48:01 -10:00",
     "via": "voice"
@@ -3469,12 +2819,7 @@
     "submitter_id": 25,
     "assignee_id": 30,
     "organization_id": 121,
-    "tags": [
-      "California",
-      "Palau",
-      "Kentucky",
-      "North Carolina"
-    ],
+    "tags": ["California", "Palau", "Kentucky", "North Carolina"],
     "has_incidents": false,
     "due_at": "2016-08-06T04:15:59 -10:00",
     "via": "chat"
@@ -3492,12 +2837,7 @@
     "submitter_id": 70,
     "assignee_id": 54,
     "organization_id": 104,
-    "tags": [
-      "South Carolina",
-      "Indiana",
-      "New Mexico",
-      "Nebraska"
-    ],
+    "tags": ["South Carolina", "Indiana", "New Mexico", "Nebraska"],
     "has_incidents": false,
     "due_at": "2016-08-01T11:56:25 -10:00",
     "via": "web"
@@ -3515,12 +2855,7 @@
     "submitter_id": 44,
     "assignee_id": 28,
     "organization_id": 117,
-    "tags": [
-      "Connecticut",
-      "Arkansas",
-      "Missouri",
-      "Alabama"
-    ],
+    "tags": ["Connecticut", "Arkansas", "Missouri", "Alabama"],
     "has_incidents": true,
     "due_at": "2016-08-02T12:18:31 -10:00",
     "via": "chat"
@@ -3538,12 +2873,7 @@
     "submitter_id": 3,
     "assignee_id": 8,
     "organization_id": 118,
-    "tags": [
-      "Virginia",
-      "Virgin Islands",
-      "Maine",
-      "West Virginia"
-    ],
+    "tags": ["Virginia", "Virgin Islands", "Maine", "West Virginia"],
     "has_incidents": true,
     "due_at": "2016-08-12T02:41:31 -10:00",
     "via": "voice"
@@ -3561,12 +2891,7 @@
     "submitter_id": 31,
     "assignee_id": 70,
     "organization_id": 123,
-    "tags": [
-      "Michigan",
-      "Florida",
-      "Georgia",
-      "Tennessee"
-    ],
+    "tags": ["Michigan", "Florida", "Georgia", "Tennessee"],
     "has_incidents": true,
     "due_at": "2016-08-21T07:57:25 -10:00",
     "via": "voice"
@@ -3584,12 +2909,7 @@
     "submitter_id": 4,
     "assignee_id": 6,
     "organization_id": 109,
-    "tags": [
-      "Mississippi",
-      "Marshall Islands",
-      "South Dakota",
-      "Montana"
-    ],
+    "tags": ["Mississippi", "Marshall Islands", "South Dakota", "Montana"],
     "has_incidents": true,
     "due_at": "2016-08-04T07:09:55 -10:00",
     "via": "chat"
@@ -3630,12 +2950,7 @@
     "submitter_id": 72,
     "assignee_id": 17,
     "organization_id": 114,
-    "tags": [
-      "Rhode Island",
-      "Kansas",
-      "Guam",
-      "Colorado"
-    ],
+    "tags": ["Rhode Island", "Kansas", "Guam", "Colorado"],
     "has_incidents": false,
     "due_at": "2016-07-30T10:36:36 -10:00",
     "via": "chat"
@@ -3653,12 +2968,7 @@
     "submitter_id": 33,
     "assignee_id": 24,
     "organization_id": 107,
-    "tags": [
-      "Washington",
-      "Wyoming",
-      "Ohio",
-      "Pennsylvania"
-    ],
+    "tags": ["Washington", "Wyoming", "Ohio", "Pennsylvania"],
     "has_incidents": false,
     "due_at": "2016-08-03T08:16:00 -10:00",
     "via": "voice"
@@ -3699,12 +3009,7 @@
     "submitter_id": 51,
     "assignee_id": 19,
     "organization_id": 120,
-    "tags": [
-      "Oklahoma",
-      "Louisiana",
-      "Massachusetts",
-      "New York"
-    ],
+    "tags": ["Oklahoma", "Louisiana", "Massachusetts", "New York"],
     "has_incidents": false,
     "due_at": "2016-07-31T12:47:31 -10:00",
     "via": "web"
@@ -3722,12 +3027,7 @@
     "submitter_id": 43,
     "assignee_id": 61,
     "organization_id": 124,
-    "tags": [
-      "Minnesota",
-      "New Jersey",
-      "Texas",
-      "Nevada"
-    ],
+    "tags": ["Minnesota", "New Jersey", "Texas", "Nevada"],
     "has_incidents": true,
     "due_at": "2016-08-03T11:43:40 -10:00",
     "via": "web"
@@ -3745,12 +3045,7 @@
     "submitter_id": 42,
     "assignee_id": 15,
     "organization_id": 113,
-    "tags": [
-      "Oregon",
-      "Arizona",
-      "Delaware",
-      "New Hampshire"
-    ],
+    "tags": ["Oregon", "Arizona", "Delaware", "New Hampshire"],
     "has_incidents": false,
     "due_at": "2016-08-09T05:54:01 -10:00",
     "via": "chat"
@@ -3768,12 +3063,7 @@
     "submitter_id": 74,
     "assignee_id": 49,
     "organization_id": 116,
-    "tags": [
-      "Utah",
-      "Hawaii",
-      "Alaska",
-      "Maryland"
-    ],
+    "tags": ["Utah", "Hawaii", "Alaska", "Maryland"],
     "has_incidents": false,
     "due_at": "2016-08-14T07:14:25 -10:00",
     "via": "voice"
@@ -3791,12 +3081,7 @@
     "submitter_id": 22,
     "assignee_id": 5,
     "organization_id": 106,
-    "tags": [
-      "Iowa",
-      "North Dakota",
-      "California",
-      "Palau"
-    ],
+    "tags": ["Iowa", "North Dakota", "California", "Palau"],
     "has_incidents": true,
     "due_at": "2016-08-20T07:04:13 -10:00",
     "via": "chat"
@@ -3814,12 +3099,7 @@
     "submitter_id": 74,
     "assignee_id": 3,
     "organization_id": 116,
-    "tags": [
-      "Kentucky",
-      "North Carolina",
-      "South Carolina",
-      "Indiana"
-    ],
+    "tags": ["Kentucky", "North Carolina", "South Carolina", "Indiana"],
     "has_incidents": true,
     "due_at": "2016-08-04T09:28:48 -10:00",
     "via": "chat"
@@ -3837,12 +3117,7 @@
     "submitter_id": 31,
     "assignee_id": 31,
     "organization_id": 109,
-    "tags": [
-      "New Mexico",
-      "Nebraska",
-      "Connecticut",
-      "Arkansas"
-    ],
+    "tags": ["New Mexico", "Nebraska", "Connecticut", "Arkansas"],
     "has_incidents": true,
     "due_at": "2016-08-19T08:44:23 -10:00",
     "via": "chat"
@@ -3860,12 +3135,7 @@
     "submitter_id": 23,
     "assignee_id": 56,
     "organization_id": 118,
-    "tags": [
-      "Missouri",
-      "Alabama",
-      "Virginia",
-      "Virgin Islands"
-    ],
+    "tags": ["Missouri", "Alabama", "Virginia", "Virgin Islands"],
     "has_incidents": true,
     "due_at": "2016-08-18T03:33:30 -10:00",
     "via": "chat"
@@ -3883,12 +3153,7 @@
     "submitter_id": 58,
     "assignee_id": 6,
     "organization_id": 107,
-    "tags": [
-      "Maine",
-      "West Virginia",
-      "Michigan",
-      "Florida"
-    ],
+    "tags": ["Maine", "West Virginia", "Michigan", "Florida"],
     "has_incidents": true,
     "due_at": "2016-08-23T08:10:03 -10:00",
     "via": "chat"
@@ -3906,12 +3171,7 @@
     "submitter_id": 3,
     "assignee_id": 31,
     "organization_id": 118,
-    "tags": [
-      "Georgia",
-      "Tennessee",
-      "Mississippi",
-      "Marshall Islands"
-    ],
+    "tags": ["Georgia", "Tennessee", "Mississippi", "Marshall Islands"],
     "has_incidents": true,
     "due_at": "2016-07-31T02:59:08 -10:00",
     "via": "voice"
@@ -3929,12 +3189,7 @@
     "submitter_id": 35,
     "assignee_id": 59,
     "organization_id": 113,
-    "tags": [
-      "South Dakota",
-      "Montana",
-      "District Of Columbia",
-      "Wisconsin"
-    ],
+    "tags": ["South Dakota", "Montana", "District Of Columbia", "Wisconsin"],
     "has_incidents": false,
     "due_at": "2016-08-06T03:25:46 -10:00",
     "via": "chat"
@@ -3975,12 +3230,7 @@
     "submitter_id": 34,
     "assignee_id": 41,
     "organization_id": 120,
-    "tags": [
-      "Guam",
-      "Colorado",
-      "Washington",
-      "Wyoming"
-    ],
+    "tags": ["Guam", "Colorado", "Washington", "Wyoming"],
     "has_incidents": true,
     "due_at": "2016-08-10T10:10:33 -10:00",
     "via": "voice"
@@ -4021,12 +3271,7 @@
     "submitter_id": 70,
     "assignee_id": 47,
     "organization_id": 109,
-    "tags": [
-      "Puerto Rico",
-      "Idaho",
-      "Oklahoma",
-      "Louisiana"
-    ],
+    "tags": ["Puerto Rico", "Idaho", "Oklahoma", "Louisiana"],
     "has_incidents": false,
     "due_at": "2016-08-06T07:52:50 -10:00",
     "via": "voice"
@@ -4044,12 +3289,7 @@
     "submitter_id": 73,
     "assignee_id": 65,
     "organization_id": 108,
-    "tags": [
-      "Massachusetts",
-      "New York",
-      "Minnesota",
-      "New Jersey"
-    ],
+    "tags": ["Massachusetts", "New York", "Minnesota", "New Jersey"],
     "has_incidents": false,
     "due_at": "2016-08-06T06:40:14 -10:00",
     "via": "voice"
@@ -4067,12 +3307,7 @@
     "submitter_id": 51,
     "assignee_id": 42,
     "organization_id": 102,
-    "tags": [
-      "Texas",
-      "Nevada",
-      "Oregon",
-      "Arizona"
-    ],
+    "tags": ["Texas", "Nevada", "Oregon", "Arizona"],
     "has_incidents": false,
     "due_at": "2016-08-03T05:35:34 -10:00",
     "via": "voice"
@@ -4090,12 +3325,7 @@
     "submitter_id": 29,
     "assignee_id": 70,
     "organization_id": 114,
-    "tags": [
-      "Delaware",
-      "New Hampshire",
-      "Utah",
-      "Hawaii"
-    ],
+    "tags": ["Delaware", "New Hampshire", "Utah", "Hawaii"],
     "has_incidents": false,
     "due_at": "2016-08-23T03:05:26 -10:00",
     "via": "web"
@@ -4113,12 +3343,7 @@
     "submitter_id": 67,
     "assignee_id": 19,
     "organization_id": 102,
-    "tags": [
-      "Alaska",
-      "Maryland",
-      "Iowa",
-      "North Dakota"
-    ],
+    "tags": ["Alaska", "Maryland", "Iowa", "North Dakota"],
     "has_incidents": false,
     "due_at": "2016-08-05T04:08:02 -10:00",
     "via": "voice"
@@ -4136,12 +3361,7 @@
     "submitter_id": 59,
     "assignee_id": 63,
     "organization_id": 125,
-    "tags": [
-      "California",
-      "Palau",
-      "Kentucky",
-      "North Carolina"
-    ],
+    "tags": ["California", "Palau", "Kentucky", "North Carolina"],
     "has_incidents": true,
     "due_at": "2016-08-21T03:47:18 -10:00",
     "via": "web"
@@ -4159,12 +3379,7 @@
     "submitter_id": 26,
     "assignee_id": 22,
     "organization_id": 103,
-    "tags": [
-      "South Carolina",
-      "Indiana",
-      "New Mexico",
-      "Nebraska"
-    ],
+    "tags": ["South Carolina", "Indiana", "New Mexico", "Nebraska"],
     "has_incidents": false,
     "due_at": "2016-08-23T07:11:18 -10:00",
     "via": "web"
@@ -4182,12 +3397,7 @@
     "submitter_id": 17,
     "assignee_id": 47,
     "organization_id": 112,
-    "tags": [
-      "Connecticut",
-      "Arkansas",
-      "Missouri",
-      "Alabama"
-    ],
+    "tags": ["Connecticut", "Arkansas", "Missouri", "Alabama"],
     "has_incidents": false,
     "due_at": "2016-08-21T09:05:53 -10:00",
     "via": "chat"
@@ -4205,12 +3415,7 @@
     "submitter_id": 39,
     "assignee_id": 52,
     "organization_id": 101,
-    "tags": [
-      "Virginia",
-      "Virgin Islands",
-      "Maine",
-      "West Virginia"
-    ],
+    "tags": ["Virginia", "Virgin Islands", "Maine", "West Virginia"],
     "has_incidents": false,
     "due_at": "2016-08-08T07:24:14 -10:00",
     "via": "web"
@@ -4228,12 +3433,7 @@
     "submitter_id": 18,
     "assignee_id": 72,
     "organization_id": 123,
-    "tags": [
-      "Michigan",
-      "Florida",
-      "Georgia",
-      "Tennessee"
-    ],
+    "tags": ["Michigan", "Florida", "Georgia", "Tennessee"],
     "has_incidents": false,
     "due_at": "2016-07-30T06:12:42 -10:00",
     "via": "voice"
@@ -4251,12 +3451,7 @@
     "submitter_id": 67,
     "assignee_id": 74,
     "organization_id": 101,
-    "tags": [
-      "Mississippi",
-      "Marshall Islands",
-      "South Dakota",
-      "Montana"
-    ],
+    "tags": ["Mississippi", "Marshall Islands", "South Dakota", "Montana"],
     "has_incidents": false,
     "due_at": "2016-08-18T10:49:09 -10:00",
     "via": "web"
@@ -4297,12 +3492,7 @@
     "submitter_id": 37,
     "assignee_id": 35,
     "organization_id": 109,
-    "tags": [
-      "Rhode Island",
-      "Kansas",
-      "Guam",
-      "Colorado"
-    ],
+    "tags": ["Rhode Island", "Kansas", "Guam", "Colorado"],
     "has_incidents": false,
     "due_at": "2016-08-08T05:51:11 -10:00",
     "via": "voice"
@@ -4320,12 +3510,7 @@
     "submitter_id": 52,
     "assignee_id": 74,
     "organization_id": 102,
-    "tags": [
-      "Washington",
-      "Wyoming",
-      "Ohio",
-      "Pennsylvania"
-    ],
+    "tags": ["Washington", "Wyoming", "Ohio", "Pennsylvania"],
     "has_incidents": true,
     "due_at": "2016-07-31T06:26:41 -10:00",
     "via": "voice"
@@ -4366,12 +3551,7 @@
     "submitter_id": 38,
     "assignee_id": 46,
     "organization_id": 106,
-    "tags": [
-      "Oklahoma",
-      "Louisiana",
-      "Massachusetts",
-      "New York"
-    ],
+    "tags": ["Oklahoma", "Louisiana", "Massachusetts", "New York"],
     "has_incidents": true,
     "due_at": "2016-08-15T08:34:44 -10:00",
     "via": "web"
@@ -4389,12 +3569,7 @@
     "submitter_id": 13,
     "assignee_id": 555,
     "organization_id": 108,
-    "tags": [
-      "Minnesota",
-      "New Jersey",
-      "Texas",
-      "Nevada"
-    ],
+    "tags": ["Minnesota", "New Jersey", "Texas", "Nevada"],
     "has_incidents": false,
     "due_at": "2016-08-09T08:34:10 -10:00",
     "via": "web"
@@ -4412,12 +3587,7 @@
     "submitter_id": 66,
     "assignee_id": 23,
     "organization_id": 121,
-    "tags": [
-      "Oregon",
-      "Arizona",
-      "Delaware",
-      "New Hampshire"
-    ],
+    "tags": ["Oregon", "Arizona", "Delaware", "New Hampshire"],
     "has_incidents": true,
     "due_at": "2016-08-02T07:15:52 -10:00",
     "via": "voice"
@@ -4435,12 +3605,7 @@
     "submitter_id": 51,
     "assignee_id": 5,
     "organization_id": 118,
-    "tags": [
-      "Utah",
-      "Hawaii",
-      "Alaska",
-      "Maryland"
-    ],
+    "tags": ["Utah", "Hawaii", "Alaska", "Maryland"],
     "has_incidents": false,
     "due_at": "2016-08-14T06:11:52 -10:00",
     "via": "web"
@@ -4458,12 +3623,7 @@
     "submitter_id": 61,
     "assignee_id": 51,
     "organization_id": 124,
-    "tags": [
-      "Iowa",
-      "North Dakota",
-      "California",
-      "Palau"
-    ],
+    "tags": ["Iowa", "North Dakota", "California", "Palau"],
     "has_incidents": true,
     "due_at": "2016-08-10T01:58:13 -10:00",
     "via": "web"
@@ -4481,12 +3641,7 @@
     "submitter_id": 59,
     "assignee_id": 15,
     "organization_id": 117,
-    "tags": [
-      "Kentucky",
-      "North Carolina",
-      "South Carolina",
-      "Indiana"
-    ],
+    "tags": ["Kentucky", "North Carolina", "South Carolina", "Indiana"],
     "has_incidents": true,
     "due_at": "2016-08-14T08:05:46 -10:00",
     "via": "web"
@@ -4504,12 +3659,7 @@
     "submitter_id": 42,
     "assignee_id": 1,
     "organization_id": 122,
-    "tags": [
-      "New Mexico",
-      "Nebraska",
-      "Connecticut",
-      "Arkansas"
-    ],
+    "tags": ["New Mexico", "Nebraska", "Connecticut", "Arkansas"],
     "has_incidents": false,
     "due_at": "2016-08-08T03:25:53 -10:00",
     "via": "voice"
@@ -4527,12 +3677,7 @@
     "submitter_id": 35,
     "assignee_id": 64,
     "organization_id": 118,
-    "tags": [
-      "Missouri",
-      "Alabama",
-      "Virginia",
-      "Virgin Islands"
-    ],
+    "tags": ["Missouri", "Alabama", "Virginia", "Virgin Islands"],
     "has_incidents": true,
     "due_at": "2016-08-06T08:36:17 -10:00",
     "via": "chat"
@@ -4550,12 +3695,7 @@
     "submitter_id": 66,
     "assignee_id": 12,
     "organization_id": 125,
-    "tags": [
-      "Maine",
-      "West Virginia",
-      "Michigan",
-      "Florida"
-    ],
+    "tags": ["Maine", "West Virginia", "Michigan", "Florida"],
     "has_incidents": false,
     "due_at": "2016-08-01T11:48:58 -10:00",
     "via": "voice"
@@ -4573,12 +3713,7 @@
     "submitter_id": 43,
     "assignee_id": 54,
     "organization_id": 103,
-    "tags": [
-      "Georgia",
-      "Tennessee",
-      "Mississippi",
-      "Marshall Islands"
-    ],
+    "tags": ["Georgia", "Tennessee", "Mississippi", "Marshall Islands"],
     "has_incidents": true,
     "due_at": "2016-08-03T09:17:37 -10:00",
     "via": "voice"
