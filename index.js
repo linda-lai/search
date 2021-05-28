@@ -1,28 +1,28 @@
 const { promptUser, printResults } = require("./ui");
 const { search } = require("./search");
-const { loadData } = require("./data");
+const { loadDatasets } = require("./data");
 
-const data = loadData();
+const data = loadDatasets();
 // const query = promptUser(data);
 
+// TODO: Handle non-string data types
 // const query = {
 //   entityName: "tickets",
 //   field: "_id",
 //   value: "50f3fdbd-f8a6-481d-9bf7-572972856628",
 // };
 
-// TODO: Handle non-string data types
-// const query = {
-//   entityName: "organizations",
-//   field: "name",
-//   value: "Qualitern",
-// };
-
 const query = {
-  entityName: "users",
+  entityName: "organizations",
   field: "name",
-  value: "Francisca Rasmussen",
+  value: "Qualitern",
 };
+
+// const query = {
+//   entityName: "users",
+//   field: "name",
+//   value: "Francisca Rasmussen",
+// };
 
 const { entityName, field, value } = query;
 
