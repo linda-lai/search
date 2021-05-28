@@ -20,7 +20,7 @@ class Organization {
     const users = search("users", "organization_id", this.attributes._id, data);
     console.log(tickets, users);
 
-    return { tickets, users };
+    return [tickets, users].flat();
   }
 }
 

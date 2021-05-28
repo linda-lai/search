@@ -34,22 +34,6 @@ const printHeader = (inputs, results) => {
   border();
 };
 
-const printRelatedResults = (entity, data) => {
-  var relatedRecords = entity.getRelatedRecords(data);
-
-  printRecords(relatedRecords.users);
-  printRecords(relatedRecords.organizations);
-  printRecords(relatedRecords.tickets);
-};
-
-const printRecord = (record) => {
-  console.log(`----------- ${record.constructor.name} -----------`);
-  record &&
-    Object.entries(record.attributes).forEach(([key, value]) => {
-      console.log(`${key}:`, value);
-    });
-};
-
 const printResults = (inputs, results, data) => {
   printHeader(inputs, results);
 
@@ -59,8 +43,20 @@ const printResults = (inputs, results, data) => {
   });
 };
 
+const printRelatedResults = (entity, data) => {
+  printRecords(entity.getRelatedRecords(data));
+};
+
 const printRecords = (records) => {
   records && records.forEach((record) => printRecord(record));
+};
+
+const printRecord = (record) => {
+  console.log(`----------- ${record.constructor.name} -----------`);
+  record &&
+    Object.entries(record.attributes).forEach(([key, value]) => {
+      console.log(`${key}:`, value);
+    });
 };
 
 module.exports = { promptUser, printResults };

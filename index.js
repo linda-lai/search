@@ -5,11 +5,11 @@ const { loadData } = require("./data");
 const data = loadData();
 // const query = promptUser(data);
 
-const query = {
-  entityName: "tickets",
-  field: "_id",
-  value: "50f3fdbd-f8a6-481d-9bf7-572972856628",
-};
+// const query = {
+//   entityName: "tickets",
+//   field: "_id",
+//   value: "50f3fdbd-f8a6-481d-9bf7-572972856628",
+// };
 
 // TODO: Handle non-string data types
 // const query = {
@@ -18,11 +18,11 @@ const query = {
 //   value: "Qualitern",
 // };
 
-// const query = {
-//   entityName: "users",
-//   field: "name",
-//   value: "Francisca Rasmussen",
-// };
+const query = {
+  entityName: "users",
+  field: "name",
+  value: "Francisca Rasmussen",
+};
 
 const { entityName, field, value } = query;
 

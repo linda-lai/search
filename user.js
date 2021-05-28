@@ -18,7 +18,7 @@ class User {
     );
     const tickets = search("tickets", "assignee_id", this.attributes._id, data);
 
-    return { organizations, tickets };
+    return [organizations, tickets].flat();
   }
 }
 

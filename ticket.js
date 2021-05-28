@@ -18,7 +18,7 @@ class Ticket {
       this.attributes.organization_id,
       data
     );
-    return { users, organizations };
+    return [users, organizations].flat();
   }
 }
 
