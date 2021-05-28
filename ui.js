@@ -43,16 +43,10 @@ const printRelatedResults = (entityName, entity, data) => {
   }
 
   if (entityName === "users") {
-    const [organization] = search(
-      "organizations",
-      "_id",
-      entity.organization_id,
-      data
-    );
-    printRecord("organization", organization);
+    const relatedRecords = entity.getRelatedRecords(data);
 
-    const tickets = search("tickets", "assignee_id", entity._id, data);
-    printRecords("ticket", tickets);
+    printRecords("organization", relatedRecords.organizations);
+    printRecords("ticket", relatedRecords.tickets);
   }
 
   if (entityName === "organizations") {
