@@ -1,15 +1,15 @@
 const { search } = require("./search");
+const utils = require("./utils");
 
 class Ticket {
   constructor(ticket) {
     this.attributes = ticket;
   }
 
-  match(fieldName, value) {
-    return this.attributes[fieldName] === value;
+  match(queryField, queryValue) {
+    return utils.match(this.attributes[queryField], queryValue);
   }
 
-  // TODO: Talk through making this just return the records rather than printing them
   getRelatedRecords(data) {
     const users = search("users", "_id", this.attributes.assignee_id, data);
     const organizations = search(

@@ -1,12 +1,13 @@
 const { search } = require("./search");
+const utils = require("./utils");
 
 class User {
   constructor(user) {
     this.attributes = user;
   }
 
-  match(fieldName, value) {
-    return this.attributes[fieldName] === value;
+  match(queryField, queryValue) {
+    return utils.match(this.attributes[queryField], queryValue);
   }
 
   getRelatedRecords(data) {

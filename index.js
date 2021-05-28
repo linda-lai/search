@@ -1,6 +1,7 @@
 const { promptUser, printResults } = require("./ui");
 const { search } = require("./search");
 const { loadDatasets } = require("./data");
+const assert = require("assert");
 
 const data = loadDatasets();
 // const query = promptUser(data);
@@ -28,3 +29,5 @@ const { entityName, field, value } = query;
 
 const results = search(entityName, field, value, data);
 printResults(query, results, data);
+
+// TODO: Create unit test assertions for the `search` function. Don't bother testing printResults.
