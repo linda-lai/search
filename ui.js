@@ -35,26 +35,11 @@ const printHeader = (inputs, results) => {
 };
 
 const printRelatedResults = (entityName, entity, data) => {
-  if (entityName === "tickets") {
-    var relatedRecords = entity.getRelatedRecords(data);
+  var relatedRecords = entity.getRelatedRecords(data);
 
-    printRecords("user", relatedRecords.users);
-    printRecords("organization", relatedRecords.organizations);
-  }
-
-  if (entityName === "users") {
-    const relatedRecords = entity.getRelatedRecords(data);
-
-    printRecords("organization", relatedRecords.organizations);
-    printRecords("ticket", relatedRecords.tickets);
-  }
-
-  if (entityName === "organizations") {
-    const relatedRecords = entity.getRelatedRecords(data);
-
-    printRecords("user", relatedRecords.users);
-    printRecords("ticket", relatedRecords.tickets);
-  }
+  printRecords("user", relatedRecords.users);
+  printRecords("organization", relatedRecords.organizations);
+  printRecords("ticket", relatedRecords.tickets);
 };
 
 const printRecord = (type, record) => {
@@ -74,7 +59,8 @@ const printResults = (inputs, results, data) => {
   });
 };
 
-const printRecords = (entityName, records) =>
-  records.forEach((record) => printRecord(entityName, record));
+const printRecords = (entityName, records) => {
+  records && records.forEach((record) => printRecord(entityName, record));
+};
 
 module.exports = { promptUser, printResults };
