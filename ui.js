@@ -19,19 +19,6 @@ const promptUser = (data) => {
   };
 };
 
-const printHeader = (inputs, results) => {
-  const { entityName, field, value } = inputs;
-  const border = () => console.log("=".repeat(100));
-
-  border();
-  console.log(
-    `Searched ${entityName.toUpperCase()} for "${field.toUpperCase()}" field and "${value.toUpperCase()}" value. Results: ${
-      results.length
-    }`
-  );
-  border();
-};
-
 const printResults = (inputs, results, data) => {
   printHeader(inputs, results);
 
@@ -41,8 +28,17 @@ const printResults = (inputs, results, data) => {
   });
 };
 
-const printRelatedResults = (entity, data) => {
-  printRecords(entity.getRelatedRecords(data));
+const printHeader = (inputs, results) => {
+  const { entityName, field, value } = inputs;
+  const border = () => console.log("=".repeat(100));
+
+  border();
+  console.log(
+    `Searched ${entityName.toUpperCase()} for "${field}" field and "${value}" value.Results: ${
+      results.length
+    }`
+  );
+  border();
 };
 
 const printRecords = (records) => {
@@ -55,6 +51,10 @@ const printRecord = (record) => {
     Object.entries(record.attributes).forEach(([key, value]) => {
       console.log(`${key}:`, value);
     });
+};
+
+const printRelatedResults = (entity, data) => {
+  printRecords(entity.getRelatedRecords(data));
 };
 
 module.exports = { promptUser, printResults };
