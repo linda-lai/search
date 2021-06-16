@@ -1,4 +1,8 @@
-node_modules/
-docs/todo.txt
-tickets.sh
 .DS_Store
+.vscode
+node_modules/
+
+docs/todo.txt
+examples/
+
+tickets.sh
