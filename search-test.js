@@ -18,12 +18,13 @@ const runTestSuite = () => {
   };
 
   message(query);
-  describe("search", () => {
+  describe("search organization", () => {
     // printQuery(query);
-    it(`finds results for _id field and 101 value as integer`, () => {
-      expect(actual(query)).toDeepEqual(mockOrganization);
+    it(`finds results for field _id and value of type integer`, () => {
+      expect(actual(query)).toDeepStrictEqual(mockOrganization);
     });
     cleanup(query);
+    console.log(`${"-".repeat(80)}`);
   });
 
   // -----------------------------------
@@ -33,25 +34,31 @@ const runTestSuite = () => {
     value: "101",
   };
   message(query);
-  describe("search", () => {
-    it(`finds results for _id field and 101 value as string`, () => {
-      expect(actual(query)).toDeepEqual(mockOrganization);
+  describe("search organization", () => {
+    it(`finds results for field _id and value of type string`, () => {
+      expect(actual(query)).toDeepStrictEqual(mockOrganization);
+    });
+    it("toBeTypeOf", () => {
+      expect(actual(query)).toBeTypeOf(mockOrganization);
+      // expect(actual(query))[0]._id.toBeTypeOf(mockOrganization[0]._id);
     });
     cleanup(query);
+    console.log(`${"-".repeat(80)}`);
   });
 
   // -----------------------------------
   query = {
     entityName: "organizations",
     field: "name",
-    value: '"Enthaze"',
+    value: '"Enthaze"', // string must be wrapped in single quotes
   };
   message(query);
-  describe("search", () => {
-    it("finds something", () => {
-      expect(actual(query)).toDeepEqual(mockOrganization);
+  describe("search organizations", () => {
+    it(`finds results for field name and value of type string`, () => {
+      expect(actual(query)).toDeepStrictEqual(mockOrganization);
     });
     cleanup(query);
+    console.log(`${"-".repeat(80)}`);
   });
 
   // -----------------------------------
@@ -61,16 +68,20 @@ const runTestSuite = () => {
     value: 118,
   };
   message(query);
-  describe("search", () => {
-    it("finds and does something else", () => {
+  describe("search users", () => {
+    it(`finds results for field organizational_id and value of type integer`, () => {
       expect(actual(query)).toHaveLengthEqualTo(mockUsers);
     });
     cleanup(query);
+    console.log(`${"-".repeat(80)}`);
   });
 
   console.log("END OF TESTS");
 };
 
+// -----------------------------------
+// -----------------------------------
+// -----------------------------------
 const actual = (query) => {
   let { entityName, field, value } = query;
   return search(entityName, field, value, loadDatasets());
@@ -84,10 +95,10 @@ const message = (query) => {
 };
 
 const cleanup = (query) => {
-  console.log(`\n---reset???`);
-  console.log(query);
+  // console.log(`\n---reset???`);
+  // console.log(query);
   query = {};
-  console.log(query);
+  // console.log(query);
 };
 
 runTestSuite();
