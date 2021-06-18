@@ -1,37 +1,33 @@
-const assert = require("assert"); //https://nodejs.org/api/assert.html#assert_assert
+const assert = require("assert");
+const AssertionError = assert.AssertionError;
+
+//https://nodejs.org/api/assert.html#assert_assert
 
 const describe = (message, callback) => {
-  console.log(`${"-".repeat(100)}`);
-  console.log(`${"-".repeat(10)} 💭 describe > ${message}`);
+  console.log(`${"-".repeat(70)}`);
+  console.log(`💭 describe > ${message}`);
   callback();
 };
 
 const it = (message, callback) => {
-  console.log(`${"-".repeat(10)} 🧪 it  > ${message}`);
+  console.log(`${"-".repeat(5)} 🧪 it  > ${message}`);
   callback(); // WTFFFFFFFFFF
 };
 
 const expect = (actual) => {
-  console.log(
-    `${"-".repeat(
-      10
-    )} 🔔 expect > expect(actual).toDeepEqual(expected)\n${"-".repeat(
-      10
-    )} 👇 to match`
-  );
+  console.log(`${"-".repeat(10)} 🔔 expect > actual to match expected`);
 
   return {
     toDeepEqual: (expected) => {
-      assertionError = assert.deepStrictEqual(actual, expected);
-      // console.log(actual);
-      // console.log(expected);
-
-      if (!assertionError) {
-        console.log(`${"-".repeat(10)} ✅ PASS`);
+      try {
+        assert.deepStrictEqual(actual, expected);
+        console.log(`✅ PASS: expect(actual).ToDeepStrictEqual(expected) 👇`);
         console.log(actual);
-      } else {
+      } catch (err) {
+        // console.log(err);
+        console.log(`\n❌ FAIL: ${err.message}`);
+        assert(err instanceof AssertionError);
       }
-      return assertionError;
     },
   };
 };
