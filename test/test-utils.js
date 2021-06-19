@@ -12,13 +12,14 @@ const test = (message, callback) => {
   callback(); // WTFFFFF
 };
 
-const assertion = (message, callback) => {
-  console.log(`💥 expect > ${message}`);
+const assertion = (expectMessage, passMessage, callback) => {
+  console.log(`💥 expect > ${expectMessage}`);
+
   try {
     callback();
-    console.log(`\n💡 RESULT: PASSED ✅\n`);
+    console.log(`🟢 ${passMessage}\n✅ RESULT: PASSED\n`);
   } catch (err) {
-    console.log(`\n💡 RESULT: FAILED ❌\n🔴 ${err.message}`);
+    console.log(`🔴 ${err.message}\n❌ RESULT: FAILED\n`);
     assert(err instanceof AssertionError);
   }
 };
@@ -26,21 +27,29 @@ const assertion = (message, callback) => {
 const expect = (actual) => {
   return {
     toDeepStrictEqual: (expected) => {
-      assertion("Expected values are strictly equal", () =>
-        assert.deepStrictEqual(actual, expected)
+      assertion(
+        "Expected is deep strict equal",
+        "Actual deep strict equal to expected",
+        () => assert.deepStrictEqual(actual, expected)
       );
     },
 
     toBeType: (expectedType) => {
-      assertion(`Expected type: ${expectedType}`, () =>
-        assert.strictEqual(typeof actual, expectedType)
+      assertion(
+        `Expected type: ${expectedType}`,
+        `Actual: ${typeof actual}, expected: ${expectedType}`,
+        () => assert.strictEqual(typeof actual, expectedType)
       );
     },
 
     toHaveLengthEqualTo: (expectedLength) => {
-      assertion("Expected totals are strictly equal", () => {
-        assert.strictEqual(actual.length, expectedLength);
-      });
+      assertion(
+        "Expected totals are strictly equal",
+        `Actual: ${actual.length}, expected: ${expectedLength}`,
+        () => {
+          assert.strictEqual(actual.length, expectedLength);
+        }
+      );
     },
   };
 };

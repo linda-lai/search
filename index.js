@@ -10,9 +10,9 @@ const data = loadDatasets();
 //   value: '"50f3fdbd-f8a6-481d-9bf7-572972856628"',
 // };
 const query = {
-  entityName: "users",
+  entityName: "tickets",
   field: "organization_id",
-  value: "118",
+  value: 112,
 };
 const { entityName, field, value } = query;
 const results = search(entityName, field, value, data);
