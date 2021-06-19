@@ -11,53 +11,35 @@ const it = (message, callback) => {
   callback(); // WTFFFFFFFFFF
 };
 
+const assertion = (message, callback) => {
+  console.log(`🔔 expect > ${message}`);
+  try {
+    callback();
+    console.log(`✅ RESULT: PASSED\n`);
+  } catch (err) {
+    console.log(`\n❌ RESULT: FAILED\n🔴 ${err.message}`);
+    assert(err instanceof AssertionError);
+  }
+};
+
 const expect = (actual) => {
   return {
     toDeepStrictEqual: (expected) => {
-      try {
-        assert.deepStrictEqual(actual, expected);
-        console.log(`🔔 expect > expect(actual).ToDeepStrictEqual(expected)`);
-        console.log(
-          `✅ RESULT: PASSED\n🟢 Expected values are strictly equal\n`
-        );
-        // console.log(actual);
-      } catch (err) {
-        // console.log(err);
-        console.log(`\n❌ RESULT: FAILED\n🔴 ${err.message}`);
-        assert(err instanceof AssertionError);
-      }
+      assertion("Expected values are strictly equal", () =>
+        assert.deepStrictEqual(actual, expected)
+      );
     },
 
     toBeTypeOf: (expected) => {
-      try {
-        assert.strictEqual(typeof actual, typeof expected);
-        console.log(
-          `🔔 expect > expect(actual).toBeTypeOf(${typeof expected})`
-        );
-        console.log(
-          `✅ RESULT: PASSED\n🟢 Expected type of ${typeof actual}\n`
-        );
-      } catch (err) {
-        // console.log(err);
-        console.log(`\n❌ RESULT: FAILED\n🔴 ${err.message}`);
-        assert(err instanceof AssertionError);
-      }
+      assertion(`Expected type of ${typeof actual}\n`, () =>
+        assert.strictEqual(typeof actual, typeof expected)
+      );
     },
 
     toHaveLengthEqualTo: (expected) => {
-      try {
+      assertion("Expected number of results are strictly equal\n", () => {
         assert.strictEqual(actual.length, expected.length);
-        console.log(
-          `🔔 expect > expect(actual).toHaveLengthEqualTo(${expected.length})`
-        );
-        console.log(
-          `✅ RESULT: PASSED\n🟢 Expected number of results are strictly equal\n`
-        );
-      } catch (err) {
-        // console.log(err);
-        console.log(`\n❌ RESULT: FAILED\n🔴 ${err.message}`);
-        assert(err instanceof AssertionError);
-      }
+      });
     },
   };
 };
