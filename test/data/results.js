@@ -54,7 +54,7 @@ let mockUsers = [
     email: "lucilemendez@flotonic.com",
     phone: "8774-883-991",
     signature: "Don't Worry Be Happy!",
-    organization_id: 119,
+    organization_id: 118,
     tags: ["Rockingham", "Waikele", "Masthope", "Oceola"],
     suspended: false,
     role: "agent",

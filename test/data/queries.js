@@ -1,4 +1,5 @@
 // MOCK QUERIES
+
 // (strings 🧵)
 // const query = {
 //   entityName: "organizations",
@@ -38,16 +39,4 @@
 //   entityName: "organizations",
 //   field: "shared_tickets",
 //   value: true,
-// };
-
-// let query1 = {
-//   entityName: "organizations",
-//   field: "name",
-//   value: '"Qualitern"',
-// };
-
-// let query = {
-//   entityName: "organizations",
-//   field: "_id",
-//   value: 106,
 // };

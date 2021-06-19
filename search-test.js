@@ -81,10 +81,42 @@ const runSearchTests = () => {
     const actual = results(query);
 
     test(message(query), () => {
+      expect(actual).toDeepStrictEqual(mockUsers);
+    });
+    test("finds 2 matching records", () => {
       expect(actual).toHaveLengthEqualTo(mockUsers.length);
     });
-    test("finds 1 matching record", () => {
-      expect(actual).toHaveLengthEqualTo(mockUsers.length);
+  });
+
+  query = cleanup();
+
+  describe("search users entity with integer value", () => {
+    query = {
+      entityName: "users",
+      field: "shared",
+      value: "false",
+    };
+
+    const actual = results(query);
+
+    test(message(query), () => {
+      expect(actual).toHaveLengthEqualTo(47);
+    });
+  });
+
+  query = cleanup();
+
+  describe("search tickets entity with integer value", () => {
+    query = {
+      entityName: "tickets",
+      field: "organization_id",
+      value: 112,
+    };
+
+    const actual = results(query);
+
+    test(message(query), () => {
+      expect(actual).toHaveLengthEqualTo(5);
     });
   });
 
