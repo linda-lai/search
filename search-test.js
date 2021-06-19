@@ -1,104 +1,104 @@
 const { search } = require("./search");
 const { loadDatasets } = require("./data");
-const { describe, it, expect } = require("./test/test-utils");
+const { describe, test, expect } = require("./test/test-utils");
 
 const { mockOrganization, mockUsers } = require("./test/data/results");
 
-const runTestSuite = () => {
-  console.log(`=`.repeat(80));
+const runSearchTests = () => {
+  console.log(`${"=".repeat(90)}\n${"=".repeat(90)}\n`);
   console.log(`RUNNING TESTS FOR: ${__filename}`);
+  console.log(`\n${"=".repeat(90)}\n${"=".repeat(90)}`);
 
   let query;
 
-  // -----------------------------------
-  query = {
-    entityName: "organizations",
-    field: "_id",
-    value: 101,
-  };
+  describe("search organizations entity with integer value", () => {
+    query = {
+      entityName: "organizations",
+      field: "_id",
+      value: 101,
+    };
 
-  message(query);
-  describe("search organization", () => {
-    // printQuery(query);
-    it(`finds results for field _id and value of type integer`, () => {
-      expect(actual(query)).toDeepStrictEqual(mockOrganization);
+    const actual = results(query);
+
+    test(message(query), () => {
+      expect(actual).toDeepStrictEqual(mockOrganization);
     });
-    cleanup(query);
-    console.log(`${"-".repeat(80)}`);
+    test("finds 1 matching record", () => {
+      expect(actual).toHaveLengthEqualTo(mockOrganization.length);
+    });
   });
 
-  // -----------------------------------
-  query = {
-    entityName: "organizations",
-    field: "_id",
-    value: "101",
-  };
-  message(query);
-  describe("search organization", () => {
-    it(`finds results for field _id and value of type string`, () => {
-      expect(actual(query)).toDeepStrictEqual(mockOrganization);
+  query = cleanup();
+
+  describe("search organizations entity with string value", () => {
+    query = {
+      entityName: "organizations",
+      field: "_id",
+      value: "101",
+    };
+
+    const actual = results(query);
+
+    test(message(query), () => {
+      expect(actual).toDeepStrictEqual(mockOrganization);
     });
-    it("toBeTypeOf", () => {
-      expect(actual(query)).toBeTypeOf(mockOrganization);
-      // expect(actual(query))[0]._id.toBeTypeOf(mockOrganization[0]._id);
+    test("finds 1 matching record", () => {
+      expect(actual).toHaveLengthEqualTo(mockOrganization.length);
     });
-    cleanup(query);
-    console.log(`${"-".repeat(80)}`);
+    test("returns an object", () => {
+      expect(actual).toBeType(typeof mockOrganization);
+    });
   });
 
-  // -----------------------------------
-  query = {
-    entityName: "organizations",
-    field: "name",
-    value: '"Enthaze"', // string must be wrapped in single quotes
-  };
-  message(query);
-  describe("search organizations", () => {
-    it(`finds results for field name and value of type string`, () => {
-      expect(actual(query)).toDeepStrictEqual(mockOrganization);
+  query = cleanup();
+
+  describe("search organizations entity with string value", () => {
+    query = {
+      entityName: "organizations",
+      field: "name",
+      value: '"Enthaze"', // string must be wrapped in single quotes
+    };
+
+    const actual = results(query);
+
+    test(message(query), () => {
+      expect(actual).toDeepStrictEqual(mockOrganization);
     });
-    cleanup(query);
-    console.log(`${"-".repeat(80)}`);
+    test("finds 1 matching record", () => {
+      expect(actual).toHaveLengthEqualTo(mockOrganization.length);
+    });
   });
 
-  // -----------------------------------
-  query = {
-    entityName: "users",
-    field: "organization_id",
-    value: 118,
-  };
-  message(query);
-  describe("search users", () => {
-    it(`finds results for field organizational_id and value of type integer`, () => {
-      expect(actual(query)).toHaveLengthEqualTo(mockUsers);
+  query = cleanup();
+
+  describe("search users entity with integer value", () => {
+    query = {
+      entityName: "users",
+      field: "organization_id",
+      value: 118,
+    };
+
+    const actual = results(query);
+
+    test(message(query), () => {
+      expect(actual).toHaveLengthEqualTo(mockUsers.length);
     });
-    cleanup(query);
-    console.log(`${"-".repeat(80)}`);
+    test("finds 1 matching record", () => {
+      expect(actual).toHaveLengthEqualTo(mockUsers.length);
+    });
   });
 
-  console.log("END OF TESTS");
+  query = cleanup();
 };
 
-// -----------------------------------
-// -----------------------------------
-// -----------------------------------
-const actual = (query) => {
-  let { entityName, field, value } = query;
-  return search(entityName, field, value, loadDatasets());
-};
+const results = ({ entityName, field, value }) =>
+  search(entityName, field, value, loadDatasets());
 
-const message = (query) => {
-  console.log(
-    `\nSearched 🔍 ENTITY: ${query.entityName} > FIELD: ${query.field} > VALUE:`,
+const message = (query) =>
+  `query for ENTITY: ${query.entityName} > FIELD: ${query.field} > VALUE: ${
     query.value
-  );
-};
+  } (${typeof query.value})`;
 
-const cleanup = (query) => {
-  // console.log(`\n---reset???`);
-  // console.log(query);
-  query = {};
-  // console.log(query);
-};
+const cleanup = () => ({});
 
-runTestSuite();
+module.exports = { runSearchTests };

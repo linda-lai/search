@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "nodemon index.js",
-    "test": "nodemon search-test.js"
+    "test": "nodemon test/tests.js"
   },
   "keywords": [],
   "author": "",

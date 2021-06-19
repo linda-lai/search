@@ -2,22 +2,23 @@ const assert = require("assert");
 const AssertionError = assert.AssertionError;
 
 const describe = (message, callback) => {
-  console.log(`💥 describe > ${message}\n`);
+  console.log(`\n🧪 describe > ${message}\n`);
   callback();
+  console.log(`${"*".repeat(85)}`);
 };
 
-const it = (message, callback) => {
-  console.log(`🧪 it > ${message}`);
-  callback(); // WTFFFFFFFFFF
+const test = (message, callback) => {
+  console.log(`🔬 test > ${message}`);
+  callback(); // WTFFFFF
 };
 
 const assertion = (message, callback) => {
-  console.log(`🔔 expect > ${message}`);
+  console.log(`💥 expect > ${message}`);
   try {
     callback();
-    console.log(`✅ RESULT: PASSED\n`);
+    console.log(`\n💡 RESULT: PASSED ✅\n`);
   } catch (err) {
-    console.log(`\n❌ RESULT: FAILED\n🔴 ${err.message}`);
+    console.log(`\n💡 RESULT: FAILED ❌\n🔴 ${err.message}`);
     assert(err instanceof AssertionError);
   }
 };
@@ -30,18 +31,18 @@ const expect = (actual) => {
       );
     },
 
-    toBeTypeOf: (expected) => {
-      assertion(`Expected type of ${typeof actual}\n`, () =>
-        assert.strictEqual(typeof actual, typeof expected)
+    toBeType: (expectedType) => {
+      assertion(`Expected type: ${expectedType}`, () =>
+        assert.strictEqual(typeof actual, expectedType)
       );
     },
 
-    toHaveLengthEqualTo: (expected) => {
-      assertion("Expected number of results are strictly equal\n", () => {
-        assert.strictEqual(actual.length, expected.length);
+    toHaveLengthEqualTo: (expectedLength) => {
+      assertion("Expected totals are strictly equal", () => {
+        assert.strictEqual(actual.length, expectedLength);
       });
     },
   };
 };
 
-module.exports = { describe, it, expect };
+module.exports = { describe, test, expect };
