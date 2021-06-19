@@ -1,11 +1,9 @@
 const readlineSync = require("readline-sync");
 
 const promptUser = (data) => {
-  const entityName = readlineSync.question(
-    "Which entity would you like to search? "
-  );
-  const field = readlineSync.question("Which field would you like to search? ");
-  const value = readlineSync.question("Which value would you like to search? ");
+  const entityName = readlineSync.question("Which entity are you searching? ");
+  const field = readlineSync.question("Which field do you want to lookup? ");
+  const value = readlineSync.question("What value do you need? ");
 
   if (!data[entityName]) {
     console.log("entity does not exist");
