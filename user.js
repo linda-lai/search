@@ -17,9 +17,20 @@ class User {
       this.attributes.organization_id,
       data
     );
-    const tickets = search("tickets", "assignee_id", this.attributes._id, data);
+    const assigned_tickets = search(
+      "tickets",
+      "assignee_id",
+      this.attributes._id,
+      data
+    );
+    const submitted_tickets = search(
+      "tickets",
+      "submitter_id",
+      this.attributes._id,
+      data
+    );
 
-    return [organizations, tickets].flat();
+    return [organizations, assigned_tickets, submitted_tickets].flat();
   }
 }
 

@@ -1,4 +1,3 @@
-// TODO: Match on any value in an array
 const match = (attributeValue, queryValue) => {
   const parsedQueryValue = JSON.parse(queryValue);
 

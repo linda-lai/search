@@ -146,9 +146,25 @@ const runSearchTests = () => {
     const actual = results(query);
 
     test(message(query), () => {
-      console.log(actual);
       expect(actual).toHaveLengthEqualTo(1);
       expect(actual[0].attributes._id).toDeepStrictEqual(104);
+    });
+  });
+
+  describe("search entity when field exists but value is empty", () => {
+    const query = {
+      entityName: "tickets",
+      field: "subject",
+      value: '""',
+    };
+
+    const actual = results(query);
+
+    test(message(query), () => {
+      expect(actual).toHaveLengthEqualTo(1);
+      expect(actual[0].attributes._id).toDeepStrictEqual(
+        "62a4326f-7114-499f-9adc-a14e99a7ffb4"
+      );
     });
   });
 };
