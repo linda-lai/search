@@ -121,6 +121,23 @@ const runSearchTests = () => {
       expect(actual).toHaveLengthEqualTo(1);
     });
   });
+
+  describe("search tickets entity when subject field is missing", () => {
+    const query = {
+      entityName: "tickets",
+      field: "subject",
+      value: "null",
+    };
+
+    const actual = results(query);
+
+    test(message(query), () => {
+      expect(actual).toHaveLengthEqualTo(1);
+      expect(actual[0].attributes._id).toDeepStrictEqual(
+        "2614576f-98fb-4031-9e13-beca7a6a73ee"
+      );
+    });
+  });
 };
 
 const results = ({ entityName, field, value }) =>
