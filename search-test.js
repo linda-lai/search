@@ -9,10 +9,8 @@ const runSearchTests = () => {
   console.log(`RUNNING TESTS FOR: ${__filename}`);
   console.log(`\n${"=".repeat(90)}\n${"=".repeat(90)}`);
 
-  let query;
-
   describe("search organizations entity with integer value", () => {
-    query = {
+    const query = {
       entityName: "organizations",
       field: "_id",
       value: 101,
@@ -28,10 +26,8 @@ const runSearchTests = () => {
     });
   });
 
-  query = cleanup();
-
   describe("search organizations entity with string value", () => {
-    query = {
+    const query = {
       entityName: "organizations",
       field: "_id",
       value: "101",
@@ -50,10 +46,8 @@ const runSearchTests = () => {
     });
   });
 
-  query = cleanup();
-
   describe("search organizations entity with string value", () => {
-    query = {
+    const query = {
       entityName: "organizations",
       field: "name",
       value: '"Enthaze"', // string must be wrapped in single quotes
@@ -69,10 +63,8 @@ const runSearchTests = () => {
     });
   });
 
-  query = cleanup();
-
   describe("search users entity with integer value", () => {
-    query = {
+    const query = {
       entityName: "users",
       field: "organization_id",
       value: 118,
@@ -88,10 +80,8 @@ const runSearchTests = () => {
     });
   });
 
-  query = cleanup();
-
   describe("search users entity with integer value", () => {
-    query = {
+    const query = {
       entityName: "users",
       field: "shared",
       value: "false",
@@ -104,10 +94,8 @@ const runSearchTests = () => {
     });
   });
 
-  query = cleanup();
-
   describe("search tickets entity with integer value", () => {
-    query = {
+    const query = {
       entityName: "tickets",
       field: "organization_id",
       value: 112,
@@ -119,8 +107,6 @@ const runSearchTests = () => {
       expect(actual).toHaveLengthEqualTo(5);
     });
   });
-
-  query = cleanup();
 };
 
 const results = ({ entityName, field, value }) =>
@@ -130,7 +116,5 @@ const message = (query) =>
   `query for ENTITY: ${query.entityName} > FIELD: ${query.field} > VALUE: ${
     query.value
   } (${typeof query.value})`;
-
-const cleanup = () => ({});
 
 module.exports = { runSearchTests };
