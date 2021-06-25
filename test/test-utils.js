@@ -36,6 +36,8 @@ const expect = (actual) => {
       );
     },
 
+    // TODO: Handle data types explicitly because typeof is weird
+    // e.g. Array.isArray([])
     toBeType: (expectedType) => {
       assertion(
         `Expected type: ${expectedType}`,

@@ -9,24 +9,21 @@ const runSearchTests = () => {
   console.log(`RUNNING TESTS FOR: ${__filename}`);
   console.log(`\n${"=".repeat(90)}\n${"=".repeat(90)}`);
 
-  describe("search organizations entity with integer value", () => {
+  describe("search organizations entity with boolean value", () => {
     const query = {
       entityName: "organizations",
-      field: "_id",
-      value: 101,
+      field: "shared_tickets",
+      value: "false",
     };
 
     const actual = results(query);
 
-    test(message(query), () => {
-      expect(actual).toDeepStrictEqual(mockOrganization);
-    });
     test("finds 1 matching record", () => {
-      expect(actual).toHaveLengthEqualTo(mockOrganization.length);
+      expect(actual).toHaveLengthEqualTo(15);
     });
   });
 
-  describe("search organizations entity with string value", () => {
+  describe("search organizations entity with integer value", () => {
     const query = {
       entityName: "organizations",
       field: "_id",
@@ -63,22 +60,22 @@ const runSearchTests = () => {
     });
   });
 
-  describe("search users entity with integer value", () => {
-    const query = {
-      entityName: "users",
-      field: "organization_id",
-      value: 118,
-    };
+  // describe("search users entity with integer value", () => {
+  //   const query = {
+  //     entityName: "users",
+  //     field: "organization_id",
+  //     value: 118,
+  //   };
 
-    const actual = results(query);
+  //   const actual = results(query);
 
-    test(message(query), () => {
-      expect(actual).toDeepStrictEqual(mockUsers);
-    });
-    test("finds 2 matching records", () => {
-      expect(actual).toHaveLengthEqualTo(mockUsers.length);
-    });
-  });
+  //   test(message(query), () => {
+  //     expect(actual).toDeepStrictEqual(mockUsers);
+  //   });
+  //   test("finds 2 matching records", () => {
+  //     expect(actual).toHaveLengthEqualTo(mockUsers.length);
+  //   });
+  // });
 
   describe("search users entity with integer value", () => {
     const query = {
@@ -94,19 +91,19 @@ const runSearchTests = () => {
     });
   });
 
-  describe("search tickets entity with integer value", () => {
-    const query = {
-      entityName: "tickets",
-      field: "organization_id",
-      value: 112,
-    };
+  // describe("search tickets entity with integer value", () => {
+  //   const query = {
+  //     entityName: "tickets",
+  //     field: "organization_id",
+  //     value: 112,
+  //   };
 
-    const actual = results(query);
+  //   const actual = results(query);
 
-    test(message(query), () => {
-      expect(actual).toHaveLengthEqualTo(5);
-    });
-  });
+  //   test(message(query), () => {
+  //     expect(actual).toHaveLengthEqualTo(5);
+  //   });
+  // });
 
   describe("search tickets entity when related record's ID doesn't exist", () => {
     const query = {
@@ -136,6 +133,22 @@ const runSearchTests = () => {
       expect(actual[0].attributes._id).toDeepStrictEqual(
         "2614576f-98fb-4031-9e13-beca7a6a73ee"
       );
+    });
+  });
+
+  describe("search organizations entity when query value is in array", () => {
+    const query = {
+      entityName: "organizations",
+      field: "tags",
+      value: '"Hendricks"',
+    };
+
+    const actual = results(query);
+
+    test(message(query), () => {
+      console.log(actual);
+      expect(actual).toHaveLengthEqualTo(1);
+      expect(actual[0].attributes._id).toDeepStrictEqual(104);
     });
   });
 };
