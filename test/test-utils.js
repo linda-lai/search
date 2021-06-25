@@ -1,4 +1,5 @@
 const assert = require("assert");
+const { exit } = require("process");
 const AssertionError = assert.AssertionError;
 
 const describe = (message, callback) => {
@@ -21,6 +22,7 @@ const assertion = (expectMessage, passMessage, callback) => {
   } catch (err) {
     console.log(`🔴 ${err.message}\n❌ RESULT: FAILED\n`);
     assert(err instanceof AssertionError);
+    process.exit();
   }
 };
 
