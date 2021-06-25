@@ -6,6 +6,7 @@ class Organization {
     this.attributes = organization;
   }
 
+  // If match is the same why is it on the class?
   match(queryField, queryValue) {
     return utils.match(this.attributes[queryField], queryValue);
   }

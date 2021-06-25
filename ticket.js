@@ -3,6 +3,7 @@ const utils = require("./utils");
 
 class Ticket {
   constructor(ticket) {
+    // If we wanted to handle UUIDs, Dates, URI parsing it would happen here
     this.attributes = ticket;
   }
 

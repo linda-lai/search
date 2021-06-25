@@ -1,10 +1,13 @@
 const readlineSync = require("readline-sync");
 
 const promptUser = (data) => {
+  // Not validating that it's a correct entity or field
   const entityName = readlineSync.question("Which entity are you searching? ");
   const field = readlineSync.question("Which field do you want to lookup? ");
+  // Could maybe be doing the JSON parsing here, and giving nice user friendly errors if there are parsing failures
   const value = readlineSync.question("What value do you need? ");
 
+  // Maybe do this check before asking for the field. And let them retry rather than exiting.
   if (!data[entityName]) {
     console.log("entity does not exist");
     process.exit(1);
