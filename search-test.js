@@ -107,6 +107,20 @@ const runSearchTests = () => {
       expect(actual).toHaveLengthEqualTo(5);
     });
   });
+
+  describe("search tickets entity when related record's ID doesn't exist", () => {
+    const query = {
+      entityName: "tickets",
+      field: "_id",
+      value: '"17951590-6a78-49e8-8e45-1d4326ba49cc"',
+    };
+
+    const actual = results(query);
+
+    test(message(query), () => {
+      expect(actual).toHaveLengthEqualTo(1);
+    });
+  });
 };
 
 const results = ({ entityName, field, value }) =>
