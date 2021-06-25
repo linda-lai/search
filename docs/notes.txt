@@ -432,3 +432,30 @@ class PolarPoint {
 
   distanceFrom()
 }
+
+---------
+
+talked about monkey patching - comparison between JavaScript and Ruby for Array.isArray()
+keep an eye out for Hansol's talk
+
+address outstanding TODOs to handle arrays, missing IDs for related entities, empty values, etc.
+
+reviewed all the code starting from entry point:
+- top-level run() reads like a recipe/plain English to describe the series of steps the app executes
+- use case for polymorphism in getRelatedEntities()
+- positives:
+  - pretty tiny (in terms of lines of code) and pretty simple
+    > some coding challenges create lots of structure upfront for the "real world" > creates a lot of boilerplate
+  - demonstrates knowledge of OOP and JavaScript
+  - adequately performant
+  - good README (once I write it)
+  - code is clean/simple/readable
+- downside:
+  - no indexing (but mention we've tested the speed/performance and wasn't necessary here)
+- ask code reviewers what level they would judge this - ZEN2, ZEN3, ZEN4+
+  - get junior developers to review and ask how understandable it is to them
+- benchmark:
+  - large users file used to test
+  - adequately performant if search takes ~10 seconds or less
+
+---------

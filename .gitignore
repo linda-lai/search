@@ -2,7 +2,5 @@
 .vscode
 node_modules/
 
-docs/todo.txt
 examples/
-
-tickets.sh
+bootstrap.sh

@@ -1,5 +1,4 @@
 const assert = require("assert");
-const { exit } = require("process");
 const AssertionError = assert.AssertionError;
 
 const describe = (message, callback) => {
@@ -10,7 +9,7 @@ const describe = (message, callback) => {
 
 const test = (message, callback) => {
   console.log(`🔬 test > ${message}`);
-  callback(); // WTFFFFF
+  callback();
 };
 
 const assertion = (expectMessage, passMessage, callback) => {
