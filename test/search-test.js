@@ -1,5 +1,5 @@
-const { search } = require("./search");
-const { loadDatasets } = require("./data");
+const { search } = require("../src/search");
+const { loadDatasets } = require("../src/data");
 const { describe, test, expect } = require("./test-utils");
 
 const { mockOrganization, mockUsers } = require("./data/results");
@@ -9,7 +9,7 @@ const runSearchTests = () => {
   console.log(`RUNNING TESTS FOR: ${__filename}`);
   console.log(`\n${"=".repeat(90)}\n${"=".repeat(90)}`);
 
-  describe("search organizations entity with boolean value", () => {
+  describe("search organizations entity for field with boolean value", () => {
     const query = {
       entityName: "organizations",
       field: "shared_tickets",
@@ -18,12 +18,12 @@ const runSearchTests = () => {
 
     const actual = results(query);
 
-    test("finds 1 matching record", () => {
+    test("finds 15 matching records", () => {
       expect(actual).toHaveLengthEqualTo(15);
     });
   });
 
-  describe("search organizations entity with integer value", () => {
+  describe("search organizations entity for field with integer value", () => {
     const query = {
       entityName: "organizations",
       field: "_id",
@@ -43,7 +43,7 @@ const runSearchTests = () => {
     });
   });
 
-  describe("search organizations entity with string value", () => {
+  describe("search organizations entity for field with string value", () => {
     const query = {
       entityName: "organizations",
       field: "name",
@@ -60,7 +60,7 @@ const runSearchTests = () => {
     });
   });
 
-  describe("search users entity with integer value", () => {
+  describe("search users entity for field with boolean value", () => {
     const query = {
       entityName: "users",
       field: "shared",
@@ -74,7 +74,7 @@ const runSearchTests = () => {
     });
   });
 
-  describe("search tickets entity when related record's ID doesn't exist", () => {
+  describe("search tickets entity when related record's assignee_id doesn't exist", () => {
     const query = {
       entityName: "tickets",
       field: "_id",
@@ -85,23 +85,6 @@ const runSearchTests = () => {
 
     test(message(query), () => {
       expect(actual).toHaveLengthEqualTo(1);
-    });
-  });
-
-  describe("search tickets entity when subject field is missing", () => {
-    const query = {
-      entityName: "tickets",
-      field: "subject",
-      value: "null",
-    };
-
-    const actual = results(query);
-
-    test(message(query), () => {
-      expect(actual).toHaveLengthEqualTo(1);
-      expect(actual[0].attributes._id).toDeepStrictEqual(
-        "2614576f-98fb-4031-9e13-beca7a6a73ee"
-      );
     });
   });
 
@@ -120,7 +103,24 @@ const runSearchTests = () => {
     });
   });
 
-  describe("search entity when field exists but value is empty", () => {
+  describe("search tickets entity for description when field is missing or value is null", () => {
+    const query = {
+      entityName: "tickets",
+      field: "description",
+      value: "null",
+    };
+
+    const actual = results(query);
+
+    test(message(query), () => {
+      expect(actual).toHaveLengthEqualTo(2);
+      expect(actual[0].attributes._id).toDeepStrictEqual(
+        "436bf9b0-1147-4c0a-8439-6f79833bff5b"
+      );
+    });
+  });
+
+  describe(`search entity for subject when field exists but value is empty string ""`, () => {
     const query = {
       entityName: "tickets",
       field: "subject",
@@ -130,9 +130,9 @@ const runSearchTests = () => {
     const actual = results(query);
 
     test(message(query), () => {
-      expect(actual).toHaveLengthEqualTo(1);
+      expect(actual).toHaveLengthEqualTo(2);
       expect(actual[0].attributes._id).toDeepStrictEqual(
-        "62a4326f-7114-499f-9adc-a14e99a7ffb4"
+        "2614576f-98fb-4031-9e13-beca7a6a73ee"
       );
     });
   });
@@ -142,8 +142,8 @@ const results = ({ entityName, field, value }) =>
   search(entityName, field, value, loadDatasets());
 
 const message = (query) =>
-  `query for ENTITY: ${query.entityName} > FIELD: ${query.field} > VALUE: ${
-    query.value
-  } (${typeof query.value})`;
+  `query | entity: ${query.entityName} | field: ${
+    query.field
+  } | value: ${JSON.parse(query.value)} (${typeof JSON.parse(query.value)})`;
 
 module.exports = { runSearchTests };
