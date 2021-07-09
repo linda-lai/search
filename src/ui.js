@@ -1,19 +1,45 @@
 const readlineSync = require("readline-sync");
 
-const promptUser = (data) => {
-  // Not validating that it's a correct entity or field
-  const entityName = readlineSync.question("Which entity are you searching? ");
-  const field = readlineSync.question("Which field do you want to lookup? ");
-  // Could maybe be doing the JSON parsing here, and giving nice user friendly errors if there are parsing failures
-  const value = readlineSync.question(
-    `What value do you need? (Enter value as JSON, e.g. "incident", "123", "true") `
+const promptEntityName = () =>
+  readlineSync
+    .question("Q: Which entity are you searching?\nA: ")
+    .toLowerCase();
+
+const promptField = () =>
+  readlineSync.question(`Q: Which field do you want to lookup?\nA: `);
+
+const promptValue = () =>
+  readlineSync.question(
+    `Q: What value do you need? (Enter value as JSON-formatted string, i.e. "incident", "123", "true")\nA: `
   );
 
-  // Maybe do this check before asking for the field. And let them retry rather than exiting.
-  if (!data[entityName]) {
-    console.log("entity does not exist");
-    process.exit(1);
+const promptUser = (data) => {
+  let entityName, field;
+
+  entityName = promptEntityName();
+
+  while (!data[entityName]) {
+    console.log("❌ Entity must be tickets, users or organization\n");
+    entityName = promptEntityName();
   }
+
+  const searchableFields = Object.keys(data[entityName][0].attributes);
+
+  console.log(
+    `\n🔍 Searchable fields in ${entityName} are:\n${searchableFields.join(
+      "\n"
+    )}\n`
+  );
+  field = promptField();
+
+  while (!searchableFields.includes(field)) {
+    console.log(`❌ Field ${field} is not searchable in ${entityName}\n`);
+    field = promptField();
+  }
+
+  // TODO: Could maybe be doing the JSON parsing here, and give nice user
+  // friendly errors if there are parsing failures
+  const value = promptValue();
 
   return {
     entityName,
@@ -37,7 +63,7 @@ const printHeader = (inputs, results) => {
 
   border();
   console.log(
-    `Searched ${entityName.toUpperCase()} for "${field}" field and "${value}" value.Results: ${
+    `Searched ${entityName.toUpperCase()} for field: ${field} and value: ${value}. Results: ${
       results.length
     }`
   );
