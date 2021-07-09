@@ -3,7 +3,11 @@ const match = (attributeValue, queryValue) => {
 
   if (Array.isArray(attributeValue)) {
     return attributeValue.includes(parsedQueryValue);
-  } else if (attributeValue === undefined && parsedQueryValue === null) {
+    // if attribute in JSON record is undefined AND query value is `null` or `""`
+  } else if (
+    (attributeValue === undefined && parsedQueryValue === null) ||
+    (attributeValue === undefined && parsedQueryValue === "")
+  ) {
     return true;
   } else {
     return attributeValue === parsedQueryValue;
