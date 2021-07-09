@@ -1,8 +1,8 @@
 const { search } = require("./search");
 const { loadDatasets } = require("./data");
-const { describe, test, expect } = require("./test/test-utils");
+const { describe, test, expect } = require("./test-utils");
 
-const { mockOrganization, mockUsers } = require("./test/data/results");
+const { mockOrganization, mockUsers } = require("./data/results");
 
 const runSearchTests = () => {
   console.log(`${"=".repeat(90)}\n${"=".repeat(90)}\n`);
@@ -47,7 +47,7 @@ const runSearchTests = () => {
     const query = {
       entityName: "organizations",
       field: "name",
-      value: '"Enthaze"', // string must be wrapped in single quotes
+      value: '"Enthaze"',
     };
 
     const actual = results(query);
@@ -59,23 +59,6 @@ const runSearchTests = () => {
       expect(actual).toHaveLengthEqualTo(mockOrganization.length);
     });
   });
-
-  // describe("search users entity with integer value", () => {
-  //   const query = {
-  //     entityName: "users",
-  //     field: "organization_id",
-  //     value: 118,
-  //   };
-
-  //   const actual = results(query);
-
-  //   test(message(query), () => {
-  //     expect(actual).toDeepStrictEqual(mockUsers);
-  //   });
-  //   test("finds 2 matching records", () => {
-  //     expect(actual).toHaveLengthEqualTo(mockUsers.length);
-  //   });
-  // });
 
   describe("search users entity with integer value", () => {
     const query = {
@@ -90,20 +73,6 @@ const runSearchTests = () => {
       expect(actual).toHaveLengthEqualTo(47);
     });
   });
-
-  // describe("search tickets entity with integer value", () => {
-  //   const query = {
-  //     entityName: "tickets",
-  //     field: "organization_id",
-  //     value: 112,
-  //   };
-
-  //   const actual = results(query);
-
-  //   test(message(query), () => {
-  //     expect(actual).toHaveLengthEqualTo(5);
-  //   });
-  // });
 
   describe("search tickets entity when related record's ID doesn't exist", () => {
     const query = {

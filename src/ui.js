@@ -5,7 +5,9 @@ const promptUser = (data) => {
   const entityName = readlineSync.question("Which entity are you searching? ");
   const field = readlineSync.question("Which field do you want to lookup? ");
   // Could maybe be doing the JSON parsing here, and giving nice user friendly errors if there are parsing failures
-  const value = readlineSync.question("What value do you need? ");
+  const value = readlineSync.question(
+    `What value do you need? (Enter value as JSON, e.g. "incident", "123", "true") `
+  );
 
   // Maybe do this check before asking for the field. And let them retry rather than exiting.
   if (!data[entityName]) {

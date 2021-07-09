@@ -33,7 +33,7 @@ const benchmark = (data, benchmarkLabel) => {
   console.time(benchmarkLabel);
   const results = search(entityName, field, value, data);
   console.timeEnd(benchmarkLabel);
-  console.log(`Matching results: ${results.length}\n`);
+  console.log(`matching results: ${results.length}\n`);
 };
 
 benchmark(defaultData, "benchmarkDefaultData");
