@@ -1,5 +1,5 @@
 # Search
-> [See REQUIREMENTS](./REQUIREMENTS.pdf)
+> [See REQUIREMENTS](./docs/REQUIREMENTS.pdf)
 
 A simple command line search application.
 
@@ -15,7 +15,7 @@ name || organization_id || has_incidents
 
 > Which value would you like to search?
 
-"Nutralab" || 24 || "true" || "null" || "" || "2016-04-07T08:21:44 -10:00"  -->
+"Nutralab" || "24" || "true" || "null" || "" || "2016-04-07T08:21:44 -10:00"  -->
 
 // Assume they are using a computer they just brought back from the store
 // State EVERYTHING they need to install

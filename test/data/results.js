@@ -1,6 +1,6 @@
 // const Ticket = require("../../ticket");
-const User = require("../../user");
-const Organization = require("../../organization");
+const User = require("../../src/user");
+const Organization = require("../../src/organization");
 
 let mockOrganization = [
   new Organization({
