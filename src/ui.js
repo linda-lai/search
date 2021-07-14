@@ -2,15 +2,17 @@ const readlineSync = require("readline-sync");
 
 const promptEntityName = () =>
   readlineSync
-    .question("Q: Which entity are you searching?\nA: ")
+    .question(
+      "Q: Which entity are you querying?\n\n🔎 Queryable collections are:\ntickets\nusers\norganizations\n\nA: "
+    )
     .toLowerCase();
 
 const promptField = () =>
-  readlineSync.question(`Q: Which field do you want to lookup?\nA: `);
+  readlineSync.question(`Q: Which field do you want to search?\nA: `);
 
 const promptValue = () =>
   readlineSync.question(
-    `Q: What value do you need? (Enter value as JSON-formatted string, i.e. "incident", "123", "true")\nA: `
+    `\nQ: What value are you looking up? (Enter as JSON-formatted string, i.e. "en-AU", "123", "true", "null", "")\nA: `
   );
 
 const promptUser = (data) => {
@@ -19,21 +21,23 @@ const promptUser = (data) => {
   entityName = promptEntityName();
 
   while (!data[entityName]) {
-    console.log("❌ Entity must be tickets, users or organization\n");
+    console.log("❌ Entity must be TICKETS, USERS or ORGANIZATION\n");
     entityName = promptEntityName();
   }
 
   const searchableFields = Object.keys(data[entityName][0].attributes);
 
   console.log(
-    `\n🔍 Searchable fields in ${entityName} are:\n${searchableFields.join(
+    `\n🔍 Searchable fields in ${entityName.toUpperCase()} are:\n${searchableFields.join(
       "\n"
     )}\n`
   );
   field = promptField();
 
   while (!searchableFields.includes(field)) {
-    console.log(`❌ Field ${field} is not searchable in ${entityName}\n`);
+    console.log(
+      `❌ Field "${field}" is not searchable in ${entityName.toUpperCase()}\n`
+    );
     field = promptField();
   }
 
