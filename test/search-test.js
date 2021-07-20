@@ -5,9 +5,9 @@ const { describe, test, expect } = require("./test-utils");
 const { mockOrganization, mockUsers } = require("./data/results");
 
 const runSearchTests = () => {
-  console.log(`${"=".repeat(90)}\n${"=".repeat(90)}\n`);
+  console.log(`${"=".repeat(100)}\n${"=".repeat(100)}\n`);
   console.log(`RUNNING TESTS FOR: ${__filename}`);
-  console.log(`\n${"=".repeat(90)}\n${"=".repeat(90)}`);
+  console.log(`\n${"=".repeat(100)}\n${"=".repeat(100)}`);
 
   describe("search organizations entity for field with boolean value", () => {
     const query = {
@@ -39,8 +39,7 @@ const runSearchTests = () => {
       expect(actual).toHaveLengthEqualTo(mockOrganization.length);
     });
     test("returns an object", () => {
-      console.log(typeof mockOrganization);
-      expect(actual).toBeType(typeof mockOrganization);
+      expect(actual[0]).toBeType(typeof mockOrganization);
     });
   });
 
@@ -135,6 +134,7 @@ const runSearchTests = () => {
       expect(actual[0].attributes._id).toDeepStrictEqual(
         "62a4326f-7114-499f-9adc-a14e99a7ffb4"
       );
+      expect(actual).toBeType("array");
     });
   });
 };

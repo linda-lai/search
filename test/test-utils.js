@@ -4,7 +4,7 @@ const AssertionError = assert.AssertionError;
 const describe = (message, callback) => {
   console.log(`\n🧪 describe > ${message}\n`);
   callback();
-  console.log(`${"*".repeat(85)}`);
+  console.log(`${"=".repeat(100)}`);
 };
 
 const test = (message, callback) => {
@@ -25,26 +25,28 @@ const assertion = (expectMessage, passMessage, callback) => {
   }
 };
 
+const validateType = (actual) => {
+  if (Array.isArray(actual)) return "array";
+  if (actual === null) return "null";
+  return typeof actual;
+};
+
 const expect = (actual) => {
   return {
-    toDeepStrictEqual: (expected) => {
+    toDeepStrictEqual: (expectedValue) => {
       assertion(
         "Expected is deep strict equal",
         "Actual deep strict equal to expected",
-        () => assert.deepStrictEqual(actual, expected)
+        () => assert.deepStrictEqual(actual, expectedValue)
       );
     },
-
-    // TODO: Handle data types explicitly because typeof is weird
-    // e.g. Array.isArray([])
     toBeType: (expectedType) => {
       assertion(
         `Expected type: ${expectedType}`,
         `Actual: ${typeof actual}, expected: ${expectedType}`,
-        () => assert.strictEqual(typeof actual, expectedType)
+        () => assert.strictEqual(validateType(actual), expectedType)
       );
     },
-
     toHaveLengthEqualTo: (expectedLength) => {
       assertion(
         "Expected totals are strictly equal",

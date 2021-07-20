@@ -3,8 +3,6 @@ const Ticket = require("./ticket");
 const User = require("./user");
 const Organization = require("./organization");
 
-// TODO: Could do this asynchronously to reduce load time while promptUser runs
-// https://nodejs.org/api/fs.html#fs_filehandle_readfile_options
 const loadDataset = (entityName, constructor) => {
   let data;
   let path = `./data/${entityName}.json`;

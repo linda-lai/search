@@ -7,7 +7,3 @@ const query = promptUser(data);
 const { entityName, field, value } = query;
 const results = search(entityName, field, value, data);
 printResults(query, results, data);
-
-// TODO: Document how we handle (if at all) date values (like timezones)
-// TODO: No indexing.
-// TODO: Test the speed and mention that it wasn't necessary in the readme
