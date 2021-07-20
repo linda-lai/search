@@ -1,4 +1,5 @@
 const readlineSync = require("readline-sync");
+const { logo } = require("./utils");
 
 const promptEntityName = () =>
   readlineSync
@@ -12,7 +13,7 @@ const promptField = () =>
 
 const promptValue = () =>
   readlineSync.question(
-    `\nQ: What value are you looking up? (Enter as JSON-formatted string, i.e. "en-AU", "123", "true", "null", "")\nA: `
+    `\nQ: What value are you looking up? e.g. "en-AU", 123, true, null, ""\n⚠️  Note: Strings must be JSON-formatted (i.e. "admin" not 'admin')\nA: `
   );
 
 const promptUser = (data) => {
@@ -52,41 +53,47 @@ const promptUser = (data) => {
   };
 };
 
+const printSummaryHeader = (inputs, results) => {
+  const { entityName, field, value } = inputs;
+  const border = () => console.log("=".repeat(97));
+
+  border();
+  console.log(
+    `\nSearched ${entityName.toUpperCase()} for field: ${field} and value: ${value}. Results: ${
+      results.length
+    }\n`
+  );
+  border();
+};
+
+const printRecordHeader = () => {
+  console.log(`\n${"=".repeat(40)} MATCHING RECORD ${"=".repeat(40)}`);
+};
+
 const printResults = (inputs, results, data) => {
-  printHeader(inputs, results);
+  printSummaryHeader(inputs, results);
 
   results.forEach((entity) => {
+    printRecordHeader();
     printRecord(entity);
     printRelatedResults(entity, data);
   });
 };
 
-const printHeader = (inputs, results) => {
-  const { entityName, field, value } = inputs;
-  const border = () => console.log("=".repeat(100));
-
-  border();
-  console.log(
-    `Searched ${entityName.toUpperCase()} for field: ${field} and value: ${value}. Results: ${
-      results.length
-    }`
-  );
-  border();
-};
-
-const printRecords = (records) => {
-  records && records.forEach((record) => printRecord(record));
-};
-
 const printRecord = (record) => {
-  console.log("-".repeat(25), record.constructor.name, "-".repeat(25));
+  console.log(`\n${"*".repeat(5)} ${record.constructor.name} ${"*".repeat(5)}`);
   record &&
     Object.entries(record.attributes).forEach(([key, value]) => {
       console.log(`${key}:`, value);
     });
 };
 
+const printRecords = (records) => {
+  records && records.forEach((record) => printRecord(record));
+};
+
 const printRelatedResults = (entity, data) => {
+  console.log(`\n${"-".repeat(40)} RELATED RECORDS ${"-".repeat(40)}`);
   printRecords(entity.getRelatedRecords(data));
 };
 
