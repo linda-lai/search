@@ -17,7 +17,7 @@ const promptValue = () =>
   );
 
 const promptUser = (data) => {
-  let entityName, field;
+  let entityName, field, value, parsedValue;
 
   entityName = promptEntityName();
 
@@ -42,14 +42,22 @@ const promptUser = (data) => {
     field = promptField();
   }
 
-  // TODO: Could maybe be doing the JSON parsing here, and give nice user
-  // friendly errors if there are parsing failures
-  const value = promptValue();
+  do {
+    value = promptValue();
+    try {
+      parsedValue = JSON.parse(value);
+    } catch (e) {
+      parsedValue = e;
+      console.error("❌ Invalid formatting for queried value");
+    }
+  } while (parsedValue instanceof SyntaxError);
+
+  console.log(parsedValue);
 
   return {
     entityName,
     field,
-    value,
+    value: parsedValue,
   };
 };
 
