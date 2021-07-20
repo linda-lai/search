@@ -13,7 +13,7 @@ const runSearchTests = () => {
     const query = {
       entityName: "organizations",
       field: "shared_tickets",
-      value: "false",
+      value: false,
     };
 
     const actual = results(query);
@@ -27,7 +27,7 @@ const runSearchTests = () => {
     const query = {
       entityName: "organizations",
       field: "_id",
-      value: "101",
+      value: 101,
     };
 
     const actual = results(query);
@@ -39,6 +39,7 @@ const runSearchTests = () => {
       expect(actual).toHaveLengthEqualTo(mockOrganization.length);
     });
     test("returns an object", () => {
+      console.log(typeof mockOrganization);
       expect(actual).toBeType(typeof mockOrganization);
     });
   });
@@ -47,7 +48,7 @@ const runSearchTests = () => {
     const query = {
       entityName: "organizations",
       field: "name",
-      value: '"Enthaze"',
+      value: "Enthaze",
     };
 
     const actual = results(query);
@@ -64,7 +65,7 @@ const runSearchTests = () => {
     const query = {
       entityName: "users",
       field: "shared",
-      value: "false",
+      value: false,
     };
 
     const actual = results(query);
@@ -78,7 +79,7 @@ const runSearchTests = () => {
     const query = {
       entityName: "tickets",
       field: "_id",
-      value: '"17951590-6a78-49e8-8e45-1d4326ba49cc"',
+      value: "17951590-6a78-49e8-8e45-1d4326ba49cc",
     };
 
     const actual = results(query);
@@ -92,7 +93,7 @@ const runSearchTests = () => {
     const query = {
       entityName: "organizations",
       field: "tags",
-      value: '"Hendricks"',
+      value: "Hendricks",
     };
 
     const actual = results(query);
@@ -107,7 +108,7 @@ const runSearchTests = () => {
     const query = {
       entityName: "tickets",
       field: "description",
-      value: "null",
+      value: null,
     };
 
     const actual = results(query);
@@ -124,15 +125,15 @@ const runSearchTests = () => {
     const query = {
       entityName: "tickets",
       field: "subject",
-      value: '""',
+      value: "",
     };
 
     const actual = results(query);
 
     test(message(query), () => {
-      expect(actual).toHaveLengthEqualTo(2);
+      expect(actual).toHaveLengthEqualTo(1);
       expect(actual[0].attributes._id).toDeepStrictEqual(
-        "2614576f-98fb-4031-9e13-beca7a6a73ee"
+        "62a4326f-7114-499f-9adc-a14e99a7ffb4"
       );
     });
   });
@@ -142,8 +143,8 @@ const results = ({ entityName, field, value }) =>
   search(entityName, field, value, loadDatasets());
 
 const message = (query) =>
-  `query | entity: ${query.entityName} | field: ${
-    query.field
-  } | value: ${JSON.parse(query.value)} (${typeof JSON.parse(query.value)})`;
+  `query | entity: ${query.entityName} | field: ${query.field} | value: ${
+    query.value
+  } (${typeof query.value})`;
 
 module.exports = { runSearchTests };
