@@ -3,11 +3,8 @@ const match = (attributeValue, queryValue) => {
 
   if (Array.isArray(attributeValue)) {
     return attributeValue.includes(parsedQueryValue);
-    // if attribute in JSON record is undefined AND query value is `null` or `""`
-  } else if (
-    (attributeValue === undefined && parsedQueryValue === null) ||
-    (attributeValue === undefined && parsedQueryValue === "")
-  ) {
+    // If attribute in JSON record is undefined and user queryValue is null
+  } else if (attributeValue === undefined && parsedQueryValue === null) {
     return true;
   } else {
     return attributeValue === parsedQueryValue;
@@ -15,15 +12,15 @@ const match = (attributeValue, queryValue) => {
 };
 
 const logo = `
-                      &&&&&&&&&&&& %&&&&&&&&&/     
-                        &&&&&&&&&%  %&&&&&&&&       
-                          &&&&&&&   %&&&&&&,        
-                                &% %&&&&%          
-                              &&&% %&&&            
-                              &&&&% %/              
-                            &&&&&&%    &&&&.       
-                          &&&&&&&&%  &&&&&&&&     
-                        &&&&&&&&&&% &&&&&&&&&&   
+                                      &&&&&&&&&&&& %&&&&&&&&&/     
+                                        &&&&&&&&&%  %&&&&&&&&       
+                                          &&&&&&&   %&&&&&&,        
+                                                &% %&&&&%          
+                                              &&&% %&&&            
+                                              &&&&% %/              
+                                            &&&&&&%    &&&&.       
+                                          &&&&&&&&%  &&&&&&&&     
+                                        &&&&&&&&&&% &&&&&&&&&&   
 `;
 
 const wordWrap = (text, limit) => {
