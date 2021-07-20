@@ -27,7 +27,7 @@ const benchmark = (data, benchmarkLabel) => {
   const query = {
     entityName: "users",
     field: "signature",
-    value: `"Don't Worry Be Happy!"`,
+    value: "Don't Worry Be Happy!",
   };
   const { entityName, field, value } = query;
   console.time(benchmarkLabel);

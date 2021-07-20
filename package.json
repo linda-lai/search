@@ -12,7 +12,8 @@
   "scripts": {
     "start": "nodemon src/index.js",
     "test": "node test/tests.js",
-    "test:watch": "nodemon test/tests.js"
+    "test:watch": "nodemon test/tests.js",
+    "test:benchmark": "node test/benchmark.js"
   },
   "keywords": [],
   "author": "",
