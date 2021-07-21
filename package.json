@@ -1,7 +1,7 @@
 {
   "name": "search",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple search application for the command line written in Node.js.",
   "main": "index.js",
   "dependencies": {
     "readline-sync": "^1.4.10"

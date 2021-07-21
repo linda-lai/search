@@ -13,7 +13,7 @@ const promptField = () =>
 
 const promptValue = () =>
   readlineSync.question(
-    `\nQ: What value are you looking up? e.g. "en-AU", 123, true, null, ""\n⚠️  Note: Strings must be JSON-formatted (i.e. "admin" not 'admin')\nA: `
+    `\nQ: What value are you looking up? e.g. "en-AU", 123, true, null, ""\n⚠️  Note: Strings must be JSON-formatted (i.e. "admin" not admin or 'admin')\nA: `
   );
 
 const promptUser = (data) => {
@@ -51,8 +51,6 @@ const promptUser = (data) => {
       console.error("❌ Invalid formatting for queried value");
     }
   } while (parsedValue instanceof SyntaxError);
-
-  console.log(parsedValue);
 
   return {
     entityName,

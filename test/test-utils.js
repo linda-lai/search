@@ -14,7 +14,6 @@ const test = (message, callback) => {
 
 const assertion = (expectMessage, passMessage, callback) => {
   console.log(`💥 expect > ${expectMessage}`);
-
   try {
     callback();
     console.log(`🟢 ${passMessage}\n✅ RESULT: PASSED\n`);
