@@ -10,9 +10,9 @@
     "nodemon": "^2.0.7"
   },
   "scripts": {
-    "start": "nodemon src/index.js",
-    "test": "node test/tests.js",
-    "test:watch": "nodemon test/tests.js",
+    "start": "node src/index.js",
+    "test": "node test/runner.js",
+    "test:watch": "nodemon test/runner.js",
     "test:benchmark": "node test/benchmark.js"
   },
   "keywords": [],

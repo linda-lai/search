@@ -1,8 +1,8 @@
 const { search } = require("../src/search");
 const { loadDatasets } = require("../src/data");
-const { describe, test, expect } = require("./test-utils");
+const { describe, test, expect } = require("./utils/helpers");
 
-const { mockOrganization, mockUsers } = require("./data");
+const { mockOrganization, mockUsers } = require("./utils/data");
 
 const runSearchTests = () => {
   console.log(`${"=".repeat(100)}\n${"=".repeat(100)}\n`);

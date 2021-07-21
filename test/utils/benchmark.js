@@ -1,9 +1,9 @@
 const fs = require("fs");
-const Ticket = require("../src/ticket");
-const User = require("../src/user");
-const Organization = require("../src/organization");
+const Ticket = require("../../src/ticket");
+const User = require("../../src/user");
+const Organization = require("../../src/organization");
 
-const { search } = require("../src/search");
+const { search } = require("../../src/search");
 
 const loadDataset = (entityName, constructor) => {
   return JSON.parse(fs.readFileSync(`./data/${entityName}.json`)).map(
