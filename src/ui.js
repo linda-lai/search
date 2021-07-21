@@ -19,6 +19,8 @@ const promptValue = () =>
 const promptUser = (data) => {
   let entityName, field, value, parsedValue;
 
+  printPromptHeader();
+
   entityName = promptEntityName();
 
   while (!data[entityName]) {
@@ -59,25 +61,29 @@ const promptUser = (data) => {
   };
 };
 
-const printSummaryHeader = (inputs, results) => {
-  const { entityName, field, value } = inputs;
-  const border = () => console.log("=".repeat(97));
+const printPromptHeader = () => {
+  const border = () => "=".repeat(97);
+  console.log(`${border()}\n${logo}\n${border()}\n`);
+};
 
-  border();
+const printResultsSummary = (inputs, results) => {
+  const { entityName, field, value } = inputs;
+  const border = () => "=".repeat(97);
+
   console.log(
-    `\nSearched ${entityName.toUpperCase()} for field: ${field} and value: ${value}. Results: ${
+    `${border()}\nSearched ${entityName.toUpperCase()} for field: ${field} and value: ${value}. Results: ${
       results.length
-    }\n`
+    }\n${border()}`
   );
-  border();
 };
 
 const printRecordHeader = () => {
-  console.log(`\n${"=".repeat(40)} MATCHING RECORD ${"=".repeat(40)}`);
+  const border = () => "=".repeat(40);
+  console.log(`\n${border()} MATCHING RECORD ${border()}`);
 };
 
 const printResults = (inputs, results, data) => {
-  printSummaryHeader(inputs, results);
+  printResultsSummary(inputs, results);
 
   results.forEach((entity) => {
     printRecordHeader();
@@ -87,7 +93,9 @@ const printResults = (inputs, results, data) => {
 };
 
 const printRecord = (record) => {
-  console.log(`\n${"*".repeat(5)} ${record.constructor.name} ${"*".repeat(5)}`);
+  const border = () => "*".repeat(5);
+
+  console.log(`\n${border()} ${record.constructor.name} ${border()}`);
   record &&
     Object.entries(record.attributes).forEach(([key, value]) => {
       console.log(`${key}:`, value);
@@ -99,7 +107,8 @@ const printRecords = (records) => {
 };
 
 const printRelatedResults = (entity, data) => {
-  console.log(`\n${"-".repeat(40)} RELATED RECORDS ${"-".repeat(40)}`);
+  const border = () => "-".repeat(40);
+  console.log(`\n${border()} RELATED RECORDS ${border()}`);
   printRecords(entity.getRelatedRecords(data));
 };
 

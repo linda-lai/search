@@ -1,10 +1,16 @@
 const assert = require("assert");
 const AssertionError = assert.AssertionError;
 
+const printTestFileHeader = (filename) => {
+  const border = () => "=".repeat(100);
+  console.log(`\n${border()}\nRUNNING TESTS FOR: ${filename}\n${border()}`);
+};
+
 const describe = (message, callback) => {
+  const border = () => "-".repeat(100);
   console.log(`\n🧪 describe > ${message}\n`);
   callback();
-  console.log(`${"=".repeat(100)}`);
+  console.log(`${border()}`);
 };
 
 const test = (message, callback) => {
@@ -58,4 +64,4 @@ const expect = (actual) => {
   };
 };
 
-module.exports = { describe, test, expect };
+module.exports = { printTestFileHeader, describe, test, expect };
