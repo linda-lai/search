@@ -14,7 +14,6 @@ A simple search application for the command line written in Node.js.
 - [Motivations](#motivations)
 - [Technical Decisions](#technical-decisions)
   - [Approach](#approach)
-  - [Modules](#modules)
   - [Error Handling](#error-handling)
   - [Performance](#performance)
 - [Assumptions & Limitations](#assumptions--limitations)
@@ -170,7 +169,7 @@ So, feedback and reviews welcomed and appreciated!
 ## Technical Decisions
 
 ### Approach
-The approach taken here focuses on simplicity > overengineering. The design aims for the simplest implementation upfront. The goal was to arrive at a solution that is readable, testable, appropriately performant and easily extensible while meeting all the requirements. With appropriate benchmarks and abstractions so the code is easy for ourselves and more importantly, for other engineers to understand, flexible and scale in future as needed.
+The approach taken here focuses on simplicity > [enterprise grade implementation](https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition). The requirements hint that while the problem definition is pretty basic, search can get complicated pretty easily, so the design aims for the simplest implementation upfront. The goal was to arrive at a solution that is readable, testable, appropriately performant and easily extensible while meeting all the requirements. With appropriate benchmarks and abstractions so the code is easy for our future selves and more importantly, for other engineers to understand, is flexible and able to scale in future as needed.
 
 In short:
 * Simplicity and readability
@@ -183,8 +182,8 @@ In short:
 <!-- ### Architecture -->
 <!-- TODO: -->
 
+<!-- 
 ### Modules
-
 |      Module       |                        Responsibility                         |
 | :---------------: | :-----------------------------------------------------------: |
 |     `data.js`     | Loads, parse and cast JSON data from disk into entity classes |
@@ -195,6 +194,7 @@ In short:
 |      `ui.js`      |            Handle printing and input prompts in UI            |
 |     `user.js`     |                  Model class for user entity                  |
 |    `utils.js`     |      Helper methods/utils for matching and UI formatting      |
+-->
 
 ### Error Handling
 The search app handles and reports the following errors to the user:
