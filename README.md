@@ -44,23 +44,23 @@ The application has been built with Node.js, and is intended to run on Node v.14
 * Homebrew
 * Node v14.15.4
 
-Install Node via Homebrew:
+Install Homebrew:
 
 ```bash
-$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && brew install node@14.15.4
+$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-Installing Node using nvm via Homebrew is recommended (but not required) if you need to manage switching between Node versions:
+Install Node v14.15.4:
 
 ```bash
-$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" && brew install nvm && nvm install 14.15.4 && nvm use 14.15.4
+$ brew install node@14.15.4
 ```
 
 ### Installation
 To get this up and running in your local development environment, install the required dependencies from the root of the project:
 
 ```bash
-$ npm i
+$ npm install
 ```
 
 ### Run Application
@@ -210,29 +210,11 @@ The search algorithm uses JavaScript's inbuilt `.filter` array method which has 
 The approach was to avoid premature performance optimizations and use benchmarks at the end to assess:
 * Whether performance optimizations are needed in the first place
 * If needed, what part of the code should be optimized
-* Metrics to use as a baseline to measure whether optimizations added have mae performance better or worse
+* Metrics to use as a baseline to measure whether optimizations added have made performance better or worse
 
-Premature optimization can explode development time while hurting code cleanlines, and can even backfire and cause suboptimial performance.
+Premature optimization can explode development time while hurting code cleanliness, and can even backfire and cause suboptimal performance.
 
-It being a search application, I created a `benchmark.js` util in `/tests` to measure the runtime for `search()` specifically, using the provided `users.json` data and a `large-users.json` test file with 10K+ entries with the same query:
-
-```js
-const benchmark = (data, benchmarkLabel) => {
-  const query = {
-    entityName: "users",
-    field: "signature",
-    value: "Don't Worry Be Happy!",
-  };
-  const { entityName, field, value } = query;
-  console.time(benchmarkLabel);
-  const results = search(entityName, field, value, data);
-  console.timeEnd(benchmarkLabel);
-  console.log(`matching results: ${results.length}\n`);
-};
-
-benchmark(defaultData, "benchmarkDefaultData");
-benchmark(largeData, "benchmarkLargeData");
-```
+It being a search application first and foremost, I created a [`benchmark.js`](https://github.com/linda-lai/search/blob/main/test/benchmark.js#L26-L37) util in `/tests` to measure the runtime for the `search` function specifically, using the provided `users.json` data and a `large-users.json` test file with 10K+ entries with the same query.
 
 To run the `benchmarks.js` test:
 ```bash
@@ -273,15 +255,15 @@ Under ~200ms should be relatively instantaneous to the user. So coming in ~3-4ms
 * Values are displayed in their original form, i.e. date values, timezones, etc.
 * No indexing (based on current performance approach and benchmarks).
 * No explicit ranking in the order of search results.
-* There is enough memory to load and run the data/application in memory on a single computer.
+* There is enough memory to load the data and run the application on a single computer.
 * Aside from relationships between entities for `getRelatedEntities` (`ticket_id`, `organization_id`, `assignee_id`, `submitter_id`), no assumptions made about the data structure of records, so fields can be added or removed in the entities as needed.
 * Fields searchable by the user for the different entity types (and validation for the user input for `fields`) assume that all searchable fields exist in first record, and that the collection contains at least one record.
 * Users cannot search for fields/values missing in a record with `undefined` (as JSON parsing is used), so searches for `null` also handle `undefined` values in records.
 * Only one value can be searched at a time.
-* UI waits for prompts rather than command line arguments.
+* UI prompts and waits for user inputs rather than parsing command line arguments (making it harder to automate, further execution is blocked until input is received, etc).
 
 ## Enhancements & Improvements
-* Fuzzy matching for partial or inprecise search matching.
+* Fuzzy matching for partial or imprecise search matching.
 * Use more performant search algorithm than `.filter`, i.e. indexing attributes (with the tradeoff of more expensive operations upfront to load and index data).
 * Implement command line flag parsing instead of user prompts to manage input (for easier automation).
-* Exit condition in prompt UI so users can quit at any point.
+* Exit condition in prompt UI so users can quit at any point for better UX.
