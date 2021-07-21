@@ -1,13 +1,16 @@
 const { search } = require("../src/search");
 const { loadDatasets } = require("../src/data");
-const { describe, test, expect } = require("./utils/helpers");
+const {
+  printTestFileHeader,
+  describe,
+  test,
+  expect,
+} = require("./utils/helpers");
 
-const { mockOrganization, mockUsers } = require("./utils/data");
+const { testOrganization, testUser, testTicket } = require("./data/data");
 
 const runSearchTests = () => {
-  console.log(`${"=".repeat(100)}\n${"=".repeat(100)}\n`);
-  console.log(`RUNNING TESTS FOR: ${__filename}`);
-  console.log(`\n${"=".repeat(100)}\n${"=".repeat(100)}`);
+  printTestFileHeader(__filename);
 
   describe("search organizations entity for field with boolean value", () => {
     const query = {
@@ -27,19 +30,19 @@ const runSearchTests = () => {
     const query = {
       entityName: "organizations",
       field: "_id",
-      value: 101,
+      value: 114,
     };
 
     const actual = results(query);
 
     test(message(query), () => {
-      expect(actual).toDeepStrictEqual(mockOrganization);
+      expect(actual).toDeepStrictEqual(testOrganization);
     });
     test("finds 1 matching record", () => {
-      expect(actual).toHaveLengthEqualTo(mockOrganization.length);
+      expect(actual).toHaveLengthEqualTo(testOrganization.length);
     });
     test("returns an object", () => {
-      expect(actual[0]).toBeType(typeof mockOrganization);
+      expect(actual[0]).toBeType(typeof testOrganization);
     });
   });
 
@@ -47,16 +50,16 @@ const runSearchTests = () => {
     const query = {
       entityName: "organizations",
       field: "name",
-      value: "Enthaze",
+      value: "Isotronic",
     };
 
     const actual = results(query);
 
     test(message(query), () => {
-      expect(actual).toDeepStrictEqual(mockOrganization);
+      expect(actual).toDeepStrictEqual(testOrganization);
     });
     test("finds 1 matching record", () => {
-      expect(actual).toHaveLengthEqualTo(mockOrganization.length);
+      expect(actual).toHaveLengthEqualTo(testOrganization.length);
     });
   });
 
@@ -132,7 +135,7 @@ const runSearchTests = () => {
     test(message(query), () => {
       expect(actual).toHaveLengthEqualTo(1);
       expect(actual[0].attributes._id).toDeepStrictEqual(
-        "62a4326f-7114-499f-9adc-a14e99a7ffb4"
+        "436bf9b0-1147-4c0a-8439-6f79833bff5b"
       );
       expect(actual).toBeType("array");
     });
