@@ -10,7 +10,7 @@
     "nodemon": "^2.0.7"
   },
   "scripts": {
-    "start": "node src/index.js",
+    "start": "nodemon src/index.js",
     "test": "node test/runner.js",
     "test:watch": "nodemon test/runner.js",
     "test:benchmark": "node test/benchmark.js"
