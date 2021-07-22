@@ -31,7 +31,7 @@ const assertion = (expectMessage, passMessage, callback) => {
     `🔴 ${err.message}`
       .split("\n")
       .map((line) => console.log(`${padding(4)}${line}`));
-    console.log(`${padding(4)}❌ RESULT: FAILED\n`);
+    console.log(`\n${padding(4)}❌ RESULT: FAILED\n`);
     assert(err instanceof AssertionError);
     process.exit();
   }

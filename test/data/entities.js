@@ -10,21 +10,21 @@ const testOrganization = [
     name: "Isotronic",
     domain_names: ["gynk.com", "goko.com", "zilidium.com", "accruex.com"],
     created_at: "2016-05-24T04:27:35 -10:00",
-    details: "Artisân",
+    details: "Artisân", // special character
     shared_tickets: true,
-    tags: ["Burton", "Dunn", "Morton", "Maddox"],
+    tags: ["Burton", "Dunn", "Morton", "Maddox"], // array matching
   }),
 ];
 
 const testUser = [
-  {
+  new User({
     _id: 59,
-    url: "http://initech.zendesk.com/api/v2/users/59.json",
+    url: "http://initech.zendesk.com/api/v2/users/59.json", //string
     external_id: "4acd4eb0-9168-4270-b09f-09600a05b0b2",
     name: "Key Mendez",
     alias: "Mr Lucile",
-    created_at: "2016-04-23T12:00:11 -10:00",
-    active: false,
+    created_at: "2016-04-23T12:00:11 -10:00", // date
+    active: false, // boolean
     verified: false,
     shared: false,
     locale: "zh-CN",
@@ -33,12 +33,12 @@ const testUser = [
     email: "lucilemendez@flotonic.com",
     phone: "8774-883-991",
     signature: "Don't Worry Be Happy!",
-    organization_id: 118,
+    organization_id: 118, // number
     tags: ["Rockingham", "Waikele", "Masthope", "Oceola"],
     suspended: false,
     role: "agent",
-  },
-].map((record) => new User(record));
+  }),
+];
 
 const testTicket = [
   new Ticket({
@@ -47,10 +47,11 @@ const testTicket = [
     external_id: "9210cdc9-4bee-485f-a078-35396cd74063",
     created_at: "2016-04-28T11:19:34 -10:00",
     type: "incident",
-    subject: "",
-    description: null,
+    subject: "", // empty ""
+    description: null, // null
     priority: "high",
     status: "pending",
+    // undefined assignee_id: 24
     submitter_id: 38,
     organization_id: 116,
     tags: [
@@ -65,6 +66,4 @@ const testTicket = [
   }),
 ];
 
-const relatedData = [];
-
-module.exports = { testOrganization, testUser, testTicket, relatedData };
+module.exports = { testOrganization, testUser, testTicket };
