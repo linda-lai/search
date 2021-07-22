@@ -250,7 +250,7 @@ const runSearchTests = () => {
 const searchResults = ({ entityName, field, value }) =>
   search(entityName, field, value, loadDatasets());
 
-const format = (query) =>
-  `entity: ${query.entityName} / field: ${query.field} / value: ${query.value}`;
+const format = ({ entityName, field, value }) =>
+  `entity: ${entityName} / field: ${field} / value: ${value}`;
 
 module.exports = { runSearchTests };

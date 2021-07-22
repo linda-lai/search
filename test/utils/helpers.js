@@ -5,14 +5,14 @@ const { border, padding } = require("../../src/utils");
 
 const printTestFileHeader = (filename) => {
   console.log(
-    `\n${border("=", 100)}\nRUNNING TESTS FOR: ${filename}\n${border("=", 100)}`
+    `\n${border("=", 115)}\nRUNNING TESTS FOR: ${filename}\n${border("=", 115)}`
   );
 };
 
 const describe = (message, callback) => {
   console.log(`\n🧪 describe > ${message}\n`);
   callback();
-  console.log(`${border("—", 100)}`);
+  console.log(`${border("—", 115)}`);
 };
 
 const test = (message, callback) => {
