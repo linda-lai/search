@@ -19,7 +19,7 @@ const loadDataset = (entityName, constructor) => {
   try {
     data = JSON.parse(file).map((rawEntity) => new constructor(rawEntity));
   } catch (e) {
-    console.error(`Malformed JSON in ${file}: ${e}`);
+    console.error(`Malformed JSON in ${path}: ${e.message}`);
     process.exit(1);
   }
 

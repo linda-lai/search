@@ -90,7 +90,7 @@ $ npm run test:watch
 ```
 
 ### Code Formatting
-Code formatting is managed by Prettier. Editors should recognise its being used via the `.prettierrc.json` file, but to Prettier:
+Code formatting is managed by Prettier. Editors should recognise it's being used via the `.prettierrc.json` file, but to run Prettier:
 
 ```bash
 $ npm run prettier
@@ -147,9 +147,9 @@ Q: What value are you looking up? e.g. "en-AU", 123, true, null, ""
 A: "436bf9b0-1147-4c0a-8439-6f79833bff5b"
 ```
 
-|                                                                                             |
+| Demo                                                                                        |
 | ------------------------------------------------------------------------------------------- |
-| <img src="./docs/usage-instructions.gif" alt="Usage instructions for search" width="400" /> |
+| <img src="./docs/usage-instructions.gif" alt="Usage instructions for search" width="700" /> |
 ## Requirements
 
 > [See REQUIREMENTS](./docs/REQUIREMENTS.pdf)
@@ -181,9 +181,11 @@ In short:
 - Avoid premature optimizations, and use benchmarks to measure performance.
 
 ### Error Handling
-|                                                                                       |                                                                                                  |
-| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
-| <img src="./docs/errors-user.gif" alt="Error handling for user inputs" width="400" /> | <img src="./docs/errors-json.gif" alt="Error handling for JSON files and parsing" width="400" /> |
+
+| Error                                                                                            | Description                                 |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------- |
+| <img src="./docs/errors-user.gif" alt="Error handling for user inputs" width="700" />            | Error handling for user inputs              |
+| <img src="./docs/errors-json.gif" alt="Error handling for JSON files and parsing" width="700" /> | Error handling for JSON loading and parsing |
 
 ### Performance
 

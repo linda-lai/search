@@ -19,6 +19,7 @@ class Ticket {
       this.attributes.submitter_id,
       data
     );
+
     const organizations = search(
       "organizations",
       "_id",
