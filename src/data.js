@@ -4,8 +4,8 @@ const User = require("./user");
 const Organization = require("./organization");
 
 const loadDataset = (entityName, constructor) => {
-  let data;
-  let path = `./data/${entityName}.json`;
+  let file, data;
+  const path = `./data/${entityName}.json`;
 
   try {
     file = fs.readFileSync(path);
