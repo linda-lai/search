@@ -1,5 +1,5 @@
 const readlineSync = require("readline-sync");
-const { logo } = require("./utils");
+const { logo, border } = require("./utils");
 
 const promptEntityName = () =>
   readlineSync
@@ -62,24 +62,24 @@ const promptUser = (data) => {
 };
 
 const printPromptHeader = () => {
-  const border = () => "=".repeat(97);
-  console.log(`${border()}\n${logo}\n${border()}\n`);
+  console.log(`${border("=", 97)}\n${logo}\n${border("=", 97)}\n`);
 };
 
 const printResultsSummary = (inputs, results) => {
   const { entityName, field, value } = inputs;
-  const border = () => "=".repeat(97);
 
   console.log(
-    `${border()}\nSearched ${entityName.toUpperCase()} for field: ${field} and value: ${value}. Results: ${
+    `${border(
+      "=",
+      97
+    )}\nSearched ${entityName.toUpperCase()} for field: ${field} and value: ${value}. Results: ${
       results.length
-    }\n${border()}`
+    }\n${border("=", 97)}`
   );
 };
 
 const printRecordHeader = () => {
-  const border = () => "=".repeat(40);
-  console.log(`\n${border()} MATCHING RECORD ${border()}`);
+  console.log(`\n${border("=", 40)} MATCHING RECORD ${border("=", 40)}`);
 };
 
 const printResults = (inputs, results, data) => {
@@ -93,9 +93,9 @@ const printResults = (inputs, results, data) => {
 };
 
 const printRecord = (record) => {
-  const border = () => "*".repeat(5);
-
-  console.log(`\n${border()} ${record.constructor.name} ${border()}`);
+  console.log(
+    `\n${border("*", 5)} ${record.constructor.name} ${border("*", 5)}`
+  );
   record &&
     Object.entries(record.attributes).forEach(([key, value]) => {
       console.log(`${key}:`, value);
@@ -107,8 +107,7 @@ const printRecords = (records) => {
 };
 
 const printRelatedResults = (entity, data) => {
-  const border = () => "-".repeat(40);
-  console.log(`\n${border()} RELATED RECORDS ${border()}`);
+  console.log(`\n${border("—", 40)} RELATED RECORDS ${border("—", 40)}`);
   printRecords(entity.getRelatedRecords(data));
 };
 

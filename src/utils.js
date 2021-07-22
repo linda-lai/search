@@ -22,4 +22,8 @@ const logo = `
                                         &&&&&&&&&&% &&&&&&&&&&   
 `;
 
-module.exports = { match, logo };
+const padding = (spacing) => " ".repeat(spacing);
+
+const border = (character, multiplier) => character.repeat(multiplier);
+
+module.exports = { match, logo, padding, border };

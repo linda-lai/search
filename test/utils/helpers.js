@@ -1,30 +1,36 @@
 const assert = require("assert");
 const AssertionError = assert.AssertionError;
 
+const { border, padding } = require("../../src/utils");
+
 const printTestFileHeader = (filename) => {
-  const border = () => "=".repeat(100);
-  console.log(`\n${border()}\nRUNNING TESTS FOR: ${filename}\n${border()}`);
+  console.log(
+    `\n${border("=", 100)}\nRUNNING TESTS FOR: ${filename}\n${border("=", 100)}`
+  );
 };
 
 const describe = (message, callback) => {
-  const border = () => "-".repeat(100);
   console.log(`\n🧪 describe > ${message}\n`);
   callback();
-  console.log(`${border()}`);
+  console.log(`${border("—", 100)}`);
 };
 
 const test = (message, callback) => {
-  console.log(`🔬 test > ${message}`);
+  console.log(`${padding(2)}🔬 test > ${message}`);
   callback();
 };
 
 const assertion = (expectMessage, passMessage, callback) => {
-  console.log(`💥 expect > ${expectMessage}`);
+  console.log(`${padding(4)}💥 expect > ${expectMessage}`);
   try {
     callback();
-    console.log(`🟢 ${passMessage}\n✅ RESULT: PASSED\n`);
+    console.log(
+      `${padding(4)}🟢 ${passMessage}\n${padding(4)}✅ RESULT: PASSED\n`
+    );
   } catch (err) {
-    console.log(`🔴 ${err.message}\n❌ RESULT: FAILED\n`);
+    console.log(
+      `${padding(4)}🔴 ${err.message}\n${padding(4)}❌ RESULT: FAILED\n`
+    );
     assert(err instanceof AssertionError);
     process.exit();
   }
