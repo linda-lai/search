@@ -9,6 +9,22 @@ const printTestFileHeader = (filename) => {
   );
 };
 
+const validateRelatedRecordIncludes = (actual, expected) =>
+  actual.every((attributeValue) => expected.includes(attributeValue));
+
+const countEntityInstances = (entityName, entityInstances) => {
+  return entityInstances.filter((instance) => instance === entityName).length;
+};
+
+const relatedRecordsInstances = (relatedRecords) =>
+  relatedRecords.map((relatedRecord) => relatedRecord.constructor.name);
+
+const validateType = (actual) => {
+  if (Array.isArray(actual)) return "array";
+  if (actual === null) return "null";
+  return typeof actual;
+};
+
 const describe = (message, callback) => {
   console.log(`\n🧪 describe > ${message}\n`);
   callback();
@@ -35,12 +51,6 @@ const assertion = (expectMessage, passMessage, callback) => {
     assert(err instanceof AssertionError);
     process.exit();
   }
-};
-
-const validateType = (actual) => {
-  if (Array.isArray(actual)) return "array";
-  if (actual === null) return "null";
-  return typeof actual;
 };
 
 const expect = (actual) => {
@@ -71,4 +81,12 @@ const expect = (actual) => {
   };
 };
 
-module.exports = { printTestFileHeader, describe, test, expect };
+module.exports = {
+  printTestFileHeader,
+  validateRelatedRecordIncludes,
+  relatedRecordsInstances,
+  countEntityInstances,
+  describe,
+  test,
+  expect,
+};
