@@ -253,4 +253,4 @@ const searchResults = ({ entityName, field, value }) =>
 const format = ({ entityName, field, value }) =>
   `entity: ${entityName} / field: ${field} / value: ${value}`;
 
-module.exports = { runSearchTests };
+module.exports = runSearchTests;

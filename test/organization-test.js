@@ -26,7 +26,7 @@ const runOrganizationTests = () => {
       expect(actual).toEqual(true);
     });
 
-    test("returns false when query value doesn't in record", () => {
+    test("returns false when query value doesn't exist in record", () => {
       const queryField = "_id";
       const queryValue = 13;
       const actual = organization.match(queryField, queryValue);
@@ -58,4 +58,4 @@ const runOrganizationTests = () => {
   });
 };
 
-module.exports = { runOrganizationTests };
+module.exports = runOrganizationTests;

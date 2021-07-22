@@ -58,4 +58,4 @@ const runUtilsTests = () => {
   });
 };
 
-module.exports = { runUtilsTests };
+module.exports = runUtilsTests;
