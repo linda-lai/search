@@ -4,9 +4,10 @@ const path = require("path");
 const User = require("../src/user");
 const {
   printTestFileHeader,
-  validateRelatedRecordIncludes,
-  countEntityInstances,
-  relatedRecordsInstances,
+  getResultIDs,
+  validateResultsInclude,
+  countResultInstances,
+  getResultInstances,
   describe,
   test,
   expect,
@@ -38,12 +39,11 @@ const runUserTests = () => {
   });
 
   describe(`User method getRelatedEntities() returns related organization and ticket records`, () => {
-    const actual = user.getRelatedRecords(data);
+    const userRelatedRecords = user.getRelatedRecords(data);
 
     test(`IDs of related entities for user record with _id: 59`, () => {
-      const actualRelatedRecordIDs = actual.map(
-        (record) => record.attributes._id
-      );
+      const userRelatedRecordIDs = getResultIDs(userRelatedRecords);
+
       const expectedRelatedRecordIDs = [
         118,
         "7c67b6ed-6776-4065-bd4a-f2d9d12c33b7",
@@ -51,29 +51,26 @@ const runUserTests = () => {
         "25cb699f-a5dd-45d8-9bc1-9c4b7d096946",
       ];
       expect(
-        validateRelatedRecordIncludes(
-          actualRelatedRecordIDs,
-          expectedRelatedRecordIDs
-        )
+        validateResultsInclude(userRelatedRecordIDs, expectedRelatedRecordIDs)
       ).toEqual(true);
 
       test("returns 4 records", () => {
-        expect(actual).toHaveLength(4);
+        expect(userRelatedRecords).toHaveLength(4);
       });
     });
 
     test(`getRelatedRecords() for user record with _id: 59 contains only 1 organization`, () => {
-      const organizationInstances = countEntityInstances(
+      const organizationInstances = countResultInstances(
         "Organization",
-        relatedRecordsInstances(actual)
+        getResultInstances(userRelatedRecords)
       );
       expect(organizationInstances).toEqual(1);
     });
 
     test(`getRelatedRecords() for user record with _id: 59 returns 3 tickets`, () => {
-      const ticketInstances = countEntityInstances(
+      const ticketInstances = countResultInstances(
         "Ticket",
-        relatedRecordsInstances(actual)
+        getResultInstances(userRelatedRecords)
       );
       expect(ticketInstances).toEqual(3);
     });

@@ -17,20 +17,10 @@ A simple search application for the command line written in Node.js.
 - [Motivations](#motivations)
 - [Technical Decisions](#technical-decisions)
   - [Approach](#approach)
-  - [Error Handling](#error-handling)
   - [Performance](#performance)
+- [Error Handling](#error-handling)
 - [Assumptions & Limitations](#assumptions--limitations)
 - [Enhancements & Improvements](#enhancements--improvements)
-
-<!--
-BASIC STRUCTURE
-- Assume they are using a computer they just brought back from the store
-- State EVERYTHING they need to install
-- Tell them how to run the program, the tests, and any codecov/benchmark/linting utils
-- Talk about limitations and tradeoffs
-- Possible improvements and extensions
-- What environments have you tested it to run on?
--->
 
 ## Getting Started
 
@@ -95,13 +85,6 @@ Code formatting is managed by Prettier. Editors should recognise it's being used
 ```bash
 $ npm run prettier
 ```
-
-<!-- 3-Test Coverage - breaking changes should break your tests.
-- Note: Estimate on the % is acceptable. You do not need to run a code coverage tool.
-- Appropriate use of Mocking (understand integration test)
-- Have multiple types of test (unit and integration tests) where appropriate
-- Cater for all important edge cases
-- At least 85+% test coverage -->
 
 ### Usage Instructions
 
@@ -180,13 +163,6 @@ In short:
   - `prettier` for code formatting
 - Avoid premature optimizations, and use benchmarks to measure performance.
 
-### Error Handling
-
-| Error                                                                                            | Description                                 |
-| ------------------------------------------------------------------------------------------------ | ------------------------------------------- |
-| <img src="./docs/errors-user.gif" alt="Error handling for user inputs" width="700" />            | Error handling for user inputs              |
-| <img src="./docs/errors-json.gif" alt="Error handling for JSON files and parsing" width="700" /> | Error handling for JSON loading and parsing |
-
 ### Performance
 
 The search algorithm uses JavaScript's inbuilt `.filter` array method which has a time complexity of `O(N)`.
@@ -233,6 +209,13 @@ matching results: 17325
 ```
 
 Under ~200ms should be relatively instantaneous to the user. So coming in ~3-4ms with the large users data, I'm confident the search algorithm is adequately performant and should gracefully handle a significant increase in the amount of data provided until it grows to a size where the use case for indexing the search algorithm is justified.
+
+## Error Handling
+
+| Error                                                                                            | Description                                 |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------- |
+| <img src="./docs/errors-user.gif" alt="Error handling for user inputs" width="700" />            | Error handling for user inputs              |
+| <img src="./docs/errors-json.gif" alt="Error handling for JSON files and parsing" width="700" /> | Error handling for JSON loading and parsing |
 
 ## Assumptions & Limitations
 

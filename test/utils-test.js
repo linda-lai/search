@@ -11,28 +11,28 @@ const {
 const runUtilsTests = () => {
   printTestFileHeader(path.basename(__filename));
 
-  describe("match() util evaluates an attribute value with query value against match criteria", () => {
+  describe("match() util evaluates an attribute value and query value against match criteria", () => {
     const attributeValue = [
       "Massachusetts",
       "New York",
       "Minnesota",
       "New Jersey",
     ];
-    test("returns true if query value matches attribute value in array", () => {
+    test("query value matches attribute value in array", () => {
       const queryValue = "New York";
 
       const result = match(attributeValue, queryValue);
       expect(result).toEqual(true);
     });
 
-    test("returns false if string isn't an exact match", () => {
+    test("string isn't an exact match", () => {
       const queryValue = "New";
 
       const result = match(attributeValue, queryValue);
       expect(result).toEqual(false);
     });
 
-    test("returns true if query value is null and attribute is undefined", () => {
+    test("query value is null and attribute is undefined", () => {
       const attributeValue = undefined;
       const queryValue = null;
 
@@ -40,7 +40,7 @@ const runUtilsTests = () => {
       expect(result).toEqual(true);
     });
 
-    test("returns true if query value is strictly equal to attribute value", () => {
+    test("query value is strictly equal to attribute value", () => {
       const attributeValue = 1;
       const queryValue = 1;
 
@@ -48,7 +48,7 @@ const runUtilsTests = () => {
       expect(result).toEqual(true);
     });
 
-    test("returns false if query value isn't strictly equal to attribute value", () => {
+    test("query value isn't strictly equal to attribute value", () => {
       const attributeValue = 1;
       const queryValue = "1";
 

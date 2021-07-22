@@ -9,15 +9,18 @@ const printTestFileHeader = (filename) => {
   );
 };
 
-const validateRelatedRecordIncludes = (actual, expected) =>
+const validateResultsInclude = (actual, expected) =>
   actual.every((attributeValue) => expected.includes(attributeValue));
 
-const countEntityInstances = (entityName, entityInstances) => {
-  return entityInstances.filter((instance) => instance === entityName).length;
-};
+const getResultIDs = (results) =>
+  results.map((record) => record.attributes._id);
 
-const relatedRecordsInstances = (relatedRecords) =>
-  relatedRecords.map((relatedRecord) => relatedRecord.constructor.name);
+const getResultInstances = (results) =>
+  results.map((record) => record.constructor.name);
+
+const countResultInstances = (entityName, instances) => {
+  return instances.filter((instance) => instance === entityName).length;
+};
 
 const validateType = (actual) => {
   if (Array.isArray(actual)) return "array";
@@ -83,9 +86,10 @@ const expect = (actual) => {
 
 module.exports = {
   printTestFileHeader,
-  validateRelatedRecordIncludes,
-  relatedRecordsInstances,
-  countEntityInstances,
+  validateResultsInclude,
+  getResultIDs,
+  getResultInstances,
+  countResultInstances,
   describe,
   test,
   expect,

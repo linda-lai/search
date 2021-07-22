@@ -21,26 +21,26 @@ const runSearchTests = () => {
       value: "Mr Lucile",
     };
 
-    const actual = searchResults(query);
+    const userResults = searchResults(query);
 
     test(`${format(query)} returns exact matching records`, () => {
-      expect(actual).toEqual(testUser);
+      expect(userResults).toEqual(testUser);
     });
 
     test("returns a collection of type array", () => {
-      expect(actual).toBeType("array");
+      expect(userResults).toBeType("array");
     });
 
     test("returns a collection of objects", () => {
-      expect(actual[0]).toBeType("object");
+      expect(userResults[0]).toBeType("object");
     });
 
     test("finds 1 matching record", () => {
-      expect(actual).toHaveLength(1);
+      expect(userResults).toHaveLength(1);
     });
 
     test("returns matching record with _id: 59", () => {
-      expect(actual[0].attributes._id).toEqual(59);
+      expect(userResults[0].attributes._id).toEqual(59);
     });
   });
 
@@ -51,14 +51,14 @@ const runSearchTests = () => {
       value: 59,
     };
 
-    const actual = searchResults(query);
+    const userResults = searchResults(query);
 
     test(`${format(query)} returns exact matching records`, () => {
-      expect(actual).toEqual(testUser);
+      expect(userResults).toEqual(testUser);
     });
 
     test("finds 1 matching record", () => {
-      expect(actual).toHaveLength(testUser.length);
+      expect(userResults).toHaveLength(testUser.length);
     });
   });
 
@@ -69,14 +69,14 @@ const runSearchTests = () => {
       value: false,
     };
 
-    const actual = searchResults(query);
+    const userResults = searchResults(query);
 
     test(`${format(query)} first matching record has _id: 2`, () => {
-      expect(actual[0].attributes._id).toEqual(2);
+      expect(userResults[0].attributes._id).toEqual(2);
     });
 
     test("finds 39 matching records", () => {
-      expect(actual).toHaveLength(39);
+      expect(userResults).toHaveLength(39);
     });
   });
 
@@ -87,14 +87,14 @@ const runSearchTests = () => {
       value: "2016-05-24T04:27:35 -10:00",
     };
 
-    const actual = searchResults(query);
+    const organizationResults = searchResults(query);
 
     test(`${format(query)} matches name: Isotronic`, () => {
-      expect(actual[0].attributes.name).toEqual("Isotronic");
+      expect(organizationResults[0].attributes.name).toEqual("Isotronic");
     });
 
     test(format(query), () => {
-      expect(actual).toHaveLength(1);
+      expect(organizationResults).toHaveLength(1);
     });
   });
 
@@ -105,10 +105,10 @@ const runSearchTests = () => {
       value: "Artisân",
     };
 
-    const actual = searchResults(query);
+    const organizationResults = searchResults(query);
 
     test(`${format(query)} finds 2 matching records`, () => {
-      expect(actual).toHaveLength(2);
+      expect(organizationResults).toHaveLength(2);
     });
   });
 
@@ -119,11 +119,11 @@ const runSearchTests = () => {
       value: "Maddox",
     };
 
-    const actual = searchResults(query);
+    const organizationResults = searchResults(query);
 
     test(`${format(query)} returns exact match`, () => {
-      expect(actual).toEqual(testOrganization);
-      expect(actual).toHaveLength(1);
+      expect(organizationResults).toEqual(testOrganization);
+      expect(organizationResults).toHaveLength(1);
     });
   });
 
@@ -134,20 +134,20 @@ const runSearchTests = () => {
       value: "",
     };
 
-    const actual = searchResults(query);
+    const ticketResults = searchResults(query);
 
     test(`${format(query)} returns exact match`, () => {
-      expect(actual).toEqual(testTicket);
+      expect(ticketResults).toEqual(testTicket);
     });
 
     test(`matches record with _id: 436bf9b0-1147-4c0a-8439-6f79833bff5b`, () => {
-      expect(actual[0].attributes._id).toEqual(
+      expect(ticketResults[0].attributes._id).toEqual(
         "436bf9b0-1147-4c0a-8439-6f79833bff5b"
       );
     });
 
     test("finds 1 matching record", () => {
-      expect(actual).toHaveLength(1);
+      expect(ticketResults).toHaveLength(1);
     });
   });
 
@@ -158,18 +158,18 @@ const runSearchTests = () => {
       value: "",
     };
 
-    const actual = searchResults(query);
+    const ticketResults = searchResults(query);
 
     test(`${format(
       query
     )} matches record with _id: 436bf9b0-1147-4c0a-8439-6f79833bff5b`, () => {
-      expect(actual[0].attributes._id).toEqual(
+      expect(ticketResults[0].attributes._id).toEqual(
         "436bf9b0-1147-4c0a-8439-6f79833bff5b"
       );
     });
 
     test("finds 1 matching record", () => {
-      expect(actual).toHaveLength(1);
+      expect(ticketResults).toHaveLength(1);
     });
   });
 
@@ -180,18 +180,18 @@ const runSearchTests = () => {
       value: null,
     };
 
-    const actual = searchResults(query);
+    const ticketResults = searchResults(query);
 
     test(`${format(
       query
     )} matches record with _id: 436bf9b0-1147-4c0a-8439-6f79833bff5b`, () => {
-      expect(actual[0].attributes._id).toEqual(
+      expect(ticketResults[0].attributes._id).toEqual(
         "436bf9b0-1147-4c0a-8439-6f79833bff5b"
       );
     });
 
     test("finds 1 matching record", () => {
-      expect(actual).toHaveLength(1);
+      expect(ticketResults).toHaveLength(1);
     });
   });
 
@@ -202,18 +202,18 @@ const runSearchTests = () => {
       value: null,
     };
 
-    const actual = searchResults(query);
+    const ticketResults = searchResults(query);
 
     test(`${format(
       query
     )} first matching record has _id: 436bf9b0-1147-4c0a-8439-6f79833bff5b`, () => {
-      expect(actual[0].attributes._id).toEqual(
+      expect(ticketResults[0].attributes._id).toEqual(
         "436bf9b0-1147-4c0a-8439-6f79833bff5b"
       );
     });
 
     test("finds 5 matching records with undefined assignee_id", () => {
-      expect(actual).toHaveLength(5);
+      expect(ticketResults).toHaveLength(5);
     });
   });
 
@@ -224,10 +224,10 @@ const runSearchTests = () => {
       value: "foobar",
     };
 
-    const actual = searchResults(query);
+    const ticketResults = searchResults(query);
 
     test(`${format(query)} returns no matches`, () => {
-      expect(actual).toHaveLength(0);
+      expect(ticketResults).toHaveLength(0);
     });
   });
 
@@ -238,11 +238,11 @@ const runSearchTests = () => {
       value: "Hendricks",
     };
 
-    const actual = searchResults(query);
+    const organizationResults = searchResults(query);
 
     test(format(query), () => {
-      expect(actual).toHaveLength(1);
-      expect(actual[0].attributes._id).toEqual(104);
+      expect(organizationResults).toHaveLength(1);
+      expect(organizationResults[0].attributes._id).toEqual(104);
     });
   });
 };
