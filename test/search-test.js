@@ -1,5 +1,5 @@
-const { search } = require("../src/search");
-const { loadDatasets } = require("../src/data");
+const path = require("path");
+
 const {
   printTestFileHeader,
   describe,
@@ -7,35 +7,46 @@ const {
   expect,
 } = require("./utils/helpers");
 
-const { testOrganization, testUser, testTicket } = require("./data/data");
+const { search } = require("../src/search");
+const { loadDatasets } = require("../src/data");
+const {
+  testOrganization,
+  // testUser,
+  // testTicket
+} = require("./data/entities");
+// const relatedData = require("./data/related-entities");
 
 const runSearchTests = () => {
-  printTestFileHeader(__filename);
+  printTestFileHeader(path.basename(__filename));
 
-  describe("search organizations entity for field with boolean value", () => {
+  describe("search() organizations for field with boolean value", () => {
     const query = {
       entityName: "organizations",
       field: "shared_tickets",
       value: false,
     };
 
-    const actual = results(query);
+    const actual = searchResults(query);
+
+    test(format(query), () => {
+      expect(actual[0].attributes._id).toDeepStrictEqual(101);
+    });
 
     test("finds 15 matching records", () => {
       expect(actual).toHaveLengthEqualTo(15);
     });
   });
 
-  describe("search organizations entity for field with integer value", () => {
+  describe("search organizations for field with integer value", () => {
     const query = {
       entityName: "organizations",
       field: "_id",
       value: 114,
     };
 
-    const actual = results(query);
+    const actual = searchResults(query);
 
-    test(message(query), () => {
+    test(format(query), () => {
       expect(actual).toDeepStrictEqual(testOrganization);
     });
     test("finds 1 matching record", () => {
@@ -46,16 +57,16 @@ const runSearchTests = () => {
     });
   });
 
-  describe("search organizations entity for field with string value", () => {
+  describe("search organizations for field with string value", () => {
     const query = {
       entityName: "organizations",
       field: "name",
       value: "Isotronic",
     };
 
-    const actual = results(query);
+    const actual = searchResults(query);
 
-    test(message(query), () => {
+    test(format(query), () => {
       expect(actual).toDeepStrictEqual(testOrganization);
     });
     test("finds 1 matching record", () => {
@@ -63,16 +74,16 @@ const runSearchTests = () => {
     });
   });
 
-  describe("search users entity for field with boolean value", () => {
+  describe("search users for field with boolean value", () => {
     const query = {
       entityName: "users",
       field: "shared",
       value: false,
     };
 
-    const actual = results(query);
+    const actual = searchResults(query);
 
-    test(message(query), () => {
+    test(format(query), () => {
       expect(actual).toHaveLengthEqualTo(47);
     });
   });
@@ -84,9 +95,9 @@ const runSearchTests = () => {
       value: "17951590-6a78-49e8-8e45-1d4326ba49cc",
     };
 
-    const actual = results(query);
+    const actual = searchResults(query);
 
-    test(message(query), () => {
+    test(format(query), () => {
       expect(actual).toHaveLengthEqualTo(1);
     });
   });
@@ -98,24 +109,24 @@ const runSearchTests = () => {
       value: "Hendricks",
     };
 
-    const actual = results(query);
+    const actual = searchResults(query);
 
-    test(message(query), () => {
+    test(format(query), () => {
       expect(actual).toHaveLengthEqualTo(1);
       expect(actual[0].attributes._id).toDeepStrictEqual(104);
     });
   });
 
-  describe("search tickets entity for description when field is missing or value is null", () => {
+  describe("search tickets for description when field is missing or value is null", () => {
     const query = {
       entityName: "tickets",
       field: "description",
       value: null,
     };
 
-    const actual = results(query);
+    const actual = searchResults(query);
 
-    test(message(query), () => {
+    test(format(query), () => {
       expect(actual).toHaveLengthEqualTo(2);
       expect(actual[0].attributes._id).toDeepStrictEqual(
         "436bf9b0-1147-4c0a-8439-6f79833bff5b"
@@ -123,16 +134,16 @@ const runSearchTests = () => {
     });
   });
 
-  describe(`search entity for subject when field exists but value is empty string ""`, () => {
+  describe(`search for subject when field exists but value is empty string ""`, () => {
     const query = {
       entityName: "tickets",
       field: "subject",
       value: "",
     };
 
-    const actual = results(query);
+    const actual = searchResults(query);
 
-    test(message(query), () => {
+    test(format(query), () => {
       expect(actual).toHaveLengthEqualTo(1);
       expect(actual[0].attributes._id).toDeepStrictEqual(
         "436bf9b0-1147-4c0a-8439-6f79833bff5b"
@@ -142,12 +153,10 @@ const runSearchTests = () => {
   });
 };
 
-const results = ({ entityName, field, value }) =>
+const searchResults = ({ entityName, field, value }) =>
   search(entityName, field, value, loadDatasets());
 
-const message = (query) =>
-  `query | entity: ${query.entityName} | field: ${query.field} | value: ${
-    query.value
-  } (${typeof query.value})`;
+const format = (query) =>
+  `entity: ${query.entityName} / field: ${query.field} / value: ${query.value}`;
 
 module.exports = { runSearchTests };
