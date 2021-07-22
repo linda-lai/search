@@ -28,9 +28,10 @@ const assertion = (expectMessage, passMessage, callback) => {
       `${padding(4)}🟢 ${passMessage}\n${padding(4)}✅ RESULT: PASSED\n`
     );
   } catch (err) {
-    console.log(
-      `${padding(4)}🔴 ${err.message}\n${padding(4)}❌ RESULT: FAILED\n`
-    );
+    `🔴 ${err.message}`
+      .split("\n")
+      .map((line) => console.log(`${padding(4)}${line}`));
+    console.log(`${padding(4)}❌ RESULT: FAILED\n`);
     assert(err instanceof AssertionError);
     process.exit();
   }
@@ -44,9 +45,9 @@ const validateType = (actual) => {
 
 const expect = (actual) => {
   return {
-    toDeepStrictEqual: (expectedValue) => {
+    toEqual: (expectedValue) => {
       assertion(
-        "Expected is deep strict equal",
+        `Expected is deep strict equal`,
         "Actual deep strict equal to expected",
         () => assert.deepStrictEqual(actual, expectedValue)
       );
@@ -58,9 +59,9 @@ const expect = (actual) => {
         () => assert.strictEqual(validateType(actual), expectedType)
       );
     },
-    toHaveLengthEqualTo: (expectedLength) => {
+    toHaveLength: (expectedLength) => {
       assertion(
-        "Expected totals are strictly equal",
+        `Expected length: ${expectedLength} is strictly equal`,
         `Actual: ${actual.length}, expected: ${expectedLength}`,
         () => {
           assert.strictEqual(actual.length, expectedLength);
