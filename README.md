@@ -88,7 +88,7 @@ $ npm run prettier
 
 ### Usage Instructions
 
-The entry point for the application is the `lib/index.js` file. After running `npm start`, the application will wait for user inputs to form the search query:
+The entry point for the application is the `src/index.js` file. After running `npm start`, the application will wait for user inputs to form the search query:
 
 - User inputs for `value` searching for a string must be JSON-formatted - i.e. wrapped in double quotes (`"Linda"`, not `Linda` or `'Linda'`). Search values for all other queryable data types don't need to be JSON-formatted (e.g. `123`, `true`, `null`, etc).
 - Querying for `null` returns records with fields with a value of `null`, and records missing that field and value entirely (i.e. that are `undefined`).
@@ -175,7 +175,7 @@ The approach was to avoid premature performance optimizations and use benchmarks
 
 Premature optimization can explode development time while hurting code cleanliness, and can even backfire and cause suboptimal performance.
 
-It being a search application first and foremost, I created a [`benchmark.js`](https://github.com/linda-lai/search/blob/main/test/benchmark.js#L26-L37) util in `/tests` to measure the runtime for the `search` function specifically, using the provided `users.json` data and a `large-users.json` test file with 10K+ entries with the same query.
+It being a search application first and foremost, I created a [`benchmark.js`](https://github.com/linda-lai/search/blob/main/test/utils/benchmark.js#L26-L37) util in `/tests` to measure the runtime for the `search` function specifically, using the provided `users.json` data and a `large-users.json` test file with 10K+ entries with the same query.
 
 To run the `benchmarks.js` test:
 
