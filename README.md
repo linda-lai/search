@@ -28,10 +28,10 @@ A simple search application for the command line written in Node.js.
 
 > NB: Not tested on Linux and Windows.
 
-The application has been built with Node.js, and is intended to run on Node v.14.15.4 (but should run without problems on Node v11.x.x or higher).
+The application has been built with Node.js, and is intended to run on Node v13.8.0 (but should run without problems on Node v11.x.x or higher).
 
 - Homebrew
-- Node v14.15.4
+- Node v13.8.0
 
 Install Homebrew:
 
@@ -39,10 +39,10 @@ Install Homebrew:
 $ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-Install Node v14.15.4:
+Install Node v13.8.0:
 
 ```bash
-$ brew install node@14.15.4
+$ brew install node@13.8.0
 ```
 
 ### Installation

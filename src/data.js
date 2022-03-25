@@ -11,7 +11,7 @@ const loadDataset = (entityName, constructor) => {
     file = fs.readFileSync(path);
   } catch (e) {
     console.error(
-      `Missing JSON file for ${entityName} in data/${entityName}.json`
+      `Unable to locate or open JSON file for ${entityName} in data/${entityName}.json`
     );
     process.exit(1);
   }

@@ -1,5 +1,4 @@
 const match = (attributeValue, queryValue) => {
-  // console.log(`attribute: ${attributeValue} query: ${queryValue}`);
   if (Array.isArray(attributeValue)) {
     return attributeValue.includes(queryValue);
     // If attribute in JSON record doesn't exist (`undefined`), the input

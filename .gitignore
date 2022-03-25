@@ -4,6 +4,3 @@ node_modules/
 
 examples/
 tmp/
-
-# test/organization-test.js
-# test/utils-test.js
